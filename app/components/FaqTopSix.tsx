@@ -129,7 +129,7 @@ export default function FaqTopSix() {
       </span>
                                 <h3 className="text-base font-semibold text-gray-900 leading-tight">{q}</h3>
                             </div>
-                            <p className="mt-2 text-[15px] leading-6 text-gray-900">{a}</p>
+                            <p className="mt-2 text-[15px] leading-6 text-gray-500">{a}</p>
                         </div>
                     </article>
                 ))}
