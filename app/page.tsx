@@ -3,7 +3,9 @@
 import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import QuickBenefits from "./components/QuickBenefits";
 import FaqTopSix from "./components/FaqTopSix";
+
 
 const navigation = [
   { name: 'Placeholder', href: '#' },
@@ -126,20 +128,7 @@ export default function Home() {
               </p>
 
               {/* benefit chips */}
-              <div className="mx-auto mt-6 flex max-w-2xl flex-wrap items-center justify-center gap-2">
-        <span
-            className="rounded-full bg-emerald-50 px-3 py-1 text-sm font-medium text-emerald-700 ring-1 ring-emerald-200">
-          Tot 20% minder gasverbruik
-        </span>
-                <span
-                    className="rounded-full bg-indigo-50 px-3 py-1 text-sm font-medium text-indigo-700 ring-1 ring-indigo-200">
-          Binnen 2–5 jaar terugverdiend
-        </span>
-                <span
-                    className="rounded-full bg-amber-50 px-3 py-1 text-sm font-medium text-amber-800 ring-1 ring-amber-200">
-          Meer wooncomfort
-        </span>
-              </div>
+              <QuickBenefits />
 
               {/* FAQ */}
               <FaqTopSix/>
