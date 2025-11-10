@@ -9,12 +9,10 @@ import {
     ShieldCheckIcon,
     SquaresPlusIcon,
 } from "@heroicons/react/24/outline";
-// import {JSX} from "react";
 
 type FaqItem = {
     q: string;
     a: React.ReactNode;
-    // Icon: (props: React.SVGProps<SVGSVGElement>) => JSX.Element;
     Icon: React.ElementType;
     color: string; // tailwind color token for accent bg
 };
@@ -102,12 +100,6 @@ export default function FaqTopSix() {
             aria-labelledby="faq-heading"
             className="mx-auto w-full max-w-5xl p-4 md:p-6 text-left"
         >
-            {/*<h2*/}
-            {/*    id="faq-heading"*/}
-            {/*    className="text-2xl font-semibold tracking-tight text-gray-900"*/}
-            {/*>*/}
-            {/*    Veelgestelde vragen*/}
-            {/*</h2>*/}
 
             <div className="mt-5 grid grid-cols-1 gap-4 md:mt-6 md:grid-cols-2 md:gap-6">
                 {faqs.map(({q, a, Icon, color}, idx) => (
@@ -121,12 +113,12 @@ export default function FaqTopSix() {
                         {/* vraag + icoon + antwoord */}
                         <div className="relative">
                             <div className="flex items-center gap-2">
-      <span
-          className={`inline-flex size-7 items-center justify-center rounded-lg ${color} ring-1 ring-black/5`}
-          aria-hidden="true"
-      >
-        <Icon className="h-4 w-4 text-gray-700"/>
-      </span>
+                                <span
+                                    className={`flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-lg ${color} ring-1 ring-black/5`}
+                                    aria-hidden="true"
+                                >
+                                    <Icon className="h-4 w-4 text-gray-700"/>
+                                </span>
                                 <h3 className="text-base font-semibold text-gray-900 leading-tight">{q}</h3>
                             </div>
                             <p className="mt-2 text-[15px] leading-6 text-gray-500">{a}</p>
