@@ -9,12 +9,13 @@ import {
     ShieldCheckIcon,
     SquaresPlusIcon,
 } from "@heroicons/react/24/outline";
-import {JSX} from "react";
+// import {JSX} from "react";
 
 type FaqItem = {
     q: string;
     a: React.ReactNode;
-    Icon: (props: React.SVGProps<SVGSVGElement>) => JSX.Element;
+    // Icon: (props: React.SVGProps<SVGSVGElement>) => JSX.Element;
+    Icon: React.ElementType;
     color: string; // tailwind color token for accent bg
 };
 
