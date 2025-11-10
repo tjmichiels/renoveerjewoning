@@ -1,11 +1,20 @@
 // app/components/FaqTopSix.tsx
 "use client";
 
-import React from "react";
+import {
+    BanknotesIcon,
+    BoltIcon,
+    ClipboardDocumentCheckIcon,
+    HomeModernIcon,
+    ShieldCheckIcon,
+    SquaresPlusIcon,
+} from "@heroicons/react/24/outline";
 
 type FaqItem = {
     q: string;
     a: React.ReactNode;
+    Icon: (props: React.SVGProps<SVGSVGElement>) => JSX.Element;
+    color: string; // tailwind color token for accent bg
 };
 
 const faqs: FaqItem[] = [
@@ -20,6 +29,8 @@ const faqs: FaqItem[] = [
                 investering die je meestal binnen <strong>2 tot 5 jaar</strong> terugverdient.
             </>
         ),
+        Icon: BanknotesIcon,
+        color: "bg-emerald-50",
     },
     {
         q: "Is renoveren niet een grote investering?",
@@ -30,47 +41,56 @@ const faqs: FaqItem[] = [
                 energiekosten én verhoog je de waarde van je woning.
             </>
         ),
+        Icon: ShieldCheckIcon,
+        color: "bg-indigo-50",
     },
     {
         q: "Wat als ik niet alles tegelijk kan betalen?",
         a: (
             <>
                 Je hoeft niet alles in één keer te doen. Je kunt <strong>stapsgewijs renoveren</strong>,
-                beginnend met de maatregelen die het meest opleveren — zoals
-                <strong> dakisolatie of HR++-glas</strong>. Zo spreid je de kosten en zie je toch snel resultaat.
+                beginnend met de maatregelen die het meest opleveren — zoals{" "}
+                <strong>dakisolatie of HR++-glas</strong>. Zo spreid je de kosten en zie je toch snel resultaat.
             </>
         ),
+        Icon: ClipboardDocumentCheckIcon,
+        color: "bg-amber-50",
     },
     {
         q: "Wat als ik niet alles in één keer wil doen?",
         a: (
             <>
-                Dat hoeft ook niet. <strong>Elke stap telt.</strong> Begin bijvoorbeeld met één
-                verbetering die goed past bij jouw woning of budget, zoals
-                <strong> vloerisolatie of nieuw glas</strong>. Zelfs één aanpassing kan al merkbaar schelen in
-                comfort en energierekening.
+                Dat hoeft ook niet. <strong>Elke stap telt.</strong> Begin bijvoorbeeld met één verbetering
+                die goed past bij jouw woning of budget, zoals <strong>vloerisolatie of nieuw glas</strong>.
+                Zelfs één aanpassing kan al merkbaar schelen in comfort en energierekening.
             </>
         ),
+        Icon: SquaresPlusIcon,
+        color: "bg-sky-50",
     },
     {
         q: "Levert renovatie echt zoveel op?",
         a: (
             <>
-                Ja. Zelfs één maatregel, zoals <strong>spouwmuurisolatie</strong>, verlaagt het
-                gasverbruik met gemiddeld <strong>20%</strong>. Daarmee bespaar je al snel
-                <strong> honderden euro’s per jaar</strong> op je energierekening.
+                Ja. Zelfs één maatregel, zoals <strong>spouwmuurisolatie</strong>, verlaagt het gasverbruik
+                met gemiddeld <strong>20%</strong>. Daarmee bespaar je al snel <strong>honderden euro’s per
+                jaar</strong>.
             </>
         ),
+        Icon: BoltIcon,
+        color: "bg-fuchsia-50",
     },
     {
         q: "Zijn er subsidies of regelingen waar ik gebruik van kan maken?",
         a: (
             <>
-                Ja. De overheid en veel gemeenten bieden <strong>subsidies voor energiebesparende
-                maatregelen</strong>. Op deze website lees je eenvoudig <strong>welke regelingen voor jouw
-                woning gelden</strong> en hoeveel je kunt besparen.
+                Ja. De overheid en veel gemeenten bieden <strong>subsidies voor energiebesparende maatregelen</strong>.
+                Op deze website lees je eenvoudig <strong>welke regelingen voor jouw woning gelden</strong> en hoeveel
+                je kunt besparen.
             </>
         ),
+        Icon: HomeModernIcon,
+        color: "bg-rose-50",
     },
 ];
 
@@ -78,7 +98,7 @@ export default function FaqTopSix() {
     return (
         <section
             aria-labelledby="faq-heading"
-            className="mx-auto w-full max-w-5xl p-4 md:p-6"
+            className="mx-auto w-full max-w-5xl p-4 md:p-6 text-left"
         >
             {/*<h2*/}
             {/*    id="faq-heading"*/}
@@ -87,17 +107,31 @@ export default function FaqTopSix() {
             {/*    Veelgestelde vragen*/}
             {/*</h2>*/}
 
-            <dl className="mt-4 grid grid-cols-1 gap-4 md:mt-6 md:grid-cols-2 md:gap-6">
-                {faqs.map((item, idx) => (
-                    <div
+            <div className="mt-5 grid grid-cols-1 gap-4 md:mt-6 md:grid-cols-2 md:gap-6">
+                {faqs.map(({q, a, Icon, color}, idx) => (
+                    <article
                         key={idx}
-                        className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm"
+                        className={`relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition hover:shadow-md`}
                     >
-                        <dt className="text-base font-semibold text-gray-900">{item.q}</dt>
-                        <dd className="mt-2 text-[15px] leading-6 text-gray-900">{item.a}</dd>
-                    </div>
+                        {/* zachte kleur-accent achter het icoon */}
+                        <div className={`absolute -right-8 -top-8 h-24 w-24 rounded-full ${color}`}/>
+
+                        {/* vraag + icoon + antwoord */}
+                        <div className="relative">
+                            <div className="flex items-center gap-2">
+      <span
+          className={`inline-flex size-7 items-center justify-center rounded-lg ${color} ring-1 ring-black/5`}
+          aria-hidden="true"
+      >
+        <Icon className="h-4 w-4 text-gray-700"/>
+      </span>
+                                <h3 className="text-base font-semibold text-gray-900 leading-tight">{q}</h3>
+                            </div>
+                            <p className="mt-2 text-[15px] leading-6 text-gray-900">{a}</p>
+                        </div>
+                    </article>
                 ))}
-            </dl>
+            </div>
         </section>
     );
 }
