@@ -98,17 +98,52 @@ export default function Home() {
           </Dialog>
         </header>
 
-        <div className="relative isolate px-6 pt-14 lg:px-8 min-h-screen">
-          <div className="mx-auto max-w-4xl py-16">
+        {/*Hero section*/}
+        <div className="relative isolate min-h-screen px-6 pt-14 lg:px-8">
+          {/* zachte gradient blob achtergrond */}
+          <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-x-0 top-[-8rem] -z-10 transform-gpu overflow-hidden blur-3xl"
+          >
+            <div
+                className="mx-auto aspect-[1155/678] w-[72rem] bg-gradient-to-tr from-indigo-200 via-sky-200 to-emerald-200 opacity-40"
+                style={{
+                  clipPath:
+                      "polygon(74% 44%, 100% 59%, 94% 90%, 74% 100%, 52% 92%, 35% 78%, 22% 61%, 15% 42%, 26% 19%, 48% 7%, 68% 12%, 78% 26%)",
+                }}
+            />
+          </div>
 
+          <div className="mx-auto max-w-4xl py-16">
             <div className="text-center">
               <h1 className="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-6xl">
                 Laat jij elk jaar honderden euro’s aan warmte ontsnappen?
               </h1>
-              <p className="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
-                In veel woningen verdwijnt tot een kwart van de warmte via muren, vloeren en ramen. Door te isoleren en oude installaties te vervangen, kun je elk jaar honderden euro’s besparen, terwijl je woning comfortabeler en duurzamer wordt.
+              <p className="mt-6 text-lg font-medium text-pretty text-gray-700 sm:text-xl/8">
+                In veel woningen verdwijnt tot een kwart van de warmte via muren, vloeren en ramen.
+                Door te isoleren en oude installaties te vervangen, kun je elk jaar honderden euro’s besparen,
+                terwijl je woning comfortabeler en duurzamer wordt.
               </p>
-              <FaqTopSix />
+
+              {/* benefit chips */}
+              <div className="mx-auto mt-6 flex max-w-2xl flex-wrap items-center justify-center gap-2">
+        <span
+            className="rounded-full bg-emerald-50 px-3 py-1 text-sm font-medium text-emerald-700 ring-1 ring-emerald-200">
+          Tot 20% minder gasverbruik
+        </span>
+                <span
+                    className="rounded-full bg-indigo-50 px-3 py-1 text-sm font-medium text-indigo-700 ring-1 ring-indigo-200">
+          Binnen 2–5 jaar terugverdiend
+        </span>
+                <span
+                    className="rounded-full bg-amber-50 px-3 py-1 text-sm font-medium text-amber-800 ring-1 ring-amber-200">
+          Meer wooncomfort
+        </span>
+              </div>
+
+              {/* FAQ */}
+              <FaqTopSix/>
+
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
                     href="#"
@@ -117,12 +152,13 @@ export default function Home() {
                   Ik wil renoveren
                 </a>
                 <a href="#" className="text-sm/6 font-semibold text-gray-900">
-                 Vertel me meer <span aria-hidden="true">→</span>
+                  Vertel me meer <span aria-hidden="true">→</span>
                 </a>
               </div>
             </div>
           </div>
         </div>
+
       </div>
   );
 }
