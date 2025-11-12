@@ -31,7 +31,7 @@ export default function QuickBenefits() {
               role="text"
           >
             <Icon className={`h-5 w-5 ${iconColor}`} aria-hidden="true" />
-            <span className="text-sm font-semibold tracking-wide uppercase">
+            <span className="font-emphasis text-sm font-semibold tracking-wide uppercase">
               {text}
             </span>
           </span>
