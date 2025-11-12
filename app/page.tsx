@@ -6,7 +6,7 @@ import {faqMore, faqTopSix} from "./content/faqs";
 import { palettes } from "./lib/theme";
 
 const navigation = [
-  { name: "Placeholder", href: "#" },
+  { name: "Aanbevolen Opties", href: "/aanbevolenopties" },
   { name: "Placeholder", href: "#" },
   { name: "Placeholder", href: "#" },
   { name: "Placeholder", href: "#" },
