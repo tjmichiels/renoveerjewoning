@@ -11,7 +11,7 @@ export default function Home() {
       <div className="bg-white">
         <Header navigation={NAV} />
 
-        <main className="relative isolate min-h-screen px-6 pt-14 lg:px-8">
+        <main className="relative isolate min-h-screen px-6 pt-0 lg:px-8">
           <Hero
               title="Weet je dat jouw woning je elk jaar honderden euro’s kan opleveren?"
               subtitle="In veel woningen verdwijnt tot een kwart van de warmte via muren, vloeren en ramen. Door te isoleren en oude installaties te vervangen, kun je elk jaar honderden euro’s besparen, terwijl je woning comfortabeler en duurzamer wordt."

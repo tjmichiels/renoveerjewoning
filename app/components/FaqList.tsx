@@ -21,7 +21,7 @@ export default function FaqList({
     columns?: 1 | 2;
 }) {
     return (
-        <section className={`mx-auto w-full max-w-5xl p-4 text-left md:p-6 ${className}`}>
+        <section className={`mx-auto w-full max-w-5xl pt-0 pb-8 text-left ${className}`}>
             <div
                 className={`mt-5 grid grid-cols-1 gap-4 md:mt-6 ${
                     columns === 2 ? "md:grid-cols-2 md:gap-6" : ""

@@ -29,13 +29,13 @@ export default function Hero({
             </h1>
 
 
-            <p className="mt-6 text-lg font-medium text-pretty text-gray-700 sm:text-xl/8 font-friendly">
+            <p className="mt-6 text-lg font-medium text-pretty text-gray-800 sm:text-xl/8 font-friendly">
                 {subtitle}
             </p>
 
             <QuickBenefits/>
 
-            <div className="mt-10 flex items-center justify-center gap-x-4">
+            <div className="mt-10 flex items-center justify-center gap-x-4 pb-6">
                 <Link
                     href={ctaPrimary.href}
                     className="font-emphasis rounded-full bg-gradient-to-r from-emerald-700 to-lime-600 px-6 py-3 text-base font-semibold text-white shadow-md hover:opacity-90 hover:shadow-lg transition"
