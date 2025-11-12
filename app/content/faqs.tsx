@@ -13,7 +13,7 @@ import {
     InformationCircleIcon,
     ChartBarIcon,
 } from "@heroicons/react/24/outline";
-import type { FaqEntry } from "@/app/components/FaqList";
+import type {FaqEntry} from "@/app/components/FaqList";
 
 export const faqTopSix: FaqEntry[] = [
     {
@@ -31,7 +31,8 @@ export const faqTopSix: FaqEntry[] = [
         q: "Is renoveren niet een grote investering?",
         a: (
             <>
-                Het is een investering die zichzelf snel terugbetaalt. Met <strong>isolatie, HR++-glas of een warmtepomp</strong>{" "}
+                Het is een investering die zichzelf snel terugbetaalt. Met <strong>isolatie, HR++-glas of een
+                warmtepomp</strong>{" "}
                 verlaag je direct je energiekosten én verhoog je de woningwaarde.
             </>
         ),
@@ -41,7 +42,8 @@ export const faqTopSix: FaqEntry[] = [
         q: "Wat als ik niet alles tegelijk kan betalen?",
         a: (
             <>
-                Je kunt <strong>stapsgewijs renoveren</strong>, beginnend met de maatregelen die het meest opleveren — zoals{" "}
+                Je kunt <strong>stapsgewijs renoveren</strong>, beginnend met de maatregelen die het meest opleveren —
+                zoals{" "}
                 <strong>dakisolatie of HR++-glas</strong>. Zo spreid je de kosten en zie je toch snel resultaat.
             </>
         ),
@@ -51,7 +53,8 @@ export const faqTopSix: FaqEntry[] = [
         q: "Wat als ik niet alles in één keer wil doen?",
         a: (
             <>
-                Dat hoeft ook niet. <strong>Elke stap telt.</strong> Begin met één verbetering die past bij jouw woning of budget, zoals{" "}
+                Dat hoeft ook niet. <strong>Elke stap telt.</strong> Begin met één verbetering die past bij jouw woning
+                of budget, zoals{" "}
                 <strong>vloerisolatie of nieuw glas</strong>. Eén aanpassing kan al merkbaar schelen.
             </>
         ),
@@ -62,7 +65,8 @@ export const faqTopSix: FaqEntry[] = [
         a: (
             <>
                 Ja. Zelfs één maatregel, zoals <strong>spouwmuurisolatie</strong>, verlaagt het gasverbruik
-                met gemiddeld <strong>20%</strong>. Dat betekent een besparing van <strong>€300 tot €600 per jaar</strong>.
+                met gemiddeld <strong>20%</strong>. Dat betekent een besparing van <strong>€300 tot €600 per
+                jaar</strong>.
                 Combineer je meerdere stappen, dan loopt dat nog verder op.
             </>
         ),
@@ -72,7 +76,8 @@ export const faqTopSix: FaqEntry[] = [
         q: "Zijn er subsidies of regelingen waar ik gebruik van kan maken?",
         a: (
             <>
-                Ja. Overheid en gemeenten bieden <strong>subsidies voor energiebesparende maatregelen</strong>. Hier lees je{" "}
+                Ja. Overheid en gemeenten bieden <strong>subsidies voor energiebesparende maatregelen</strong>. Hier
+                lees je{" "}
                 <strong>welke regelingen voor jouw woning gelden</strong> en hoeveel je kunt besparen.
             </>
         ),

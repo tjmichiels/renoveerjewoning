@@ -20,6 +20,6 @@ export const palettes = {
 export type PaletteKey = keyof typeof palettes;
 
 export const blobs = {
-    indigoSkyEmerald: { from: "from-indigo-200", via: "via-sky-200", to: "to-emerald-200" },
-    greenYellow: { from: "from-emerald-200", via: "via-lime-200", to: "to-yellow-200" },
+    indigoSkyEmerald: {from: "from-indigo-200", via: "via-sky-200", to: "to-emerald-200"},
+    greenYellow: {from: "from-emerald-200", via: "via-lime-200", to: "to-yellow-200"},
 } as const;

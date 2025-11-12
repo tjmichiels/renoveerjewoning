@@ -1,16 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import {useState} from "react";
 import Link from "next/link";
-import { Dialog, DialogPanel } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import {Dialog, DialogPanel} from "@headlessui/react";
+import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/outline";
 
 type NavItem = { name: string; href: string };
-export default function Header({ navigation }: { navigation: NavItem[] }) {
+export default function Header({navigation}: { navigation: NavItem[] }) {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className="absolute inset-x-0 top-0 z-50">
+        <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-200">
             <nav aria-label="Hoofdmenu" className="flex items-center justify-between p-6 lg:px-8">
                 <div className="flex lg:flex-1">{/* logo plek */}</div>
 
@@ -21,7 +21,7 @@ export default function Header({ navigation }: { navigation: NavItem[] }) {
                         className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
                     >
                         <span className="sr-only">Open hoofdmenu</span>
-                        <Bars3Icon aria-hidden="true" className="size-6" />
+                        <Bars3Icon aria-hidden="true" className="size-6"/>
                     </button>
                 </div>
 
@@ -33,12 +33,13 @@ export default function Header({ navigation }: { navigation: NavItem[] }) {
                     ))}
                 </div>
 
-                <div className="hidden lg:flex lg:flex-1 lg:justify-end" />
+                <div className="hidden lg:flex lg:flex-1 lg:justify-end"/>
             </nav>
 
             <Dialog open={open} onClose={setOpen} className="lg:hidden">
-                <div className="fixed inset-0 z-50" />
-                <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <div className="fixed inset-0 z-50"/>
+                <DialogPanel
+                    className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
                         <button
                             type="button"
@@ -46,7 +47,7 @@ export default function Header({ navigation }: { navigation: NavItem[] }) {
                             className="-m-2.5 rounded-md p-2.5 text-gray-700"
                         >
                             <span className="sr-only">Sluit menu</span>
-                            <XMarkIcon aria-hidden="true" className="size-6" />
+                            <XMarkIcon aria-hidden="true" className="size-6"/>
                         </button>
                     </div>
                     <div className="mt-6 space-y-2">
