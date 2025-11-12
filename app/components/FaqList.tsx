@@ -6,14 +6,14 @@ export type FaqIcon = React.ElementType;
 export type FaqEntry = {
     q: string;
     a: React.ReactNode;
-    Icon?: FaqIcon;          // optioneel: sommige FAQ’s hoeven geen icoon
+    Icon?: FaqIcon;
 };
 
 export default function FaqList({
                                     items,
                                     palette = palettes.indigoSkyEmerald,
                                     className = "",
-                                    columns = 2, // 1 of 2
+                                    columns = 2,
                                 }: {
     items: FaqEntry[];
     palette?: readonly string[];

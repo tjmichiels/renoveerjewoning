@@ -18,7 +18,7 @@ export default function Hero({
 }) {
     return (
         <section className="relative mx-auto max-w-4xl py-16 text-center">
-            <GradientBlob from={blob.from} via={blob.via} to={blob.to} />
+            <GradientBlob from={blob.from} via={blob.via} to={blob.to}/>
 
             <h1 className="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-6xl">
                 {title}
@@ -27,17 +27,20 @@ export default function Hero({
                 {subtitle}
             </p>
 
-            <QuickBenefits />
+            <QuickBenefits/>
 
-            <div className="mt-10 flex items-center justify-center gap-x-6">
+            <div className="mt-10 flex items-center justify-center gap-x-4">
                 <Link
                     href={ctaPrimary.href}
-                    className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    className="rounded-full bg-gradient-to-r from-emerald-700 to-lime-600 px-6 py-3 text-sm font-semibold text-white shadow-md hover:opacity-90 hover:shadow-lg transition"
                 >
                     {ctaPrimary.label}
                 </Link>
                 {ctaSecondary && (
-                    <Link href={ctaSecondary.href} className="text-sm/6 font-semibold text-gray-900">
+                    <Link
+                        href={ctaSecondary.href}
+                        className="text-sm font-semibold text-gray-800 hover:text-emerald-700 flex items-center gap-1"
+                    >
                         {ctaSecondary.label} <span aria-hidden="true">→</span>
                     </Link>
                 )}
