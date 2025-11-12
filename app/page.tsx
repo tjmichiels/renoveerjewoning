@@ -20,7 +20,7 @@ export default function Home() {
               blob={{ from: "from-emerald-200", via: "via-yellow-200", to: "to-sky-200" }}
           />
 
-          <section aria-labelledby="faq" className="mx-auto max-w-5xl py-12 sm:py-16">
+          <section aria-labelledby="faq" className="mx-auto max-w-5xl py-0">
             <h2 id="faq" className="sr-only">Veelgestelde vragen</h2>
 
             <FaqList

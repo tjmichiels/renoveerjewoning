@@ -17,7 +17,7 @@ export default function Hero({
     blob?: { from: string; via: string; to: string };
 }) {
     return (
-        <section className="relative mx-auto max-w-4xl py-16 text-center">
+        <section className="relative mx-auto max-w-4xl pt-12 pb-0 text-center">
             <GradientBlob from={blob.from} via={blob.via} to={blob.to}/>
 
             <h1 className="font-emphasis text-5xl tracking-tight text-balance text-gray-900 sm:text-6xl">
@@ -38,14 +38,14 @@ export default function Hero({
             <div className="mt-10 flex items-center justify-center gap-x-4">
                 <Link
                     href={ctaPrimary.href}
-                    className="font-emphasis rounded-full bg-gradient-to-r from-emerald-700 to-lime-600 px-6 py-3 text-sm font-semibold text-white shadow-md hover:opacity-90 hover:shadow-lg transition"
+                    className="font-emphasis rounded-full bg-gradient-to-r from-emerald-700 to-lime-600 px-6 py-3 text-base font-semibold text-white shadow-md hover:opacity-90 hover:shadow-lg transition"
                 >
                     {ctaPrimary.label}
                 </Link>
                 {ctaSecondary && (
                     <Link
                         href={ctaSecondary.href}
-                        className="font-emphasis text-sm font-semibold text-gray-800 hover:text-emerald-700 flex items-center gap-1"
+                        className="font-emphasis text-base font-semibold text-gray-800 hover:text-emerald-700 flex items-center gap-1"
                     >
                         {ctaSecondary.label} <span aria-hidden="true">→</span>
                     </Link>

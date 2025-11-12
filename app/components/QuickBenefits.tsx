@@ -23,7 +23,7 @@ export default function QuickBenefits() {
     ];
 
     return (
-        <ul className="mt-10 flex flex-wrap justify-center gap-4">
+        <ul className="mt-6 flex flex-wrap justify-center gap-4">
             {benefits.map(({ icon: Icon, text, color, iconColor }, i) => (
                 <li key={i}>
           <span
