@@ -1,12 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import {useState} from "react";
 import Link from "next/link";
-import { Dialog, DialogPanel } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import {Dialog, DialogPanel} from "@headlessui/react";
+import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/outline";
 
 type NavItem = { name: string; href: string };
-export default function Header({ navigation }: { navigation: NavItem[] }) {
+export default function Header({navigation}: { navigation: NavItem[] }) {
     const [open, setOpen] = useState(false);
 
     return (

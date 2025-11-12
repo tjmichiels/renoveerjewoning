@@ -1,14 +1,14 @@
 // app/faq/page.tsx
 import Header from "../components/Header";
 import FaqList from "../components/FaqList";
-import { faqTopSix, faqMore } from "../content/faqs";
-import { palettes } from "../lib/theme";
-import { NAV } from "../content/navigation";
+import {faqTopSix, faqMore} from "../content/faqs";
+import {palettes} from "../lib/theme";
+import {NAV} from "../content/navigation";
 
 export default function FaqPage() {
     return (
         <div className="bg-white">
-            <Header navigation={NAV} />
+            <Header navigation={NAV}/>
 
             <main className="relative isolate min-h-screen px-6 pt-10 lg:px-8">
                 <header className="mx-auto max-w-5xl">

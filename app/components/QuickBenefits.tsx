@@ -1,4 +1,4 @@
-import { BoltIcon, BanknotesIcon, HomeModernIcon } from "@heroicons/react/24/outline";
+import {BoltIcon, BanknotesIcon, HomeModernIcon} from "@heroicons/react/24/outline";
 
 export default function QuickBenefits() {
     const benefits = [
@@ -24,13 +24,13 @@ export default function QuickBenefits() {
 
     return (
         <ul className="mt-6 flex flex-wrap justify-center gap-4">
-            {benefits.map(({ icon: Icon, text, color, iconColor }, i) => (
+            {benefits.map(({icon: Icon, text, color, iconColor}, i) => (
                 <li key={i}>
           <span
               className={`inline-flex h-10 items-center gap-2 rounded-full border px-5 shadow-sm ring-1 transition ${color}`}
               role="text"
           >
-            <Icon className={`h-5 w-5 ${iconColor}`} aria-hidden="true" />
+            <Icon className={`h-5 w-5 ${iconColor}`} aria-hidden="true"/>
             <span className="font-emphasis text-sm font-semibold tracking-wide uppercase">
               {text}
             </span>

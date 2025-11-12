@@ -1,6 +1,6 @@
 import "./globals.css";
-import type { Metadata } from "next";
-import { Inter, Source_Sans_3, Poppins } from "next/font/google";
+import type {Metadata} from "next";
+import {Inter, Source_Sans_3, Poppins} from "next/font/google";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         "Ontdek hoe je jouw woning stap voor stap kunt renoveren. Krijg inzicht in kosten, besparing en comfort, en leer hoe slimme maatregelen jouw huis energiezuiniger maken.",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({children}: { children: React.ReactNode }) {
     return (
         <html lang="nl">
         <body
