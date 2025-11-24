@@ -1,0 +1,44 @@
+// app/woningtypes/page.tsx
+import Header from "../components/Header";
+import HousingTypeCard from "../components/HousingTypeCard";
+import { housingTypes } from "../content/housingTypes";
+import { NAV } from "../content/navigation";
+import GradientBlob from "../components/GradientBlob";
+
+export default function HousingTypesPage() {
+    return (
+        <div className="bg-white">
+            <Header navigation={NAV} />
+
+            <main className="relative isolate min-h-screen px-6 pt-10 lg:px-8">
+                {/* blob-achtergrond bovenin de pagina */}
+                <div className="relative mx-auto max-w-5xl pb-4">
+                    <GradientBlob
+                        from="from-emerald-200"
+                        via="via-yellow-200"
+                        to="to-sky-200"
+                    />
+
+                    <header className="relative">
+                        <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900">
+                            Kies jouw woningtype
+                        </h1>
+                        <p className="mt-2 text-gray-600">
+                            Niet elke maatregel past bij elke woning. Kies het type dat het
+                            beste lijkt op jouw huis en bekijk welke stappen daar het meest
+                            opleveren.
+                        </p>
+                    </header>
+                </div>
+
+                <section className="mx-auto mt-4 max-w-5xl pb-16">
+                    <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+                        {housingTypes.map((type) => (
+                            <HousingTypeCard key={type.id} type={type} />
+                        ))}
+                    </div>
+                </section>
+            </main>
+        </div>
+    );
+}
