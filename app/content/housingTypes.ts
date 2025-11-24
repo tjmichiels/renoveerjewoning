@@ -149,46 +149,46 @@ export const housingTypes: HousingType[] = [
         imageAlt: "Vrijstaande woning met tuin",
         tagline: "Grote schil, veel oppervlak om te isoleren.",
     },
-    {
-        id: "appartement",
-        slug: "appartement",
-        title: "Appartement",
-        shortLabel: "Typisch voor een appartement:",
-        intro:
-            "In een appartement heb je meestal minder eigen schil om te isoleren. Glas en kierdichting leveren vaak de meeste winst op.",
-        yearlySavings: "afhankelijk van complex en installaties",
-        typicalIssues: [
-            "Beperkte eigen geveloppervlakken",
-            "Afhankelijk van Vereniging van Eigenaren (VvE)",
-            "Tocht langs ramen en balkon/deur"
-        ],
-        measures: [
-            {
-                title: "HR++-glas",
-                description:
-                    "Vervangt oud dubbel of enkel glas en vermindert tocht en kou bij ramen.",
-                costRange: "afhankelijk van aantal ramen",
-                savingsRange: "merkbaar meer comfort"
-            },
-            {
-                title: "Kierdichting",
-                description:
-                    "Tochtstrips en naadafdichting bij ramen en deuren verminderen tocht tegen lage kosten.",
-                costRange: "± €20 – €100",
-                note: "Goed zelf te doen, direct merkbaar."
-            },
-            {
-                title: "Afstemming met VvE",
-                description:
-                    "Voor grotere maatregelen (dak-, gevelisolatie, collectieve installaties) is vaak besluitvorming binnen de VvE nodig.",
-                costRange: "afhankelijk van gekozen maatregelen",
-                note: "Informeer bij de VvE welke plannen er al zijn."
-            }
-        ],
-        imageSrc: "/images/appartement.jpg",
-        imageAlt: "Appartementencomplex",
-        tagline: "Glas en kierdichting leveren hier vaak de meeste winst op.",
-    }
+    // {
+    //     id: "appartement",
+    //     slug: "appartement",
+    //     title: "Appartement",
+    //     shortLabel: "Typisch voor een appartement:",
+    //     intro:
+    //         "In een appartement heb je meestal minder eigen schil om te isoleren. Glas en kierdichting leveren vaak de meeste winst op.",
+    //     yearlySavings: "afhankelijk van complex en installaties",
+    //     typicalIssues: [
+    //         "Beperkte eigen geveloppervlakken",
+    //         "Afhankelijk van Vereniging van Eigenaren (VvE)",
+    //         "Tocht langs ramen en balkon/deur"
+    //     ],
+    //     measures: [
+    //         {
+    //             title: "HR++-glas",
+    //             description:
+    //                 "Vervangt oud dubbel of enkel glas en vermindert tocht en kou bij ramen.",
+    //             costRange: "afhankelijk van aantal ramen",
+    //             savingsRange: "merkbaar meer comfort"
+    //         },
+    //         {
+    //             title: "Kierdichting",
+    //             description:
+    //                 "Tochtstrips en naadafdichting bij ramen en deuren verminderen tocht tegen lage kosten.",
+    //             costRange: "± €20 – €100",
+    //             note: "Goed zelf te doen, direct merkbaar."
+    //         },
+    //         {
+    //             title: "Afstemming met VvE",
+    //             description:
+    //                 "Voor grotere maatregelen (dak-, gevelisolatie, collectieve installaties) is vaak besluitvorming binnen de VvE nodig.",
+    //             costRange: "afhankelijk van gekozen maatregelen",
+    //             note: "Informeer bij de VvE welke plannen er al zijn."
+    //         }
+    //     ],
+    //     imageSrc: "/images/appartement.jpg",
+    //     imageAlt: "Appartementencomplex",
+    //     tagline: "Glas en kierdichting leveren hier vaak de meeste winst op.",
+    // }
 ];
 
 export function getHousingTypeBySlug(slug: string): HousingType | undefined {
