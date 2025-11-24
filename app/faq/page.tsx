@@ -40,7 +40,7 @@ export default function FaqPage() {
                     <p className="text-gray-600 mb-4">
                         Meer weten over hoe het renoveren in de praktijk gaat?
                     </p>
-                    <FaqList items={faqMore} palette={palettes.greenYellow} columns={2}/>
+                    <FaqList items={faqMore} palette={palettes.greenYellow}  columns={2}/>
                 </section>
             </main>
         </div>
