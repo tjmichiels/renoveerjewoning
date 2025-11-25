@@ -1,9 +1,20 @@
+// export type MeasureIconKey = "wall" | "roof" | "floor" | "glass" | "small";
+export type MeasureIconKey =
+    | "wall"
+    | "cavity"
+    | "floor"
+    | "glass"
+    | "small"
+    | "roof";
+
+
 export type HousingMeasure = {
     title: string;
     description: string;
     costRange: string;
     savingsRange?: string;
     note?: string;
+    icon: MeasureIconKey;
 };
 
 export type HousingType = {
@@ -14,11 +25,12 @@ export type HousingType = {
     intro: string;
     typicalIssues: string[];
     yearlySavings?: string;
-    measures: HousingMeasure[];
 
     imageSrc: string;
     imageAlt: string;
     tagline: string;
+
+    measures: HousingMeasure[];
 };
 
 export const housingTypes: HousingType[] = [
@@ -35,39 +47,43 @@ export const housingTypes: HousingType[] = [
             "Ouder dubbel glas dat veel warmte doorlaat",
             "Koude plekken bij ramen en kozijnen"
         ],
+        imageSrc: "/images/tussenwoning.jpg",
+        imageAlt: "Typische tussenwoning in een rij huizen",
+        tagline: "Veel winst te halen met spouwmuur- en dakisolatie.",
         measures: [
             {
                 title: "Spouwmuurisolatie",
                 description:
                     "Isolatiemateriaal wordt in de spouw geblazen. Dit vermindert warmteverlies via de gevel, zonder grote verbouwing.",
                 costRange: "± €800 – €1.500",
-                savingsRange: "gemiddeld 15–25% minder gasverbruik"
+                savingsRange: "gemiddeld 15–25% minder gasverbruik",
+                icon: "cavity",
             },
             {
                 title: "Dakisolatie",
                 description:
                     "Het dak isoleren voorkomt dat warmte omhoog wegtrekt. Vooral interessant als de zolder vaak koud is.",
                 costRange: "± €2.000 – €4.000",
-                savingsRange: "tot enkele honderden euro’s per jaar"
+                savingsRange: "tot enkele honderden euro’s per jaar",
+                icon: "roof",
             },
             {
                 title: "HR++-glas",
                 description:
                     "Vervangt standaard dubbel glas of enkel glas. Dit verhoogt comfort en vermindert tocht bij ramen.",
                 costRange: "± €4.000 – €6.000 (afhankelijk van aantal ramen)",
-                savingsRange: "merkbaar lagere warmtevraag en meer comfort"
+                savingsRange: "merkbaar lagere warmtevraag en meer comfort",
+                icon: "glass",
             },
             {
                 title: "Kleine maatregelen",
                 description:
                     "Tochtstrips, radiatorfolie en buisisolatie zijn goedkoop en eenvoudig zelf te plaatsen.",
                 costRange: "± €20 – €100",
-                note: "Kleine investering, maar snel merkbaar in comfort."
+                note: "Kleine investering, maar snel merkbaar in comfort.",
+                icon: "small",
             }
         ],
-        imageSrc: "/images/tussenwoning.jpg",
-        imageAlt: "Typische tussenwoning in een rij huizen",
-        tagline: "Veel winst te halen met spouwmuur- en dakisolatie.",
     },
     {
         id: "hoekwoning",
@@ -82,32 +98,35 @@ export const housingTypes: HousingType[] = [
             "Tocht bij hoeken en kozijnen",
             "Koude vloeren bij buitenmuren"
         ],
+        imageSrc: "/images/hoekwoning.jpeg",
+        imageAlt: "Hoekwoning met extra buitengevel",
+        tagline: "Extra buitenmuur betekent extra warmteverlies — en extra besparingskans.",
         measures: [
             {
                 title: "Gevel- of spouwmuurisolatie",
                 description:
                     "Door de buitengevel of spouw te isoleren wordt de grootste warmte-lek aangepakt.",
                 costRange: "± €1.500 – €3.000",
-                savingsRange: "duidelijke daling in gasverbruik en meer comfort"
+                savingsRange: "duidelijke daling in gasverbruik en meer comfort",
+                icon: "wall",
             },
             {
                 title: "Vloerisolatie",
                 description:
                     "Een geïsoleerde vloer voorkomt koude voeten en warmteverlies via de kruipruimte.",
                 costRange: "± €1.500 – €3.000",
-                savingsRange: "merkbare verbetering in comfort"
+                savingsRange: "merkbare verbetering in comfort",
+                icon: "floor",
             },
             {
                 title: "HR++-glas",
                 description:
                     "Zorgt voor minder warmteverlies en minder condens op ramen, vooral aan de windzijde.",
                 costRange: "afhankelijk van aantal ramen",
-                savingsRange: "structureel lagere warmtevraag"
+                savingsRange: "structureel lagere warmtevraag",
+                icon: "glass",
             }
         ],
-        imageSrc: "/images/hoekwoning.jpeg",
-        imageAlt: "Hoekwoning met extra buitengevel",
-        tagline: "Extra buitenmuur betekent extra warmteverlies — en extra besparingskans.",
     },
     {
         id: "vrijstaand",
@@ -122,32 +141,35 @@ export const housingTypes: HousingType[] = [
             "Hoger gasverbruik dan rijwoningen",
             "Oudere isolatie of helemaal geen isolatie"
         ],
+        imageSrc: "/images/vrijstaand.webp",
+        imageAlt: "Vrijstaande woning met tuin",
+        tagline: "Grote schil, veel oppervlak om te isoleren.",
         measures: [
             {
                 title: "Dakisolatie",
                 description:
                     "Bij grote dakoppervlakken is dakisolatie vaak een van de belangrijkste stappen.",
                 costRange: "sterk afhankelijk van dakoppervlak",
-                savingsRange: "kan honderden euro’s per jaar schelen"
+                savingsRange: "kan honderden euro’s per jaar schelen",
+                icon: "roof",
             },
             {
                 title: "Gevelisolatie",
                 description:
                     "Aan de buitenkant isoleren geeft zowel energetische als esthetische verbetering, maar vraagt een hogere investering.",
                 costRange: "meestal enkele duizenden euro’s",
-                savingsRange: "grote impact op verbruik en comfort"
+                savingsRange: "grote impact op verbruik en comfort",
+                icon: "wall",
             },
             {
                 title: "Vloerisolatie",
                 description:
                     "Maakt de woning minder kil en verlaagt het energieverbruik.",
                 costRange: "± €2.000 – €4.000",
-                savingsRange: "comfortverbetering en lagere stookkosten"
+                savingsRange: "comfortverbetering en lagere stookkosten",
+                icon: "floor",
             }
         ],
-        imageSrc: "/images/vrijstaand.webp",
-        imageAlt: "Vrijstaande woning met tuin",
-        tagline: "Grote schil, veel oppervlak om te isoleren.",
     },
     // {
     //     id: "appartement",

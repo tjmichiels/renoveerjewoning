@@ -4,7 +4,25 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import Header from "../../components/Header";
 import { NAV } from "../../content/navigation";
-import { getHousingTypeBySlug, housingTypes } from "../../content/housingTypes";
+import {
+    getHousingTypeBySlug,
+    housingTypes,
+    MeasureIconKey,
+} from "../../content/housingTypes";
+import {
+    BanknotesIcon,      // Kosten
+    BoltIcon,           // Besparing
+    InformationCircleIcon,
+
+    BuildingStorefrontIcon,
+    BuildingOfficeIcon,
+    Square3Stack3DIcon,
+    WindowIcon,
+    WrenchIcon,
+    HomeModernIcon,
+
+
+} from "@heroicons/react/24/outline";
 
 type Props = {
     params: { type: string };
@@ -13,6 +31,21 @@ type Props = {
 export function generateStaticParams() {
     return housingTypes.map((t) => ({ type: t.slug }));
 }
+
+// mapping van type → icoon
+const measureIconMap: Record<MeasureIconKey, React.ElementType> = {
+    // wall: HomeModernIcon,          // gevel/spouw
+    // roof: HomeModernIcon,          // dak
+    // floor: Squares2X2Icon,         // vloer / tegels
+    // glass: WindowIcon,             // ramen
+    // small: WrenchScrewdriverIcon,  // kleine maatregelen / klusjes
+    wall: BuildingStorefrontIcon,
+    cavity: BuildingOfficeIcon,
+    floor: Square3Stack3DIcon,
+    glass: WindowIcon,
+    small: WrenchIcon,
+    roof: HomeModernIcon,
+};
 
 export default function HousingTypeDetailPage({ params }: Props) {
     const housingType = getHousingTypeBySlug(params.type);
@@ -35,33 +68,38 @@ export default function HousingTypeDetailPage({ params }: Props) {
                         ← Terug naar woningtypes
                     </Link>
 
-                    {/* Hoofdblok: titel + tekst + afbeelding */}
-                    <section className="mt-4 grid gap-6 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] items-start">
-                        <header>
-                            <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight text-gray-900">
-                                {housingType.title}
-                            </h1>
-                            <p className="mt-2 text-gray-600">
-                                {housingType.intro}
-                            </p>
+                    {/* Hoofdblok: titel + samenvatting + afbeelding */}
+                    <section className="mt-4 grid items-start gap-6 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
+                        <header className="space-y-4">
+                            <div>
+                                <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight text-gray-900">
+                                    {housingType.title}
+                                </h1>
+                                <p className="mt-2 text-sm sm:text-base text-gray-600">
+                                    {housingType.intro}
+                                </p>
+                            </div>
 
                             {housingType.yearlySavings && (
-                                <p className="mt-3 inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-800">
-                                    Gemiddelde besparing:{" "}
-                                    <span className="ml-1 font-semibold">
-                    {housingType.yearlySavings}
+                                <p className="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-800">
+                                    <BanknotesIcon className="h-4 w-4" aria-hidden />
+                                    <span>
+                    Gemiddelde besparing:{" "}
+                                        <span className="font-semibold">
+                      {housingType.yearlySavings}
+                    </span>
                   </span>
                                 </p>
                             )}
 
-                            <div className="mt-6">
-                                <h2 className="text-sm font-semibold uppercase tracking-wide text-gray-500">
+                            <div className="mt-2 rounded-2xl border border-gray-100 bg-gray-50 px-4 py-3">
+                                <h2 className="text-xs font-semibold uppercase tracking-wide text-gray-500">
                                     Wat vaak speelt bij dit type woning
                                 </h2>
-                                <ul className="mt-2 space-y-1.5 text-sm text-gray-600">
+                                <ul className="mt-2 space-y-1.5 text-sm text-gray-700">
                                     {housingType.typicalIssues.map((issue, idx) => (
                                         <li key={idx} className="flex gap-2">
-                                            <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                                            <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500" />
                                             <span>{issue}</span>
                                         </li>
                                     ))}
@@ -70,54 +108,86 @@ export default function HousingTypeDetailPage({ params }: Props) {
                         </header>
 
                         {/* Afbeelding rechts */}
-                        <div className="relative h-48 w-full overflow-hidden rounded-2xl border border-gray-200 bg-gray-100 md:h-56">
+                        <figure className="relative h-48 w-full overflow-hidden rounded-2xl border border-gray-200 bg-gray-100 md:h-56">
                             <Image
                                 src={housingType.imageSrc}
                                 alt={housingType.imageAlt}
                                 fill
                                 className="object-cover"
                             />
-                        </div>
+                        </figure>
                     </section>
 
                     {/* Maatregelen */}
                     <section className="mt-10">
                         <h2 className="text-xl font-semibold text-gray-900">
-                            Maatregelen die vaak goed passen bij dit type woning
+                            Maatregelen die vaak goed passen
                         </h2>
-                        <p className="mt-2 text-sm text-gray-600">
-                            Dit zijn geen exacte adviezen, maar logische eerste stappen die bij dit soort woningen vaak veel opleveren.
+                        <p className="mt-1 text-sm text-gray-600">
+                            Deze maatregelen leveren bij dit woningtype meestal de meeste winst op.
                         </p>
 
                         <div className="mt-6 grid gap-4 md:grid-cols-2">
-                            {housingType.measures.map((measure, idx) => (
-                                <article
-                                    key={idx}
-                                    className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm"
-                                >
-                                    <h3 className="text-base font-semibold text-gray-900">
-                                        {measure.title}
-                                    </h3>
-                                    <p className="mt-2 text-sm text-gray-600">
-                                        {measure.description}
-                                    </p>
-                                    <div className="mt-3 flex flex-wrap gap-2 text-xs">
-                    <span className="rounded-full bg-emerald-50 px-3 py-1 text-emerald-800">
-                      Kosten: <span className="font-semibold">{measure.costRange}</span>
-                    </span>
-                                        {measure.savingsRange && (
-                                            <span className="rounded-full bg-sky-50 px-3 py-1 text-sky-800">
-                        Besparing: <span className="font-semibold">{measure.savingsRange}</span>
-                      </span>
-                                        )}
-                                    </div>
-                                    {measure.note && (
-                                        <p className="mt-2 text-xs text-gray-500">
-                                            {measure.note}
+                            {housingType.measures.map((measure, idx) => {
+                                const Icon = measureIconMap[measure.icon];
+
+                                return (
+                                    <article
+                                        key={idx}
+                                        className="flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-5 shadow-sm"
+                                    >
+                                        {/* Titel + icoon op één regel */}
+                                        <div className="flex items-center gap-2">
+                                            <span className="inline-flex items-center justify-center rounded-lg bg-emerald-50 p-1.5">
+                                              <Icon className="h-4 w-4 text-emerald-700" aria-hidden/>
+                                            </span>
+                                            <h3 className="text-base font-semibold text-gray-900">
+                                                {measure.title}
+                                            </h3>
+                                        </div>
+
+                                        {/* Beschrijving gewoon links eronder, geen extra inspring */}
+                                        <p className="mt-2 text-sm text-gray-600">
+                                            {measure.description}
                                         </p>
-                                    )}
-                                </article>
-                            ))}
+
+                                        {/* kosten + besparing */}
+                                        <div className="mt-3 flex flex-wrap gap-2 text-xs">
+        <span className="inline-flex items-center gap-1 rounded-full bg-gray-100 px-3 py-1 text-gray-700">
+          <BanknotesIcon className="h-3.5 w-3.5" aria-hidden/>
+          <span>
+            Kosten:{" "}
+              <span className="font-semibold">{measure.costRange}</span>
+          </span>
+        </span>
+
+                                            {measure.savingsRange && (
+                                                <span
+                                                    className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-3 py-1 text-emerald-800">
+            <BoltIcon className="h-3.5 w-3.5" aria-hidden/>
+            <span>
+              Besparing:{" "}
+                <span className="font-semibold">
+                {measure.savingsRange}
+              </span>
+            </span>
+          </span>
+                                            )}
+                                        </div>
+
+                                        {/* optionele toelichting */}
+                                        {measure.note && (
+                                            <p className="mt-3 flex items-start gap-1.5 text-xs text-gray-500">
+                                                <InformationCircleIcon
+                                                    className="mt-0.5 h-3.5 w-3.5"
+                                                    aria-hidden
+                                                />
+                                                <span>{measure.note}</span>
+                                            </p>
+                                        )}
+                                    </article>
+                                );
+                            })}
                         </div>
                     </section>
                 </div>
