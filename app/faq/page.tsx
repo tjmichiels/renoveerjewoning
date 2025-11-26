@@ -4,6 +4,7 @@ import FaqList from "../components/FaqList";
 import {faqTopSix, faqMore} from "../content/faqs";
 import {palettes} from "../lib/theme";
 import {NAV} from "../content/navigation";
+import SocialProofStrip from "@/app/components/SocialProofStrip";
 
 export default function FaqPage() {
     return (
@@ -31,6 +32,10 @@ export default function FaqPage() {
                     <FaqList items={faqTopSix} palette={palettes.greenYellow} columns={2}/>
                 </section>
 
+                {/* Sociale vergelijking / herkenbare context */}
+                <SocialProofStrip />
+
+
                 {/* Meer */}
                 <section id="more" aria-labelledby="more-heading"
                          className="mx-auto max-w-5xl pb-16 pt-10 scroll-mt-20">
@@ -40,7 +45,7 @@ export default function FaqPage() {
                     <p className="text-gray-600 mb-4">
                         Meer weten over hoe het renoveren in de praktijk gaat?
                     </p>
-                    <FaqList items={faqMore} palette={palettes.greenYellow}  columns={2}/>
+                    <FaqList items={faqMore} palette={palettes.greenYellow} columns={2}/>
                 </section>
             </main>
         </div>

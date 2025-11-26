@@ -35,6 +35,8 @@ export default function Hero({
 
             <QuickBenefits/>
 
+
+
             <div className="mt-10 flex items-center justify-center gap-x-4 pb-6">
                 <Link
                     href={ctaPrimary.href}
