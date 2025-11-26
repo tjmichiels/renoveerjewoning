@@ -32,6 +32,8 @@ export type HousingType = {
     imageAlt: string;
     tagline: string;
 
+    socialProof?: string;
+
     measures: HousingMeasure[];
 };
 
@@ -49,9 +51,14 @@ export const housingTypes: HousingType[] = [
             "Ouder dubbel glas dat veel warmte doorlaat",
             "Koude plekken bij ramen en kozijnen"
         ],
+
         imageSrc: "/images/woningtypes/tussenwoning.jpg",
         imageAlt: "Typische tussenwoning in een rij huizen",
         tagline: "Veel winst te halen met spouwmuur- en dakisolatie.",
+
+        socialProof:
+            "Bij tussenwoningen beginnen veel eigenaren met spouwmuur- en dakisolatie. Dat zijn vaak de stappen met de meeste winst per euro.",
+
         measures: [
             {
                 title: "Spouwmuurisolatie",
@@ -108,9 +115,14 @@ export const housingTypes: HousingType[] = [
             "Tocht bij hoeken en kozijnen",
             "Koude vloeren bij buitenmuren"
         ],
+
         imageSrc: "/images/woningtypes/hoekwoning.jpeg",
         imageAlt: "Hoekwoning met extra buitengevel",
         tagline: "Extra buitenmuur betekent extra warmteverlies — en extra besparingskans.",
+
+        socialProof:
+            "Eigenaren van hoekwoningen kiezen vaak eerst voor gevelisolatie en HR++-glas aan de windzijde. Dat vermindert tocht en warmteverlies langs de extra buitenmuur.",
+
         measures: [
             {
                 title: "Gevel- of spouwmuurisolatie",
@@ -157,9 +169,14 @@ export const housingTypes: HousingType[] = [
             "Hoger gasverbruik dan rijwoningen",
             "Oudere isolatie of helemaal geen isolatie"
         ],
+
         imageSrc: "/images/woningtypes/vrijstaand.webp",
         imageAlt: "Vrijstaande woning met tuin",
         tagline: "Grote schil, veel oppervlak om te isoleren.",
+
+        socialProof:
+            "Bij vrijstaande woningen leveren dak- en gevelisolatie meestal de grootste besparing op, omdat er veel buitenoppervlak is om te isoleren.",
+
         measures: [
             {
                 title: "Dakisolatie",

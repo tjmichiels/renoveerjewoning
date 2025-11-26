@@ -22,8 +22,9 @@ import {
     WrenchIcon,
     HomeModernIcon,
 
-
+    UserGroupIcon,
 } from "@heroicons/react/24/outline";
+
 
 type Props = {
     params: { type: string };
@@ -143,6 +144,24 @@ export default function HousingTypeDetailPage({params}: Props) {
                         <p className="mt-1 text-sm text-gray-600">
                             Deze maatregelen leveren bij dit woningtype meestal de meeste winst op.
                         </p>
+
+                        {/*Sociale vergelijking: "Wat anderen vaak doen"*/}
+                        {housingType.socialProof && (
+                            <div
+                                className="mt-4 rounded-2xl border border-emerald-100 bg-emerald-50/60 px-4 py-3 text-[13px] text-emerald-900 flex items-start gap-3">
+                                <span className="mt-0.5 inline-flex h-8 w-8 items-center justify-center rounded-full bg-white shadow-sm">
+                                    <UserGroupIcon className="h-4 w-4 text-emerald-700" aria-hidden/>
+                                </span>
+                                <div>
+                                    <p className="text-[11px] font-semibold uppercase tracking-wide text-emerald-700">
+                                        Wat anderen vaak doen
+                                    </p>
+                                    <p className="mt-0.5 leading-relaxed">
+                                        {housingType.socialProof}
+                                    </p>
+                                </div>
+                            </div>
+                        )}
 
                         <div className="mt-6 grid gap-4 md:grid-cols-2">
                             {housingType.measures.map((measure, idx) => {
