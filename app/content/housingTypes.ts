@@ -15,6 +15,8 @@ export type HousingMeasure = {
     savingsRange?: string;
     note?: string;
     icon: MeasureIconKey;
+    imageSrc: string;
+    imageAlt: string;
 };
 
 export type HousingType = {
@@ -47,7 +49,7 @@ export const housingTypes: HousingType[] = [
             "Ouder dubbel glas dat veel warmte doorlaat",
             "Koude plekken bij ramen en kozijnen"
         ],
-        imageSrc: "/images/tussenwoning.jpg",
+        imageSrc: "/images/woningtypes/tussenwoning.jpg",
         imageAlt: "Typische tussenwoning in een rij huizen",
         tagline: "Veel winst te halen met spouwmuur- en dakisolatie.",
         measures: [
@@ -58,6 +60,8 @@ export const housingTypes: HousingType[] = [
                 costRange: "± €800 – €1.500",
                 savingsRange: "gemiddeld 15–25% minder gasverbruik",
                 icon: "cavity",
+                imageSrc: "/images/maatregelen/spouwmuurisolatie.jpg",
+                imageAlt: "Spouwmuurisolatie",
             },
             {
                 title: "Dakisolatie",
@@ -66,6 +70,8 @@ export const housingTypes: HousingType[] = [
                 costRange: "± €2.000 – €4.000",
                 savingsRange: "tot enkele honderden euro’s per jaar",
                 icon: "roof",
+                imageSrc: "/images/maatregelen/dakisolatie.jpg",
+                imageAlt: "Dakisolatie wordt aangebracht",
             },
             {
                 title: "HR++-glas",
@@ -74,6 +80,8 @@ export const housingTypes: HousingType[] = [
                 costRange: "± €4.000 – €6.000 (afhankelijk van aantal ramen)",
                 savingsRange: "merkbaar lagere warmtevraag en meer comfort",
                 icon: "glass",
+                imageSrc: "/images/maatregelen/hrplusplusglas.jpg",
+                imageAlt: "Een kozijn met HR++ glas",
             },
             {
                 title: "Kleine maatregelen",
@@ -82,6 +90,8 @@ export const housingTypes: HousingType[] = [
                 costRange: "± €20 – €100",
                 note: "Kleine investering, maar snel merkbaar in comfort.",
                 icon: "small",
+                imageSrc: "/images/maatregelen/kleinemaatregelen.jpg",
+                imageAlt: "Tochtstrips worden aangebracht bij een kozijn",
             }
         ],
     },
@@ -98,7 +108,7 @@ export const housingTypes: HousingType[] = [
             "Tocht bij hoeken en kozijnen",
             "Koude vloeren bij buitenmuren"
         ],
-        imageSrc: "/images/hoekwoning.jpeg",
+        imageSrc: "/images/woningtypes/hoekwoning.jpeg",
         imageAlt: "Hoekwoning met extra buitengevel",
         tagline: "Extra buitenmuur betekent extra warmteverlies — en extra besparingskans.",
         measures: [
@@ -109,6 +119,8 @@ export const housingTypes: HousingType[] = [
                 costRange: "± €1.500 – €3.000",
                 savingsRange: "duidelijke daling in gasverbruik en meer comfort",
                 icon: "wall",
+                imageSrc: "/images/maatregelen/gevelofspouwmuurisolatie.jpg",
+                imageAlt: "Gevelisolatie",
             },
             {
                 title: "Vloerisolatie",
@@ -117,6 +129,8 @@ export const housingTypes: HousingType[] = [
                 costRange: "± €1.500 – €3.000",
                 savingsRange: "merkbare verbetering in comfort",
                 icon: "floor",
+                imageSrc: "/images/maatregelen/vloerisolatie.jpg",
+                imageAlt: "Isolatiemateriaal dat onder een houten vloer wordt aangebracht",
             },
             {
                 title: "HR++-glas",
@@ -125,6 +139,8 @@ export const housingTypes: HousingType[] = [
                 costRange: "afhankelijk van aantal ramen",
                 savingsRange: "structureel lagere warmtevraag",
                 icon: "glass",
+                imageSrc: "/images/maatregelen/hrplusplusglas.jpg",
+                imageAlt: "Een kozijn met HR++ glas",
             }
         ],
     },
@@ -141,7 +157,7 @@ export const housingTypes: HousingType[] = [
             "Hoger gasverbruik dan rijwoningen",
             "Oudere isolatie of helemaal geen isolatie"
         ],
-        imageSrc: "/images/vrijstaand.webp",
+        imageSrc: "/images/woningtypes/vrijstaand.webp",
         imageAlt: "Vrijstaande woning met tuin",
         tagline: "Grote schil, veel oppervlak om te isoleren.",
         measures: [
@@ -152,6 +168,8 @@ export const housingTypes: HousingType[] = [
                 costRange: "sterk afhankelijk van dakoppervlak",
                 savingsRange: "kan honderden euro’s per jaar schelen",
                 icon: "roof",
+                imageSrc: "/images/maatregelen/dakisolatie.jpg",
+                imageAlt: "Dakisolatie wordt aangebracht",
             },
             {
                 title: "Gevelisolatie",
@@ -160,6 +178,8 @@ export const housingTypes: HousingType[] = [
                 costRange: "meestal enkele duizenden euro’s",
                 savingsRange: "grote impact op verbruik en comfort",
                 icon: "wall",
+                imageSrc: "/images/maatregelen/gevelisolatie.jpeg",
+                imageAlt: "Gevelisolatie",
             },
             {
                 title: "Vloerisolatie",
@@ -168,6 +188,8 @@ export const housingTypes: HousingType[] = [
                 costRange: "± €2.000 – €4.000",
                 savingsRange: "comfortverbetering en lagere stookkosten",
                 icon: "floor",
+                imageSrc: "/images/maatregelen/vloerisolatie.jpg",
+                imageAlt: "Isolatiemateriaal dat onder een houten vloer wordt aangebracht",
             }
         ],
     },

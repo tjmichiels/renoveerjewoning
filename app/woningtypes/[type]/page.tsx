@@ -34,11 +34,6 @@ export function generateStaticParams() {
 
 // mapping van type → icoon
 const measureIconMap: Record<MeasureIconKey, React.ElementType> = {
-    // wall: HomeModernIcon,          // gevel/spouw
-    // roof: HomeModernIcon,          // dak
-    // floor: Squares2X2Icon,         // vloer / tegels
-    // glass: WindowIcon,             // ramen
-    // small: WrenchScrewdriverIcon,  // kleine maatregelen / klusjes
     wall: BuildingStorefrontIcon,
     cavity: BuildingOfficeIcon,
     floor: Square3Stack3DIcon,
@@ -130,63 +125,133 @@ export default function HousingTypeDetailPage({ params }: Props) {
                         <div className="mt-6 grid gap-4 md:grid-cols-2">
                             {housingType.measures.map((measure, idx) => {
                                 const Icon = measureIconMap[measure.icon];
-
                                 return (
                                     <article
                                         key={idx}
-                                        className="flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-5 shadow-sm"
+                                        className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white p-5 shadow-sm"
                                     >
-                                        {/* Titel + icoon op één regel */}
-                                        <div className="flex items-center gap-2">
-                                            <span className="inline-flex items-center justify-center rounded-lg bg-emerald-50 p-1.5">
-                                              <Icon className="h-4 w-4 text-emerald-700" aria-hidden/>
-                                            </span>
-                                            <h3 className="text-base font-semibold text-gray-900">
-                                                {measure.title}
-                                            </h3>
+                                        {/* hover-afbeelding over de achtergrond */}
+                                        <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                            <Image
+                                                src={measure.imageSrc}
+                                                alt={measure.imageAlt}
+                                                fill
+                                                className="object-cover"
+                                            />
+                                            {/* lichte overlay voor leesbaarheid */}
+                                            <div className="absolute inset-0 bg-white/80" />
                                         </div>
 
-                                        {/* Beschrijving gewoon links eronder, geen extra inspring */}
-                                        <p className="mt-2 text-sm text-gray-600">
-                                            {measure.description}
-                                        </p>
+                                        {/* inhoud boven de overlay */}
+                                        <div className="relative">
+                                            {/* Titel + icoon op één regel */}
+                                            <div className="flex items-center gap-2">
+            <span className="inline-flex items-center justify-center rounded-lg bg-emerald-50 p-1.5">
+              <Icon className="h-4 w-4 text-emerald-700" aria-hidden />
+            </span>
+                                                <h3 className="text-base font-semibold text-gray-900">
+                                                    {measure.title}
+                                                </h3>
+                                            </div>
 
-                                        {/* kosten + besparing */}
-                                        <div className="mt-3 flex flex-wrap gap-2 text-xs">
-        <span className="inline-flex items-center gap-1 rounded-full bg-gray-100 px-3 py-1 text-gray-700">
-          <BanknotesIcon className="h-3.5 w-3.5" aria-hidden/>
-          <span>
-            Kosten:{" "}
-              <span className="font-semibold">{measure.costRange}</span>
-          </span>
-        </span>
+                                            {/* Beschrijving */}
+                                            <p className="mt-2 text-sm text-gray-600">
+                                                {measure.description}
+                                            </p>
 
-                                            {measure.savingsRange && (
-                                                <span
-                                                    className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-3 py-1 text-emerald-800">
-            <BoltIcon className="h-3.5 w-3.5" aria-hidden/>
-            <span>
-              Besparing:{" "}
-                <span className="font-semibold">
-                {measure.savingsRange}
+                                            {/* kosten + besparing */}
+                                            <div className="mt-3 flex flex-wrap gap-2 text-xs">
+            <span className="inline-flex items-center gap-1 rounded-full bg-gray-100 px-3 py-1 text-gray-700">
+              <BanknotesIcon className="h-3.5 w-3.5" aria-hidden />
+              <span>
+                Kosten:{" "}
+                  <span className="font-semibold">{measure.costRange}</span>
               </span>
             </span>
-          </span>
+
+                                                {measure.savingsRange && (
+                                                    <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-3 py-1 text-emerald-800">
+                <BoltIcon className="h-3.5 w-3.5" aria-hidden />
+                <span>
+                  Besparing:{" "}
+                    <span className="font-semibold">
+                    {measure.savingsRange}
+                  </span>
+                </span>
+              </span>
+                                                )}
+                                            </div>
+
+                                            {/* optionele toelichting */}
+                                            {measure.note && (
+                                                <p className="mt-3 flex items-start gap-1.5 text-xs text-gray-500">
+                                                    <InformationCircleIcon
+                                                        className="mt-0.5 h-3.5 w-3.5"
+                                                        aria-hidden
+                                                    />
+                                                    <span>{measure.note}</span>
+                                                </p>
                                             )}
                                         </div>
-
-                                        {/* optionele toelichting */}
-                                        {measure.note && (
-                                            <p className="mt-3 flex items-start gap-1.5 text-xs text-gray-500">
-                                                <InformationCircleIcon
-                                                    className="mt-0.5 h-3.5 w-3.5"
-                                                    aria-hidden
-                                                />
-                                                <span>{measure.note}</span>
-                                            </p>
-                                        )}
                                     </article>
                                 );
+        //                         return (
+        //
+        //                             <article
+        //                                 key={idx}
+        //                                 className="flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-5 shadow-sm"
+        //                             >
+        //                                 {/* Titel + icoon op één regel */}
+        //                                 <div className="flex items-center gap-2">
+        //                                     <span className="inline-flex items-center justify-center rounded-lg bg-emerald-50 p-1.5">
+        //                                       <Icon className="h-4 w-4 text-emerald-700" aria-hidden/>
+        //                                     </span>
+        //                                     <h3 className="text-base font-semibold text-gray-900">
+        //                                         {measure.title}
+        //                                     </h3>
+        //                                 </div>
+        //
+        //                                 {/* Beschrijving gewoon links eronder, geen extra inspring */}
+        //                                 <p className="mt-2 text-sm text-gray-600">
+        //                                     {measure.description}
+        //                                 </p>
+        //
+        //                                 {/* kosten + besparing */}
+        //                                 <div className="mt-3 flex flex-wrap gap-2 text-xs">
+        // <span className="inline-flex items-center gap-1 rounded-full bg-gray-100 px-3 py-1 text-gray-700">
+        //   <BanknotesIcon className="h-3.5 w-3.5" aria-hidden/>
+        //   <span>
+        //     Kosten:{" "}
+        //       <span className="font-semibold">{measure.costRange}</span>
+        //   </span>
+        // </span>
+        //
+        //                                     {measure.savingsRange && (
+        //                                         <span
+        //                                             className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-3 py-1 text-emerald-800">
+        //     <BoltIcon className="h-3.5 w-3.5" aria-hidden/>
+        //     <span>
+        //       Besparing:{" "}
+        //         <span className="font-semibold">
+        //         {measure.savingsRange}
+        //       </span>
+        //     </span>
+        //   </span>
+        //                                     )}
+        //                                 </div>
+        //
+        //                                 {/* optionele toelichting */}
+        //                                 {measure.note && (
+        //                                     <p className="mt-3 flex items-start gap-1.5 text-xs text-gray-500">
+        //                                         <InformationCircleIcon
+        //                                             className="mt-0.5 h-3.5 w-3.5"
+        //                                             aria-hidden
+        //                                         />
+        //                                         <span>{measure.note}</span>
+        //                                     </p>
+        //                                 )}
+        //                             </article>
+        //                         );
                             })}
                         </div>
                     </section>
