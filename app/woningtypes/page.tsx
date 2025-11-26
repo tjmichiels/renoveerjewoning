@@ -1,10 +1,10 @@
 // app/woningtypes/page.tsx
 import {Metadata} from "next";
-import Header from "../components/Header";
-import HousingTypeCard from "../components/HousingTypeCard";
+import Header from "../components/layout/Header";
+import HousingTypeCard from "../components/housing/HousingTypeCard";
 import {housingTypes} from "../content/housingTypes";
 import {NAV} from "../content/navigation";
-import GradientBlob from "../components/GradientBlob";
+import GradientBlob from "../components/layout/GradientBlob";
 
 
 export const metadata: Metadata = {

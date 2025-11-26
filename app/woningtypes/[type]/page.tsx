@@ -3,7 +3,7 @@ import type {Metadata} from "next";
 import Link from "next/link";
 import Image from "next/image";
 import {notFound} from "next/navigation";
-import Header from "../../components/Header";
+import Header from "../../components/layout/Header";
 import {NAV} from "../../content/navigation";
 import {
     getHousingTypeBySlug,

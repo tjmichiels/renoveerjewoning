@@ -1,11 +1,11 @@
 // app/faq/page.tsx
 import {Metadata} from "next";
-import Header from "../components/Header";
-import FaqList from "../components/FaqList";
+import Header from "../components/layout/Header";
+import FaqList from "../components/faq/FaqList";
 import {faqTopSix, faqMore} from "../content/faqs";
 import {palettes} from "../lib/theme";
 import {NAV} from "../content/navigation";
-import SocialProofStrip from "@/app/components/SocialProofStrip";
+import SocialProofStrip from "@/app/components/faq/SocialProofStrip";
 
 
 export const metadata: Metadata = {

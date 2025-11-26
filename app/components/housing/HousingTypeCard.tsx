@@ -1,7 +1,7 @@
 // app/components/HousingTypeCard.tsx
 import Link from "next/link";
 import Image from "next/image";
-import type { HousingType } from "../content/housingTypes";
+import type { HousingType } from "../../content/housingTypes";
 
 type Props = {
     type: HousingType;

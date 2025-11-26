@@ -1,11 +1,18 @@
 // app/page.tsx
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import FaqList from "./components/FaqList";
+import {Metadata} from "next";
+import Header from "./components/layout/Header";
+import Hero from "./components/home/Hero";
+import FaqList from "./components/faq/FaqList";
 import {faqTopSix} from "./content/faqs";
 import {palettes} from "./lib/theme";
 import {NAV} from "./content/navigation";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+    title: "Renoveer je woning – inzicht in kosten en besparing",
+    description:
+        "In veel woningen verdwijnt onnodig warmte. Bekijk welke renovatiestappen je kunt zetten, wat ze ongeveer kosten en hoeveel je per jaar kunt besparen.",
+};
 
 export default function Home() {
     return (

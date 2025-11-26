@@ -1,6 +1,6 @@
 import Link from "next/link";
 import QuickBenefits from "./QuickBenefits";
-import GradientBlob from "./GradientBlob";
+import GradientBlob from "../layout/GradientBlob";
 
 type CTA = { label: string; href: string };
 export default function Hero({
