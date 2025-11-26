@@ -195,63 +195,7 @@ export default function HousingTypeDetailPage({ params }: Props) {
                                         </div>
                                     </article>
                                 );
-        //                         return (
-        //
-        //                             <article
-        //                                 key={idx}
-        //                                 className="flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-5 shadow-sm"
-        //                             >
-        //                                 {/* Titel + icoon op één regel */}
-        //                                 <div className="flex items-center gap-2">
-        //                                     <span className="inline-flex items-center justify-center rounded-lg bg-emerald-50 p-1.5">
-        //                                       <Icon className="h-4 w-4 text-emerald-700" aria-hidden/>
-        //                                     </span>
-        //                                     <h3 className="text-base font-semibold text-gray-900">
-        //                                         {measure.title}
-        //                                     </h3>
-        //                                 </div>
-        //
-        //                                 {/* Beschrijving gewoon links eronder, geen extra inspring */}
-        //                                 <p className="mt-2 text-sm text-gray-600">
-        //                                     {measure.description}
-        //                                 </p>
-        //
-        //                                 {/* kosten + besparing */}
-        //                                 <div className="mt-3 flex flex-wrap gap-2 text-xs">
-        // <span className="inline-flex items-center gap-1 rounded-full bg-gray-100 px-3 py-1 text-gray-700">
-        //   <BanknotesIcon className="h-3.5 w-3.5" aria-hidden/>
-        //   <span>
-        //     Kosten:{" "}
-        //       <span className="font-semibold">{measure.costRange}</span>
-        //   </span>
-        // </span>
-        //
-        //                                     {measure.savingsRange && (
-        //                                         <span
-        //                                             className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-3 py-1 text-emerald-800">
-        //     <BoltIcon className="h-3.5 w-3.5" aria-hidden/>
-        //     <span>
-        //       Besparing:{" "}
-        //         <span className="font-semibold">
-        //         {measure.savingsRange}
-        //       </span>
-        //     </span>
-        //   </span>
-        //                                     )}
-        //                                 </div>
-        //
-        //                                 {/* optionele toelichting */}
-        //                                 {measure.note && (
-        //                                     <p className="mt-3 flex items-start gap-1.5 text-xs text-gray-500">
-        //                                         <InformationCircleIcon
-        //                                             className="mt-0.5 h-3.5 w-3.5"
-        //                                             aria-hidden
-        //                                         />
-        //                                         <span>{measure.note}</span>
-        //                                     </p>
-        //                                 )}
-        //                             </article>
-        //                         );
+
                             })}
                         </div>
                     </section>
