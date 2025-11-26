@@ -1,14 +1,22 @@
 // app/woningtypes/page.tsx
+import {Metadata} from "next";
 import Header from "../components/Header";
 import HousingTypeCard from "../components/HousingTypeCard";
-import { housingTypes } from "../content/housingTypes";
-import { NAV } from "../content/navigation";
+import {housingTypes} from "../content/housingTypes";
+import {NAV} from "../content/navigation";
 import GradientBlob from "../components/GradientBlob";
+
+
+export const metadata: Metadata = {
+    title: "Voorbeelden per woningtype – welke maatregelen passen bij jouw huis?",
+    description:
+        "Kies jouw woningtype en bekijk welke maatregelen daar meestal het meeste opleveren, met globale kosten en besparingen per type woning.",
+};
 
 export default function HousingTypesPage() {
     return (
         <div className="bg-white">
-            <Header navigation={NAV} />
+            <Header navigation={NAV}/>
 
             <main className="relative isolate min-h-screen px-6 pt-10 lg:px-8">
                 {/* blob-achtergrond bovenin de pagina */}
@@ -34,7 +42,7 @@ export default function HousingTypesPage() {
                 <section className="mx-auto mt-4 max-w-5xl pb-16">
                     <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                         {housingTypes.map((type) => (
-                            <HousingTypeCard key={type.id} type={type} />
+                            <HousingTypeCard key={type.id} type={type}/>
                         ))}
                     </div>
                 </section>

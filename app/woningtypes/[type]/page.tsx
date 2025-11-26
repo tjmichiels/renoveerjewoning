@@ -1,9 +1,10 @@
 // app/woningtypes/[type]/page.tsx
+import type {Metadata} from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { notFound } from "next/navigation";
+import {notFound} from "next/navigation";
 import Header from "../../components/Header";
-import { NAV } from "../../content/navigation";
+import {NAV} from "../../content/navigation";
 import {
     getHousingTypeBySlug,
     housingTypes,
@@ -29,7 +30,27 @@ type Props = {
 };
 
 export function generateStaticParams() {
-    return housingTypes.map((t) => ({ type: t.slug }));
+    return housingTypes.map((t) => ({type: t.slug}));
+}
+
+
+// ➜ hier metadata per woningtype
+export async function generateMetadata(
+    {params}: Props
+): Promise<Metadata> {
+    const housingType = getHousingTypeBySlug(params.type);
+
+    if (!housingType) {
+        return {
+            title: "Woningtype niet gevonden",
+            description: "Het gekozen woningtype kon niet worden gevonden.",
+        };
+    }
+
+    return {
+        title: `${housingType.title} – logische renovatiemaatregelen en besparing`,
+        description: `Bekijk welke renovatiemaatregelen vaak goed passen bij een ${housingType.title}, met globale kosten, mogelijke besparing en praktische uitleg.`,
+    };
 }
 
 // mapping van type → icoon
@@ -42,7 +63,7 @@ const measureIconMap: Record<MeasureIconKey, React.ElementType> = {
     roof: HomeModernIcon,
 };
 
-export default function HousingTypeDetailPage({ params }: Props) {
+export default function HousingTypeDetailPage({params}: Props) {
     const housingType = getHousingTypeBySlug(params.type);
 
     if (!housingType) {
@@ -51,7 +72,7 @@ export default function HousingTypeDetailPage({ params }: Props) {
 
     return (
         <div className="bg-white">
-            <Header navigation={NAV} />
+            <Header navigation={NAV}/>
 
             <main className="relative isolate min-h-screen px-6 pt-10 lg:px-8">
                 <div className="mx-auto max-w-5xl pb-16">
@@ -77,7 +98,7 @@ export default function HousingTypeDetailPage({ params }: Props) {
 
                             {housingType.yearlySavings && (
                                 <p className="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-800">
-                                    <BanknotesIcon className="h-4 w-4" aria-hidden />
+                                    <BanknotesIcon className="h-4 w-4" aria-hidden/>
                                     <span>
                     Gemiddelde besparing:{" "}
                                         <span className="font-semibold">
@@ -94,7 +115,7 @@ export default function HousingTypeDetailPage({ params }: Props) {
                                 <ul className="mt-2 space-y-1.5 text-sm text-gray-700">
                                     {housingType.typicalIssues.map((issue, idx) => (
                                         <li key={idx} className="flex gap-2">
-                                            <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                                            <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500"/>
                                             <span>{issue}</span>
                                         </li>
                                     ))}
@@ -103,7 +124,8 @@ export default function HousingTypeDetailPage({ params }: Props) {
                         </header>
 
                         {/* Afbeelding rechts */}
-                        <figure className="relative h-48 w-full overflow-hidden rounded-2xl border border-gray-200 bg-gray-100 md:h-56">
+                        <figure
+                            className="relative h-48 w-full overflow-hidden rounded-2xl border border-gray-200 bg-gray-100 md:h-56">
                             <Image
                                 src={housingType.imageSrc}
                                 alt={housingType.imageAlt}
@@ -131,7 +153,8 @@ export default function HousingTypeDetailPage({ params }: Props) {
                                         className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white p-5 shadow-sm"
                                     >
                                         {/* hover-afbeelding over de achtergrond */}
-                                        <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                        <div
+                                            className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                                             <Image
                                                 src={measure.imageSrc}
                                                 alt={measure.imageAlt}
@@ -139,7 +162,7 @@ export default function HousingTypeDetailPage({ params }: Props) {
                                                 className="object-cover"
                                             />
                                             {/* lichte overlay voor leesbaarheid */}
-                                            <div className="absolute inset-0 bg-white/80" />
+                                            <div className="absolute inset-0 bg-white/80"/>
                                         </div>
 
                                         {/* inhoud boven de overlay */}
@@ -147,7 +170,7 @@ export default function HousingTypeDetailPage({ params }: Props) {
                                             {/* Titel + icoon op één regel */}
                                             <div className="flex items-center gap-2">
             <span className="inline-flex items-center justify-center rounded-lg bg-emerald-50 p-1.5">
-              <Icon className="h-4 w-4 text-emerald-700" aria-hidden />
+              <Icon className="h-4 w-4 text-emerald-700" aria-hidden/>
             </span>
                                                 <h3 className="text-base font-semibold text-gray-900">
                                                     {measure.title}
@@ -162,7 +185,7 @@ export default function HousingTypeDetailPage({ params }: Props) {
                                             {/* kosten + besparing */}
                                             <div className="mt-3 flex flex-wrap gap-2 text-xs">
             <span className="inline-flex items-center gap-1 rounded-full bg-gray-100 px-3 py-1 text-gray-700">
-              <BanknotesIcon className="h-3.5 w-3.5" aria-hidden />
+              <BanknotesIcon className="h-3.5 w-3.5" aria-hidden/>
               <span>
                 Kosten:{" "}
                   <span className="font-semibold">{measure.costRange}</span>
@@ -170,8 +193,9 @@ export default function HousingTypeDetailPage({ params }: Props) {
             </span>
 
                                                 {measure.savingsRange && (
-                                                    <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-3 py-1 text-emerald-800">
-                <BoltIcon className="h-3.5 w-3.5" aria-hidden />
+                                                    <span
+                                                        className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-3 py-1 text-emerald-800">
+                <BoltIcon className="h-3.5 w-3.5" aria-hidden/>
                 <span>
                   Besparing:{" "}
                     <span className="font-semibold">

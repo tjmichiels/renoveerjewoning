@@ -1,10 +1,18 @@
 // app/faq/page.tsx
+import {Metadata} from "next";
 import Header from "../components/Header";
 import FaqList from "../components/FaqList";
 import {faqTopSix, faqMore} from "../content/faqs";
 import {palettes} from "../lib/theme";
 import {NAV} from "../content/navigation";
 import SocialProofStrip from "@/app/components/SocialProofStrip";
+
+
+export const metadata: Metadata = {
+    title: "Veelgestelde vragen over woningrenovatie",
+    description:
+        "Antwoorden op de belangrijkste vragen over kosten, terugverdientijd, overlast en praktische stappen bij het renoveren van je woning.",
+};
 
 export default function FaqPage() {
     return (
@@ -33,7 +41,7 @@ export default function FaqPage() {
                 </section>
 
                 {/* Sociale vergelijking / herkenbare context */}
-                <SocialProofStrip />
+                <SocialProofStrip/>
 
 
                 {/* Meer */}
