@@ -123,6 +123,17 @@ export default function FinancieelPage() {
                         </div>
                     </section>
 
+                    <p className="mt-4 text-sm text-gray-600 max-w-3xl">
+                        Wil je niet alleen bedragen zien, maar ook de inhoudelijke uitleg per maatregel?<br/>{" "}
+                        <Link
+                            href="/renovatiemogelijkheden"
+                            className="font-semibold text-emerald-700 hover:text-emerald-900"
+                        >
+                            Bekijk de renovatiemogelijkheden →
+                        </Link>
+                    </p>
+
+
                     {/* Sectie: andere voordelen dan alleen geld */}
                     <section className="mt-12">
                         <h2 className="text-2xl font-semibold text-gray-900">
