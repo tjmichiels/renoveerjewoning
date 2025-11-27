@@ -86,7 +86,7 @@ export default function HousingTypeDetailPage({params}: Props) {
                     </Link>
 
                     {/* Hoofdblok: titel + samenvatting + afbeelding */}
-                    <section className="mt-4 grid items-start gap-6 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
+                    <section className="mt-5 grid items-start gap-6 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
                         <header className="space-y-4">
                             <div>
                                 <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight text-gray-900">
@@ -109,7 +109,7 @@ export default function HousingTypeDetailPage({params}: Props) {
                                 </p>
                             )}
 
-                            <div className="mt-2 rounded-2xl border border-gray-100 bg-gray-50 px-4 py-3">
+                            <div className="mt-4 rounded-2xl border border-gray-100 bg-gray-50 px-4 py-3">
                                 <h2 className="text-xs font-semibold uppercase tracking-wide text-gray-500">
                                     Wat vaak speelt bij dit type woning
                                 </h2>
@@ -137,18 +137,18 @@ export default function HousingTypeDetailPage({params}: Props) {
                     </section>
 
                     {/* Maatregelen */}
-                    <section className="mt-10">
+                    <section className="mt-12">
                         <h2 className="text-xl font-semibold text-gray-900">
                             Maatregelen die vaak goed passen
                         </h2>
-                        <p className="mt-1 text-sm text-gray-600">
+                        <p className="text-sm text-gray-600">
                             Deze maatregelen leveren bij dit woningtype meestal de meeste winst op.
                         </p>
 
                         {/*Sociale vergelijking: "Wat anderen vaak doen"*/}
                         {housingType.socialProof && (
                             <div
-                                className="mt-4 rounded-2xl border border-emerald-100 bg-emerald-50/60 px-4 py-3 text-[13px] text-emerald-900 flex items-start gap-3">
+                                className="mt-5 rounded-2xl border border-emerald-100 bg-emerald-50/60 px-4 py-3 text-[13px] text-emerald-900 flex items-start gap-3">
                                 <span
                                     className="mt-0.5 inline-flex h-8 w-8 items-center justify-center rounded-full bg-white shadow-sm">
                                     <UserGroupIcon className="h-4 w-4 text-emerald-700" aria-hidden/>
@@ -157,14 +157,14 @@ export default function HousingTypeDetailPage({params}: Props) {
                                     <p className="text-[11px] font-semibold uppercase tracking-wide text-emerald-700">
                                         Wat anderen vaak doen
                                     </p>
-                                    <p className="mt-0.5 leading-relaxed">
+                                    <p className="mt-0.5 leading-0.5 mb-2">
                                         {housingType.socialProof}
                                     </p>
                                 </div>
                             </div>
                         )}
 
-                        <div className="mt-6 grid gap-4 md:grid-cols-2">
+                        <div className="mt-7 grid gap-4 md:grid-cols-2">
                             {housingType.measures.map((measure, idx) => {
                                 const Icon = measureIconMap[measure.icon];
                                 return (
@@ -244,27 +244,18 @@ export default function HousingTypeDetailPage({params}: Props) {
                         </div>
                     </section>
 
-                    <section className="mt-10">
-                        <div className="rounded-2xl border border-gray-100 bg-white px-5 py-5 shadow-sm">
-                            <h2 className="text-lg font-semibold text-gray-900">
-                                Hoe merk je dit in je woning?
-                            </h2>
-                            <p className="mt-2 text-sm text-gray-700">
-                                Minder tocht, warmere kamers en een stiller huis. Ontdek hoe renovatie
-                                jouw wooncomfort direct verbetert.
-                            </p>
-
-                            <Link
-                                href="/wooncomfort"
-                                className="mt-3 inline-flex items-center text-sm font-semibold text-emerald-700 hover:text-emerald-900"
-                            >
-                                Meer over wooncomfort →
-                            </Link>
-                        </div>
-                    </section>
+                    <p className="mt-4 text-sm text-gray-600">
+                        Wil je meer achtergrond per maatregel?{" "}
+                        <Link
+                            href="/renovatiemogelijkheden"
+                            className="font-semibold text-emerald-700 hover:text-emerald-900"
+                        >
+                            Bekijk de renovatiemogelijkheden →
+                        </Link>
+                    </p>
 
 
-                    <section className="mt-10">
+                    <section className="mt-12">
                         <div className="rounded-2xl border border-emerald-100 bg-emerald-50/70 px-5 py-5 sm:py-6">
                             <h2 className="text-lg font-semibold text-gray-900">
                                 Met deze maatregelen aan de slag?

@@ -24,17 +24,33 @@ export default function FaqPage() {
                     <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900">
                         Veelgestelde vragen
                     </h1>
-                    <p className="mt-2 text-gray-600">
+                    <p className="mt-1 text-gray-600">
                         Alles wat je wilt weten voordat je aan renovatie begint.
                     </p>
                 </header>
 
+                {/* Kleine callout: skip naar vervolgvragen */}
+                <div className="mx-auto max-w-5xl mt-5">
+                    <div className="rounded-lg border border-emerald-100 bg-emerald-50/60 px-4 py-3 text-sm text-gray-800">
+                        <p>
+                            Heb je de eerste vragen al gezien op de homepage?{" "}
+                            <a
+                                href="#more"
+                                className="font-semibold text-emerald-700 hover:text-emerald-900"
+                            >
+                                Ga direct naar de vervolgvragen →
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+
                 {/* Top 6 */}
-                <section id="top" aria-labelledby="top-heading" className="mx-auto max-w-5xl pt-8 scroll-mt-20">
-                    <h2 id="top-heading" className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-2">
+                <section id="top" aria-labelledby="top-heading" className="mx-auto max-w-5xl pt-5 scroll-mt-20">
+                    <h2 id="top-heading" className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-0">
                         Belangrijkste vragen
                     </h2>
-                    <p className="mt-2 text-gray-600">
+                    <p className="mt-1 text-gray-600">
                         Start hier: de vragen waar de meeste huiseigenaren mee beginnen.
                     </p>
                     <FaqList items={faqTopSix} palette={palettes.greenYellow} columns={2}/>
@@ -46,11 +62,11 @@ export default function FaqPage() {
 
                 {/* Meer */}
                 <section id="more" aria-labelledby="more-heading"
-                         className="mx-auto max-w-5xl pb-16 pt-10 scroll-mt-20">
-                    <h2 id="more-heading" className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-2">
+                         className="mx-auto max-w-5xl pb-16 pt-12 scroll-mt-20">
+                    <h2 id="more-heading" className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-0">
                         Meer vragen
                     </h2>
-                    <p className="text-gray-600 mb-4">
+                    <p className="text-gray-600 mb-4 mt-1">
                         Meer weten over hoe het renoveren in de praktijk gaat?
                     </p>
                     <FaqList items={faqMore} palette={palettes.greenYellow} columns={2}/>

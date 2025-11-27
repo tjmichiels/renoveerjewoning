@@ -34,6 +34,8 @@ const steps = [
             "Let op: maatregelen aan schil (gevel, dak, vloer, glas) geven vaak snel resultaat.",
             "Kies één of twee maatregelen die passen bij jouw budget en situatie.",
         ],
+        linkLabel: "Lees meer per maatregel",
+        href: "/renovatiemogelijkheden",
     },
     {
         nr: "3",
@@ -133,13 +135,25 @@ export default function ActiePage() {
                                             </Link>
                                         </div>
                                     )}
+                                    {step.nr === "5" && (
+                                        <p className="mt-4 text-sm text-gray-600">
+                                            Wil je zien hoe zo’n uitvoering er in de praktijk uitziet?{" "}
+                                            <Link
+                                                href="/renovatie-verloop"
+                                                className="font-semibold text-emerald-700 hover:text-emerald-900"
+                                            >
+                                                Bekijk een voorbeeld van een renovatiedag →
+                                            </Link>
+                                        </p>
+                                    )}
+
                                 </div>
                             </article>
                         ))}
                     </section>
 
                     {/* Slotcallout */}
-                    <section className="mt-10 rounded-2xl border border-emerald-100 bg-emerald-50/70 px-6 py-5">
+                    <section className="mt-14 rounded-2xl border border-emerald-100 bg-emerald-50/70 px-6 py-5">
                         <h2 className="text-base sm:text-lg font-semibold text-gray-900">
                             Je hoeft niet alles tegelijk te doen om resultaat te merken.
                         </h2>

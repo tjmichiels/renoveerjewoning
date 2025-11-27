@@ -1,7 +1,7 @@
 // app/financieel/page.tsx
-import type { Metadata } from "next";
+import type {Metadata} from "next";
 import Header from "../components/layout/Header";
-import { NAV } from "../content/navigation";
+import {NAV} from "../content/navigation";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function FinancieelPage() {
     return (
         <div className="bg-white">
-            <Header navigation={NAV} />
+            <Header navigation={NAV}/>
 
             <main className="relative isolate min-h-screen px-6 pt-10 lg:px-8">
                 <div className="mx-auto max-w-5xl pb-16">
@@ -123,6 +123,17 @@ export default function FinancieelPage() {
                         </div>
                     </section>
 
+                    <p className="mt-4 text-sm/6 text-gray-600 max-w-3xl">
+                        Wil je niet alleen bedragen zien, maar ook de inhoudelijke uitleg per maatregel?<br/>{" "}
+                        <Link
+                            href="/renovatiemogelijkheden"
+                            className="font-semibold text-emerald-700 hover:text-emerald-900"
+                        >
+                            Bekijk de renovatiemogelijkheden →
+                        </Link>
+                    </p>
+
+
                     {/* Sectie: andere voordelen dan alleen geld */}
                     <section className="mt-12">
                         <h2 className="text-2xl font-semibold text-gray-900">
@@ -174,84 +185,103 @@ export default function FinancieelPage() {
                         </p>
                     </section>
 
-                    {/* Sectie: subsidies en regelingen (hoog over, geen calculator) */}
-                    <section className="mt-12">
+                    {/* Sectie: subsidies en regelingen (praktisch en concreet) */}
+                    <section id="subsidies" className="mt-12">
                         <h2 className="text-2xl font-semibold text-gray-900">
-                            Subsidies en regelingen
+                            Subsidies en leningen: wat kun je ongeveer verwachten?
                         </h2>
+
                         <p className="mt-2 text-sm text-gray-600 max-w-3xl">
-                            Voor veel energiebesparende maatregelen zijn subsidies of leningen beschikbaar.
-                            De exacte bedragen en voorwaarden verschillen per periode en soms per gemeente,
-                            maar grofweg kun je rekening houden met:
+                            De meeste bewoners betalen een deel zelf en krijgen een deel terug via subsidie of een
+                            lening. Hieronder zie je wat de belangrijkste regelingen in de praktijk vaak betekenen.
                         </p>
 
-                        <ul className="mt-4 space-y-2 text-sm text-gray-700">
+                        <div className="mt-5 grid gap-4 md:grid-cols-3 text-sm text-gray-700">
+                            <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+                                <h3 className="text-sm font-semibold text-gray-900">
+                                    1. Landelijke subsidie (ISDE)
+                                </h3>
+                                <p className="mt-2">
+                                    Voor isolatiemaatregelen en warmtepompen kun je via de landelijke regeling
+                                    <strong> een deel van de investering terugkrijgen</strong>. De vergoeding wordt
+                                    berekend per m² isolatie of per installatie (bijvoorbeeld een warmtepomp).
+                                </p>
+                                <p className="mt-2 text-xs text-gray-500">
+                                    Vaak krijg je <strong>extra subsidie als je twee isolatiemaatregelen
+                                    combineert</strong>,
+                                    bijvoorbeeld spouwmuur + vloer.
+                                </p>
+                            </div>
+
+                            <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+                                <h3 className="text-sm font-semibold text-gray-900">
+                                    2. Gemeentelijke regelingen
+                                </h3>
+                                <p className="mt-2">
+                                    Veel gemeenten bieden extra <strong>subsidies, waardebonnen of een gratis
+                                    energiecoach</strong>.
+                                    Soms wordt een deel van isolatie, advies of kleine maatregelen vergoed.
+                                </p>
+                                <p className="mt-2 text-xs text-gray-500">
+                                    Check op de pagina “duurzaam wonen” of het “energieloket” van jouw gemeente
+                                    welke regelingen nu lopen.
+                                </p>
+                            </div>
+
+                            <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+                                <h3 className="text-sm font-semibold text-gray-900">
+                                    3. Leningen voor verduurzaming
+                                </h3>
+                                <p className="mt-2">
+                                    Met speciale <strong>verduurzamingsleningen</strong> kun je de kosten spreiden
+                                    over meerdere jaren. De rente is vaak lager dan bij een gewone persoonlijke lening.
+                                </p>
+                                <p className="mt-2 text-xs text-gray-500">
+                                    Deze leningen zijn meestal alleen te gebruiken voor isolatie, glas, warmtepompen,
+                                    zonnepanelen en ventilatie.
+                                </p>
+                            </div>
+                        </div>
+
+                        <h3 className="mt-8 text-sm font-semibold text-gray-900">
+                            Wat betekent dit concreet voor jou?
+                        </h3>
+
+                        <ul className="mt-3 space-y-2 text-sm text-gray-700 max-w-3xl">
                             <li className="flex gap-2">
-                                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500"/>
+                                <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald-500 mt-1"/>
                                 <span>
-                  <strong>Landelijke subsidie</strong> voor isolatiemaatregelen en
-                  soms warmtepompen (bedragen per m² of per installatie).
-                </span>
+        Bij een gemiddelde tussenwoning kun je vaak rekenen op{" "}
+                                    <strong>een bijdrage van enkele honderden tot soms meer dan duizend euro</strong>{" "}
+                                    aan subsidie, afhankelijk van het aantal m² en het type maatregel.
+      </span>
                             </li>
                             <li className="flex gap-2">
-                                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500"/>
+                                <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald-500 mt-1"/>
                                 <span>
-                  <strong>Gemeentelijke regelingen</strong> zoals extra subsidies of een
-                  energiecoach die met je meekijkt.
-                </span>
+        Combineer je <strong>twee isolatiemaatregelen</strong> (bijvoorbeeld spouwmuur
+        en vloer), dan valt de totale subsidie in veel gevallen duidelijk hoger uit
+        dan bij één losse stap.
+      </span>
                             </li>
                             <li className="flex gap-2">
-                                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500"/>
+                                <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald-500 mt-1"/>
                                 <span>
-                  <strong>Leningen met lagere rente</strong> speciaal voor verduurzaming
-                  (bijvoorbeeld via een energiebespaarlening).
-                </span>
+        Gemeentelijke regelingen en leningen kunnen er net voor zorgen dat een maatregel
+        <strong> nu wél binnen bereik komt</strong> in plaats van “ooit later”.
+      </span>
                             </li>
                         </ul>
 
                         <p className="mt-4 text-sm text-gray-600 max-w-3xl">
-                            Op deze site laten we vooral zien <strong>welke stappen logisch zijn</strong> voor jouw
-                            woning.
-                            De exacte subsidiebedragen kun je het beste controleren bij de overheid of je gemeente
-                            op het moment dat je echt offertes gaat opvragen.
+                            Op deze site focussen we op <strong>logische stappen voor jouw woning</strong>.
+                            De exacte bedragen en voorwaarden veranderen regelmatig. Gebruik deze uitleg om
+                            in te schatten wat er ongeveer mogelijk is en check voor actuele cijfers de
+                            landelijke subsidieregeling en de website van jouw gemeente als je offertes
+                            gaat aanvragen.
                         </p>
                     </section>
 
-                    {/* Laatste sectie: logische eerste stap / CTA */}
-                    <section id="subsidies" className="mt-12">
-                        <div
-                            className="rounded-2xl border border-emerald-100 bg-emerald-50/60 px-6 py-6 sm:py-7 shadow-sm">
-                            <h2 className="text-xl font-semibold text-gray-900">
-                                Wat is een logische eerste stap voor jou?
-                            </h2>
-                            <p className="mt-2 text-sm text-gray-700 max-w-3xl">
-                                Wil je nu concreet zien wat logisch is voor jouw woning?
-                                Kies dan eerst het woningtype dat het meest op jouw huis lijkt,
-                                of bekijk nog even de veelgestelde vragen als je nog twijfels hebt.
-                            </p>
-
-                            <div className="mt-4 flex flex-wrap gap-3">
-                                <Link
-                                    href="/woningtypes"
-                                    className="inline-flex items-center rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-800"
-                                >
-                                    Bekijk maatregelen per woningtype
-                                    <span className="ml-1" aria-hidden>
-                    →
-                  </span>
-                                </Link>
-                                <Link
-                                    href="/faq"
-                                    className="inline-flex items-center text-sm font-semibold text-emerald-800 hover:text-emerald-900"
-                                >
-                                    Nog vragen? Bekijk de FAQ
-                                    <span className="ml-1" aria-hidden>
-                                          →
-                                    </span>
-                                </Link>
-                            </div>
-                        </div>
-                    </section>
 
                     <section className="mx-auto mt-10 max-w-5xl pb-16">
                         <div
@@ -259,24 +289,30 @@ export default function FinancieelPage() {
                             <h2 className="text-xl sm:text-2xl font-semibold text-gray-900">
                                 Klaar om er echt werk van te maken?
                             </h2>
-                            <p className="mt-2 text-sm sm:text-base text-gray-700">
-                                Je weet nu wat renovatie ongeveer kost en oplevert. Op de volgende pagina
-                                helpen we je om dit om te zetten in concrete stappen: van oriëntatie
-                                naar daadwerkelijk in actie komen.
+                            <p className="mt-2 text-sm sm:text-base text-gray-700 max-w-3xl">
+                                Je weet nu wat renovatie ongeveer kost en oplevert. Op{" "}
+                                <strong>Actie ondernemen</strong> zie je hoe je dit omzet in concrete stappen,
+                                en via <strong>Woningtypes</strong> zie je welke maatregelen logisch zijn voor jouw
+                                huis.
                             </p>
-                            <div className="mt-4">
+                            <div className="mt-4 flex flex-wrap gap-3">
                                 <Link
                                     href="/actie-ondernemen"
                                     className="inline-flex items-center rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-800"
                                 >
-                                    Ga naar: Actie ondernemen
-                                    <span className="ml-1" aria-hidden>
-          →
-        </span>
+                                    Naar: Actie ondernemen
+                                    <span className="ml-1" aria-hidden>→</span>
+                                </Link>
+                                <Link
+                                    href="/woningtypes"
+                                    className="inline-flex items-center text-sm font-semibold text-emerald-800 hover:text-emerald-900"
+                                >
+                                    Of bekijk eerst woningtypes →
                                 </Link>
                             </div>
                         </div>
                     </section>
+
 
                 </div>
             </main>
