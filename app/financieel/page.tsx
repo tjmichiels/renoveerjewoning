@@ -1,7 +1,7 @@
 // app/financieel/page.tsx
-import type { Metadata } from "next";
+import type {Metadata} from "next";
 import Header from "../components/layout/Header";
-import { NAV } from "../content/navigation";
+import {NAV} from "../content/navigation";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function FinancieelPage() {
     return (
         <div className="bg-white">
-            <Header navigation={NAV} />
+            <Header navigation={NAV}/>
 
             <main className="relative isolate min-h-screen px-6 pt-10 lg:px-8">
                 <div className="mx-auto max-w-5xl pb-16">
@@ -185,48 +185,104 @@ export default function FinancieelPage() {
                         </p>
                     </section>
 
-                    {/* Sectie: subsidies en regelingen (hoog over, geen calculator) */}
-                    <section className="mt-12">
+                    {/* Sectie: subsidies en regelingen (praktisch en concreet) */}
+                    <section id="subsidies" className="mt-12">
                         <h2 className="text-2xl font-semibold text-gray-900">
-                            Subsidies en regelingen
+                            Subsidies en leningen: wat kun je ongeveer verwachten?
                         </h2>
+
                         <p className="mt-2 text-sm text-gray-600 max-w-3xl">
-                            Voor veel energiebesparende maatregelen zijn subsidies of leningen beschikbaar.
-                            De exacte bedragen en voorwaarden verschillen per periode en soms per gemeente,
-                            maar grofweg kun je rekening houden met:
+                            De meeste bewoners betalen een deel zelf en krijgen een deel terug via subsidie of een
+                            lening. Hieronder zie je wat de belangrijkste regelingen in de praktijk vaak betekenen.
                         </p>
 
-                        <ul className="mt-4 space-y-2 text-sm text-gray-700">
+                        <div className="mt-5 grid gap-4 md:grid-cols-3 text-sm text-gray-700">
+                            <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+                                <h3 className="text-sm font-semibold text-gray-900">
+                                    1. Landelijke subsidie (ISDE)
+                                </h3>
+                                <p className="mt-2">
+                                    Voor isolatiemaatregelen en warmtepompen kun je via de landelijke regeling
+                                    vaak <strong>een deel van de investering terugkrijgen</strong>. De vergoeding wordt
+                                    meestal berekend per m² isolatie of per installatie (bijvoorbeeld een warmtepomp).
+                                </p>
+                                <p className="mt-2 text-xs text-gray-500">
+                                    Belangrijk: in veel gevallen krijg je{" "}
+                                    <strong>meer subsidie als je twee isolatiemaatregelen combineert</strong>
+                                    {" "} (bijvoorbeeld spouwmuur + vloer).
+                                </p>
+                            </div>
+
+                            <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+                                <h3 className="text-sm font-semibold text-gray-900">
+                                    2. Gemeentelijke regelingen
+                                </h3>
+                                <p className="mt-2">
+                                    Veel gemeenten hebben extra{" "}
+                                    <strong>subsidies, waardebonnen of een gratis energiecoach</strong>. Soms
+                                    wordt een deel van de isolatie, het advies of kleine maatregelen vergoed.
+                                </p>
+                                <p className="mt-2 text-xs text-gray-500">
+                                    Dit verschilt per gemeente. Het is handig om{" "}
+                                    <strong>voor je offertes opvraagt</strong> even te kijken op de pagina
+                                    “duurzaam wonen” of het “energieloket” van jouw gemeente.
+                                </p>
+                            </div>
+
+                            <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+                                <h3 className="text-sm font-semibold text-gray-900">
+                                    3. Leningen voor verduurzaming
+                                </h3>
+                                <p className="mt-2">
+                                    Via speciale <strong>verduurzamingsleningen</strong> kun je de kosten spreiden
+                                    over meerdere jaren. De rente is vaak lager dan bij een gewone persoonlijke lening.
+                                </p>
+                                <p className="mt-2 text-xs text-gray-500">
+                                    Deze leningen zijn meestal alleen te gebruiken voor een vaste lijst maatregelen
+                                    (isolatie, glas, warmtepomp, zonnepanelen, ventilatie).
+                                </p>
+                            </div>
+                        </div>
+
+                        <h3 className="mt-8 text-sm font-semibold text-gray-900">
+                            Wat betekent dit concreet voor jou?
+                        </h3>
+
+                        <ul className="mt-3 space-y-2 text-sm text-gray-700 max-w-3xl">
                             <li className="flex gap-2">
-                                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500"/>
+                                <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald-500 mt-1"/>
                                 <span>
-                  <strong>Landelijke subsidie</strong> voor isolatiemaatregelen en
-                  soms warmtepompen (bedragen per m² of per installatie).
-                </span>
+        Bij een gemiddelde tussenwoning kun je vaak rekenen op{" "}
+                                    <strong>een bijdrage van enkele honderden tot soms meer dan duizend euro</strong>{" "}
+                                    aan subsidie, afhankelijk van het aantal m² en het type maatregel.
+      </span>
                             </li>
                             <li className="flex gap-2">
-                                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500"/>
+                                <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald-500 mt-1"/>
                                 <span>
-                  <strong>Gemeentelijke regelingen</strong> zoals extra subsidies of een
-                  energiecoach die met je meekijkt.
-                </span>
+        Combineer je <strong>twee isolatiemaatregelen</strong> (bijvoorbeeld spouwmuur
+        en vloer), dan valt de totale subsidie in veel gevallen duidelijk hoger uit
+        dan bij één losse stap.
+      </span>
                             </li>
                             <li className="flex gap-2">
-                                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500"/>
+                                <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald-500 mt-1"/>
                                 <span>
-                  <strong>Leningen met lagere rente</strong> speciaal voor verduurzaming
-                  (bijvoorbeeld via een energiebespaarlening).
-                </span>
+        Gemeentelijke regelingen en leningen kunnen er net voor zorgen dat een maatregel
+        <strong>nu wél binnen bereik komt</strong> in plaats van “ooit later”.
+      </span>
                             </li>
                         </ul>
 
                         <p className="mt-4 text-sm text-gray-600 max-w-3xl">
-                            Op deze site laten we vooral zien <strong>welke stappen logisch zijn</strong> voor jouw
-                            woning.
-                            De exacte subsidiebedragen kun je het beste controleren bij de overheid of je gemeente
-                            op het moment dat je echt offertes gaat opvragen.
+                            Op deze site focussen we op <strong>logische stappen voor jouw woning</strong>.
+                            De exacte bedragen en voorwaarden veranderen regelmatig. Gebruik deze uitleg om
+                            in te schatten wat er ongeveer mogelijk is en check voor actuele cijfers de
+                            landelijke subsidieregeling en de website van jouw gemeente als je offertes
+                            gaat aanvragen.
                         </p>
                     </section>
+
 
                     {/* Laatste sectie: logische eerste stap / CTA */}
                     <section id="subsidies" className="mt-12">
