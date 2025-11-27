@@ -15,11 +15,10 @@ const steps = [
         nr: "1",
         title: "Begin met je woningtype",
         summary:
-            "Niet elke maatregel past bij elke woning. Door eerst naar je woningtype te kijken, maak je het kiezen van maatregelen een stuk eenvoudiger.",
+            "Door eerst naar je woningtype te kijken, wordt het kiezen van maatregelen een stuk overzichtelijker.",
         bullets: [
-            "Kies het woningtype dat het meest lijkt op jouw huis (tussenwoning, hoekwoning of vrijstaand).",
+            "Kies het woningtype dat het meest lijkt op jouw huis.",
             "Bekijk per type welke maatregelen meestal het meeste opleveren.",
-            "Gebruik dit als startpunt, niet als verplicht stappenplan.",
         ],
         linkLabel: "Bekijk voorbeelden per woningtype",
         href: "/woningtypes",
@@ -28,10 +27,9 @@ const steps = [
         nr: "2",
         title: "Kies één of twee logische eerste maatregelen",
         summary:
-            "Je hoeft niet alles tegelijk te doen. Eén goede maatregel kan al veel verschil maken in comfort en energierekening.",
+            "Je hoeft niet alles tegelijk te doen. Eén stap kan al veel schelen in comfort en energierekening.",
         bullets: [
-            "Kijk welke maatregelen bij jouw woningtype veel voorkomen (bijv. spouwmuurisolatie, vloerisolatie, HR++-glas).",
-            "Let op: maatregelen aan schil (gevel, dak, vloer, glas) geven vaak snel resultaat.",
+            "Let vooral op maatregelen aan gevel, dak, vloer en glas: die leveren vaak snel resultaat op.",
             "Kies één of twee maatregelen die passen bij jouw budget en situatie.",
         ],
         linkLabel: "Lees meer per maatregel",
@@ -44,8 +42,7 @@ const steps = [
             "Voordat je offertes opvraagt, is het handig om globaal te weten in welke orde van grootte je moet denken.",
         bullets: [
             "Bekijk per maatregel wat de gebruikelijke bandbreedte is qua kosten.",
-            "Kijk naar de globale jaarlijkse besparing in euro’s of procenten gasverbruik.",
-            "Gebruik dit niet als exacte berekening, maar als grove richtlijn.",
+            "Gebruik de bedragen als grove richtlijn, niet als exacte berekening.",
         ],
         linkLabel: "Naar kosten en besparing",
         href: "/financieel",
@@ -54,11 +51,10 @@ const steps = [
         nr: "4",
         title: "Check subsidies en regelingen",
         summary:
-            "Subsidies kunnen een flinke hap uit de kosten halen, maar de regels veranderen regelmatig.",
+            "Subsidies en leningen kunnen een flinke hap uit de kosten halen.",
         bullets: [
-            "Controleer welke landelijke regelingen op dit moment bestaan (zoals ISDE).",
+            "Check de landelijke regeling (zoals ISDE) voor jouw maatregelen.",
             "Kijk bij je gemeente of er extra lokale subsidies of leningen zijn.",
-            "Let erop dat je vaak pas subsidie krijgt als de maatregel door een erkend bedrijf is uitgevoerd.",
         ],
         linkLabel: "Bekijk uitleg over subsidies",
         href: "/financieel#subsidies",
@@ -67,14 +63,14 @@ const steps = [
         nr: "5",
         title: "Bereid je voor op offertes en uitvoering",
         summary:
-            "Met een idee van maatregelen, kosten en subsidies kun je gericht in gesprek met bedrijven.",
+            "Met een helder beeld van maatregelen, kosten en subsidies kun je gerichter in gesprek met bedrijven.",
         bullets: [
-            "Vraag bij meerdere bedrijven een offerte op voor dezelfde maatregel, zodat je goed kunt vergelijken.",
-            "Let niet alleen op prijs, maar ook op planning, garantie en gebruikte materialen.",
-            "Bedenk vooraf: wil je alles in één keer doen, of verspreid over meerdere jaren?",
+            "Vraag bij meerdere bedrijven een offerte op voor dezelfde maatregel.",
+            "Let niet alleen op prijs, maar ook op planning, garantie en materialen.",
         ],
     },
 ];
+
 
 export default function ActiePage() {
     return (
