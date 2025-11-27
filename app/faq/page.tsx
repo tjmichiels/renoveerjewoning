@@ -29,6 +29,22 @@ export default function FaqPage() {
                     </p>
                 </header>
 
+                {/* Kleine callout: skip naar vervolgvragen */}
+                <div className="mx-auto max-w-5xl mt-6">
+                    <div className="rounded-lg border border-emerald-100 bg-emerald-50/60 px-4 py-3 text-sm text-gray-800">
+                        <p>
+                            Heb je de vragen op de homepage al gezien?{" "}
+                            <a
+                                href="#more"
+                                className="font-semibold text-emerald-700 hover:text-emerald-900"
+                            >
+                                Ga direct naar de vervolgvragen →
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+
                 {/* Top 6 */}
                 <section id="top" aria-labelledby="top-heading" className="mx-auto max-w-5xl pt-8 scroll-mt-20">
                     <h2 id="top-heading" className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-2">
