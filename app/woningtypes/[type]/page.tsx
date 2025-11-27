@@ -263,6 +263,16 @@ export default function HousingTypeDetailPage({params}: Props) {
                     {/*    </div>*/}
                     {/*</section>*/}
 
+                    <p className="mt-5 text-sm text-gray-600">
+                        Wil je meer achtergrond per maatregel?{" "}
+                        <Link
+                            href="/renovatiemogelijkheden"
+                            className="font-semibold text-emerald-700 hover:text-emerald-900"
+                        >
+                            Bekijk de renovatiemogelijkheden →
+                        </Link>
+                    </p>
+
 
                     <section className="mt-10">
                         <div className="rounded-2xl border border-emerald-100 bg-emerald-50/70 px-5 py-5 sm:py-6">
