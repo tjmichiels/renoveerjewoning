@@ -29,7 +29,7 @@ export default function Home() {
 
 
 
-                <section aria-labelledby="faq" className="mx-auto max-w-5xl py-8">
+                <section aria-labelledby="faq" className="mx-auto max-w-5xl pt-8">
                     <div className="mb-4 flex flex-col items-start justify-between gap-2 sm:flex-row sm:items-end ">
                         <div>
                             <h2 id="faq" className="text-2xl font-semibold text-gray-900">
