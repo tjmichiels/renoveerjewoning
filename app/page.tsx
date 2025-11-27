@@ -27,6 +27,8 @@ export default function Home() {
                     blob={{from: "from-emerald-200", via: "via-yellow-200", to: "to-sky-200"}}
                 />
 
+
+
                 <section aria-labelledby="faq" className="mx-auto max-w-5xl py-8">
                     <div className="mb-4 flex flex-col items-start justify-between gap-2 sm:flex-row sm:items-end ">
                         <div>
