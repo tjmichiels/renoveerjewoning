@@ -154,10 +154,10 @@ export default function HousingTypeDetailPage({params}: Props) {
                                     <UserGroupIcon className="h-4 w-4 text-emerald-700" aria-hidden/>
                                 </span>
                                 <div>
-                                    <p className="text-[11px] font-semibold uppercase tracking-wide text-emerald-700">
+                                    <p className="text-[11px] font-semibold uppercase tracking-wide text-emerald-700 leading-none">
                                         Wat anderen vaak doen
                                     </p>
-                                    <p className="mt-0.5 leading-0.5 mb-2">
+                                    <p className="leading-snug mb-2">
                                         {housingType.socialProof}
                                     </p>
                                 </div>
