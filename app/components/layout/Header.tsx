@@ -68,16 +68,26 @@ export default function Header({navigation}: { navigation: NavItem[] }) {
                         </button>
                     </div>
                     <div className="mt-6 space-y-2">
-                        {navigation.map((item) => (
-                            <Link
-                                key={item.name}
-                                href={item.href}
-                                className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                            >
-                                {item.name}
-                            </Link>
-                        ))}
+                        {navigation.map((item) => {
+                            const isActive = pathname === item.href;
+
+                            return (
+                                <Link
+                                    key={item.name}
+                                    href={item.href}
+                                    className={
+                                        `block rounded-lg px-3 py-2 text-base font-semibold transition 
+                    ${isActive
+                                            ? "bg-emerald-50 text-emerald-800"
+                                            : "text-gray-900 hover:bg-gray-50"}`
+                                    }
+                                >
+                                    {item.name}
+                                </Link>
+                            );
+                        })}
                     </div>
+
                 </DialogPanel>
             </Dialog>
         </header>
