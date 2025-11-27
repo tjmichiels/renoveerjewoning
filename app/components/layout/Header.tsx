@@ -2,6 +2,7 @@
 
 import {useState} from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {Dialog, DialogPanel} from "@headlessui/react";
 import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/outline";
 import {usePathname} from "next/navigation";
@@ -15,6 +16,7 @@ export default function Header({navigation}: { navigation: NavItem[] }) {
         <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-200">
             <nav aria-label="Hoofdmenu" className="flex items-center justify-between p-6 lg:px-8">
                 <div className="flex lg:flex-1">{/* logo plek */}</div>
+
 
                 <div className="flex lg:hidden">
                     <button
