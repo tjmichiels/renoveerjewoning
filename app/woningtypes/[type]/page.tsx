@@ -136,7 +136,6 @@ export default function HousingTypeDetailPage({ params }: Props) {
                                         key={idx}
                                         className="flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-5 shadow-sm"
                                     >
-                                        {/* Titel + icoon op één regel */}
                                         <div className="flex items-center gap-2">
                                             <span className="inline-flex items-center justify-center rounded-lg bg-emerald-50 p-1.5">
                                               <Icon className="h-4 w-4 text-emerald-700" aria-hidden/>
