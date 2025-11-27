@@ -33,7 +33,7 @@ export default function FaqPage() {
                 <div className="mx-auto max-w-5xl mt-6">
                     <div className="rounded-lg border border-emerald-100 bg-emerald-50/60 px-4 py-3 text-sm text-gray-800">
                         <p>
-                            Heb je de vragen op de homepage al gezien?{" "}
+                            Heb je de eerste vragen al gezien op de homepage?{" "}
                             <a
                                 href="#more"
                                 className="font-semibold text-emerald-700 hover:text-emerald-900"

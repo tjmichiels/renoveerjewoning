@@ -20,9 +20,12 @@ export const faqTopSix: FaqEntry[] = [
         q: "Wat kost een woningrenovatie gemiddeld?",
         a: (
             <>
-                Een woning energiezuiniger maken hoeft niet duur te zijn. Kleine verbeteringen beginnen bij{" "}
-                <strong>enkele tientjes</strong>. Grotere stappen, zoals isolatie of HR++-glas, kosten vaak tussen{" "}
-                <strong>€2000 en €4000</strong> — meestal binnen <strong>2 tot 5 jaar</strong> terugverdiend.
+                Dat hangt sterk af van je woning en welke stappen je zet. Kleine
+                maatregelen kosten vaak <strong>tientjes tot enkele honderden euro’s</strong>.
+                Voor grotere stappen (zoals isolatie of HR++-glas) moet je eerder denken
+                aan <strong>enkele duizenden euro’s</strong>. Op de pagina{" "}
+                <strong>Financieel</strong> laten we per maatregel
+                een globale bandbreedte zien.
             </>
         ),
         Icon: BanknotesIcon,
@@ -31,9 +34,10 @@ export const faqTopSix: FaqEntry[] = [
         q: "Is renoveren niet een grote investering?",
         a: (
             <>
-                Het is een investering die zichzelf snel terugbetaalt. Met <strong>isolatie, HR++-glas of een
-                warmtepomp</strong>{" "}
-                verlaag je direct je energiekosten én verhoog je de woningwaarde.
+                Renoveren is wel een investering, maar vaak een{" "}
+                <strong>voorspelbare</strong>. Met maatregelen als{" "}
+                <strong>isolatie, HR++-glas of (hybride) warmtepomp</strong> dalen je
+                energiekosten en verbetert je energielabel.
             </>
         ),
         Icon: ShieldCheckIcon,
@@ -42,9 +46,13 @@ export const faqTopSix: FaqEntry[] = [
         q: "Wat als ik niet alles tegelijk kan betalen?",
         a: (
             <>
-                Je kunt <strong>stapsgewijs renoveren</strong>, beginnend met de maatregelen die het meest opleveren —
-                zoals{" "}
-                <strong>dakisolatie of HR++-glas</strong>. Zo spreid je de kosten en zie je toch snel resultaat.
+                Je hoeft niet in één keer het volledige bedrag op je rekening te hebben.
+                Veel huiseigenaren combineren{" "}
+                <strong>stap-voor-stap renoveren</strong> met{" "}
+                <strong>subsidies of een energiebespaarlening</strong>.
+                Zo kun je beginnen met één maatregel die veel oplevert (bijvoorbeeld
+                <strong> spouwmuurisolatie of HR++-glas</strong>) en de kosten
+                spreiden over meerdere jaren.
             </>
         ),
         Icon: ClipboardDocumentCheckIcon,
@@ -53,9 +61,13 @@ export const faqTopSix: FaqEntry[] = [
         q: "Wat als ik niet alles in één keer wil doen?",
         a: (
             <>
-                Dat hoeft ook niet. <strong>Elke stap telt.</strong> Begin met één verbetering die past bij jouw woning
-                of budget, zoals{" "}
-                <strong>vloerisolatie of nieuw glas</strong>. Eén aanpassing kan al merkbaar schelen.
+
+                Veel bewoners kiezen er bewust voor om{" "}
+                <strong>niet in één keer groots te renoveren</strong>.
+                Je kunt prima beginnen met één rustige stap, zoals{" "}
+                <strong>vloerisolatie, spouwmuurisolatie of nieuw glas</strong>,
+                en later eventueel verder gaan met dak, installatie of zonnepanelen.
+                Eén aanpassing kan al merkbaar schelen.
             </>
         ),
         Icon: SquaresPlusIcon,
@@ -64,10 +76,13 @@ export const faqTopSix: FaqEntry[] = [
         q: "Levert renovatie echt zoveel op?",
         a: (
             <>
-                Ja. Zelfs één maatregel, zoals <strong>spouwmuurisolatie</strong>, verlaagt het gasverbruik
-                met gemiddeld <strong>20%</strong>. Dat betekent een besparing van <strong>€300 tot €600 per
-                jaar</strong>.
-                Combineer je meerdere stappen, dan loopt dat nog verder op.
+                Eén maatregel kan al merkbaar schelen. Denk aan{" "}
+                <strong>spouwmuurisolatie of HR++-glas</strong>: je verliest minder warmte
+                en verbruikt daardoor minder gas. Voor een doorsnee jaren 80-woning lopen
+                de besparingen al snel op tot <strong>enkele honderden euro’s per jaar</strong>,
+                afhankelijk van je woning en energieprijs. Op de pagina{" "}
+                <strong>Financieel</strong> laten we globaal zien
+                met welke bandbreedtes je kunt rekenen.
             </>
         ),
         Icon: BoltIcon,
@@ -76,9 +91,11 @@ export const faqTopSix: FaqEntry[] = [
         q: "Zijn er subsidies of regelingen waar ik gebruik van kan maken?",
         a: (
             <>
-                Ja. Overheid en gemeenten bieden <strong>subsidies voor energiebesparende maatregelen</strong>. Hier
-                lees je{" "}
-                <strong>welke regelingen voor jouw woning gelden</strong> en hoeveel je kunt besparen.
+                Vaak wel. Voor isolatie, glas en soms warmtepompen zijn{" "}
+                <strong>landelijke subsidies</strong> beschikbaar. Veel gemeenten hebben
+                daarnaast eigen regelingen of leningen. Op de pagina{" "}
+                <strong>Financieel</strong> leggen we kort uit
+                welke soorten regelingen er zijn en waar je ze kunt checken.
             </>
         ),
         Icon: HomeModernIcon,

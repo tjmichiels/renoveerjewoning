@@ -11,7 +11,7 @@ export default function SocialProofStrip() {
                 </h2>
 
                 <p className="mt-2 text-sm text-emerald-900">
-                    Veel mensen beginnen niet met een grote verbouwing, maar met één stap die snel iets oplevert.
+                    Veel mensen beginnen niet met een grote verbouwing, maar met één maatregel die relatief snel iets oplevert.
                 </p>
 
                 <ul className="mt-2 space-y-1.5 text-sm text-emerald-900">
