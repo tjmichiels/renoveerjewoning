@@ -244,24 +244,24 @@ export default function HousingTypeDetailPage({params}: Props) {
                         </div>
                     </section>
 
-                    <section className="mt-10">
-                        <div className="rounded-2xl border border-gray-100 bg-white px-5 py-5 shadow-sm">
-                            <h2 className="text-lg font-semibold text-gray-900">
-                                Hoe merk je dit in je woning?
-                            </h2>
-                            <p className="mt-2 text-sm text-gray-700">
-                                Minder tocht, warmere kamers en een stiller huis. Ontdek hoe renovatie
-                                jouw wooncomfort direct verbetert.
-                            </p>
+                    {/*<section className="mt-10">*/}
+                    {/*    <div className="rounded-2xl border border-gray-100 bg-white px-5 py-5 shadow-sm">*/}
+                    {/*        <h2 className="text-lg font-semibold text-gray-900">*/}
+                    {/*            Hoe merk je dit in je woning?*/}
+                    {/*        </h2>*/}
+                    {/*        <p className="mt-2 text-sm text-gray-700">*/}
+                    {/*            Minder tocht, warmere kamers en een stiller huis. Ontdek hoe renovatie*/}
+                    {/*            jouw wooncomfort direct verbetert.*/}
+                    {/*        </p>*/}
 
-                            <Link
-                                href="/wooncomfort"
-                                className="mt-3 inline-flex items-center text-sm font-semibold text-emerald-700 hover:text-emerald-900"
-                            >
-                                Meer over wooncomfort →
-                            </Link>
-                        </div>
-                    </section>
+                    {/*        <Link*/}
+                    {/*            href="/wooncomfort"*/}
+                    {/*            className="mt-3 inline-flex items-center text-sm font-semibold text-emerald-700 hover:text-emerald-900"*/}
+                    {/*        >*/}
+                    {/*            Meer over wooncomfort →*/}
+                    {/*        </Link>*/}
+                    {/*    </div>*/}
+                    {/*</section>*/}
 
 
                     <section className="mt-10">
