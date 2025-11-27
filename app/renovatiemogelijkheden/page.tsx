@@ -9,6 +9,7 @@ import {
   SunIcon,
   ArrowPathIcon,
 } from "@heroicons/react/24/outline";
+import GradientBlob from "../components/layout/GradientBlob";
 
 const iconMap = {
   insulation: HomeModernIcon,
@@ -23,6 +24,13 @@ export default function Renovatiemogelijkheden() {
     <div className="bg-white">
       <Header navigation={NAV} />
       <main className="relative isolate min-h-screen px-6 pt-10 lg:px-8">
+        {/* Achtergrond blob */}
+        <GradientBlob
+            from="from-amber-100"
+            via="via-lime-100"
+            to="to-yellow-100"
+        />
+
         <header className="mx-auto max-w-5xl">
           <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900">
             Renovatiemogelijkheden
@@ -33,6 +41,7 @@ export default function Renovatiemogelijkheden() {
         </header>
 
         <section className="mx-auto max-w-5xl pb-16 pt-8">
+
           <div className="grid gap-4 sm:gap-6 sm:grid-cols-2">
             {renovationOptions.map((opt) => {
               const Icon = iconMap[opt.icon];
