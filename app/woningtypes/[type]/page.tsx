@@ -136,8 +136,11 @@ export default function HousingTypeDetailPage({params}: Props) {
                         </figure>
                     </section>
 
+                    {/*Gradient divider*/}
+                    <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-9 mb-0"/>
+
                     {/* Maatregelen */}
-                    <section className="mt-12">
+                    <section className="mt-7">
                         <h2 className="text-xl font-semibold text-gray-900">
                             Maatregelen die vaak goed passen
                         </h2>
@@ -257,7 +260,10 @@ export default function HousingTypeDetailPage({params}: Props) {
                     </p>
 
 
-                    <section className="mt-12">
+                    {/*Gradient divider*/}
+                    <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-10 mb-0"/>
+
+                    <section className="mt-10">
                         <div className="rounded-2xl border border-emerald-100 bg-emerald-50/70 px-5 py-5 sm:py-6">
                             <h2 className="text-lg font-semibold text-gray-900">
                                 Met deze maatregelen aan de slag?
