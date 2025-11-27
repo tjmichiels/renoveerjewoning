@@ -1,12 +1,12 @@
 // app/page.tsx
-import {Metadata} from "next";
+import { Metadata } from "next";
+import Link from "next/link";
 import Header from "./components/layout/Header";
 import Hero from "./components/home/Hero";
 import FaqList from "./components/faq/FaqList";
-import {faqTopSix} from "./content/faqs";
-import {palettes} from "./lib/theme";
-import {NAV} from "./content/navigation";
-import Link from "next/link";
+import { faqTopSix } from "./content/faqs";
+import { palettes } from "./lib/theme";
+import { NAV } from "./content/navigation";
 
 export const metadata: Metadata = {
     title: "Renoveer je woning – inzicht in kosten en besparing",
@@ -17,47 +17,66 @@ export const metadata: Metadata = {
 export default function Home() {
     return (
         <div className="bg-white">
-            <Header navigation={NAV}/>
+            <Header navigation={NAV} />
 
             <main className="relative isolate min-h-screen px-6 pt-0 lg:px-8">
+                {/* HERO */}
                 <Hero
                     title="Weet je dat jouw woning je elk jaar honderden euro’s kan opleveren?"
                     subtitle="In veel woningen verdwijnt tot een kwart van de warmte via muren, vloeren en ramen. Door te isoleren en oude installaties te vervangen, kun je elk jaar honderden euro’s besparen, terwijl je woning comfortabeler en duurzamer wordt."
-                    ctaPrimary={{label: "Ik wil renoveren", href: "#"}}
-                    ctaSecondary={{label: "Vertel me meer", href: "/faq#more"}}
-                    blob={{from: "from-emerald-200", via: "via-yellow-200", to: "to-sky-200"}}
+                    blob={{ from: "from-emerald-200", via: "via-yellow-200", to: "to-sky-200" }}
                 />
 
-                <section aria-labelledby="faq" className="mx-auto max-w-5xl py-0">
-                    <h2 id="faq" className="sr-only">Veelgestelde vragen</h2>
+                {/* FAQ-BAND */}
+                <section
+                    aria-labelledby="faq-heading"
+                    className="mt-10 w-full border-t border-gray-100 bg-gray-50/70"
+                >
+                    <div className="mx-auto max-w-5xl py-10 sm:py-14">
+                        <h2
+                            id="faq-heading"
+                            className="text-2xl sm:text-3xl font-semibold tracking-tight text-gray-900 text-center"
+                        >
+                            Veelgestelde vragen over kosten en besparing
+                        </h2>
+                        <p className="mt-2 text-sm sm:text-base text-gray-600 text-center">
+                            Antwoorden op de vragen die de meeste huiseigenaren als eerste hebben.
+                        </p>
 
-                    <FaqList
-                        items={faqTopSix}
-                        palette={palettes.greenYellow}
-                        columns={2}
-                    />
+                        <div className="mt-6">
+                            <FaqList items={faqTopSix} palette={palettes.greenYellow} columns={2} />
+                        </div>
+                    </div>
                 </section>
 
-                {/* Nieuwe callout naar woningtypes */}
+                {/* CTA-SECTIE ONDER FAQ */}
                 <section className="mx-auto max-w-5xl pb-20">
-                    <div className="rounded-2xl border border-emerald-100 bg-emerald-50/60 px-6 py-6 sm:py-8 shadow-sm">
-                        <h2 className="text-xl sm:text-2xl font-semibold text-gray-900">
-                            Wil je voorbeelden zien die lijken op jouw woning?
-                        </h2>
-                        <p className="mt-2 text-sm sm:text-base text-gray-700">
-                            Kies jouw woningtype en bekijk welke maatregelen daar meestal het meeste opleveren.
-                            Zo zie je sneller wat logisch is voor jouw situatie.
-                        </p>
-                        <div className="mt-4">
-                            <Link
-                                href="/woningtypes"
-                                className="inline-flex items-center rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-800"
-                            >
-                                Bekijk voorbeelden per woningtype
-                                <span className="ml-1" aria-hidden>
-                  →
-                </span>
-                            </Link>
+                    <div className="mt-4 rounded-2xl border border-emerald-100 bg-white px-6 py-6 sm:py-7 shadow-sm">
+                        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                            <div>
+                                <h2 className="text-lg sm:text-xl font-semibold text-gray-900">
+                                    Wat is een logische volgende stap voor jouw woning?
+                                </h2>
+                                <p className="mt-1 text-sm text-gray-700">
+                                    Kies jouw woningtype om voorbeelden te zien, of bekijk eerst wat renovatie
+                                    je financieel kan opleveren.
+                                </p>
+                            </div>
+
+                            <div className="flex flex-wrap gap-3 sm:justify-end">
+                                <Link
+                                    href="/woningtypes"
+                                    className="font-emphasis rounded-full bg-gradient-to-r from-emerald-700 to-lime-600 px-6 py-2.5 text-sm font-semibold text-white shadow-md hover:opacity-90 hover:shadow-lg transition"
+                                >
+                                    Kies jouw woningtype
+                                </Link>
+                                <Link
+                                    href="/financieel"
+                                    className="font-emphasis text-sm font-semibold text-gray-800 hover:text-emerald-700 flex items-center gap-1"
+                                >
+                                    Wat levert dit op? <span aria-hidden="true">→</span>
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </section>
