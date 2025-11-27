@@ -1,113 +1,102 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
-import Header from "../../components/layout/Header"; // Pas het pad aan indien nodig
-import { NAV } from "../../content/navigation"; // Pas het pad aan indien nodig
-import { getRenovationOptionBySlug, renovationOptions } from "../../content/renovatiemogelijkheden"; // Pas het pad aan indien nodig
+import Header from "../../components/layout/Header";
+import { NAV } from "../../content/navigation";
+import { getRenovationOptionBySlug, renovationOptions } from "../../content/renovatiemogelijkheden";
 
 export function generateStaticParams() {
-    return renovationOptions.map((o) => ({ slug: o.slug }));
+  return renovationOptions.map((o) => ({ slug: o.slug }));
 }
 
-// Hulpfunctie om de 'markdown-achtige' tekst netjes te renderen
 function renderFormattedText(text: string) {
-    if (!text) return null;
+  if (!text) return null;
 
-    return text.split('\n').map((line, index) => {
-        // 1. Kopjes (###)
-        if (line.startsWith('### ')) {
-            return (
-                <h3 key={index} className="text-xl font-semibold text-emerald-800 mt-8 mb-3">
-                    {line.replace('### ', '')}
-                </h3>
-            );
-        }
+  return text.split("\n").map((line, index) => {
+    if (line.startsWith("### ")) {
+      return (
+        <h3 key={index} className="text-xl font-semibold text-emerald-800 mt-8 mb-3">
+          {line.replace("### ", "")}
+        </h3>
+      );
+    }
 
-        // 2. Lijstitems (*) met ondersteuning voor dikgedrukte tekst (\*\*text\*\*)
-        if (line.startsWith('* ')) {
-            const content = line.replace('* ', '');
-            // Split de tekst op '**' om dikgedrukte delen te vinden
-            const parts = content.split('**');
+    if (line.startsWith("* ")) {
+      const content = line.replace("* ", "");
+      const parts = content.split("**");
 
-            return (
-                <li key={index} className="ml-5 list-disc text-gray-700 mb-2 pl-1 leading-relaxed">
-                    {parts.map((part, i) =>
-                        // Elk oneven deel was omsloten door **, dus maak dat dikgedrukt
-                        i % 2 === 1 ? <strong key={i} className="font-semibold text-gray-900">{part}</strong> : part
-                    )}
-                </li>
-            );
-        }
+      return (
+        <li key={index} className="ml-5 list-disc text-gray-700 mb-2 pl-1 leading-relaxed">
+          {parts.map((part, i) =>
+            i % 2 === 1 ? <strong key={i} className="font-semibold text-gray-900">{part}</strong> : part
+          )}
+        </li>
+      );
+    }
 
-        // 3. Lege regels (voor witruimte)
-        if (line.trim() === '') {
-            return <div key={index} className="h-2"></div>;
-        }
+    if (line.trim() === "") {
+      return <div key={index} className="h-2" />;
+    }
 
-        // 4. Gewone paragrafen
-        return (
-            <p key={index} className="text-gray-700 mb-3 leading-relaxed">
-                {line}
-            </p>
-        );
-    });
+    return (
+      <p key={index} className="text-gray-700 mb-3 leading-relaxed">
+        {line}
+      </p>
+    );
+  });
 }
 
 export default function RenovationDetailPage({ params }: { params: { slug: string } }) {
-    const option = getRenovationOptionBySlug(params.slug);
-    if (!option) return notFound();
+  const option = getRenovationOptionBySlug(params.slug);
+  if (!option) return notFound();
 
-    return (
-        <div className="bg-white">
-            <Header navigation={NAV} />
-            <main className="relative isolate min-h-screen px-6 pt-10 lg:px-8">
-                <div className="mx-auto max-w-4xl pb-16 relative z-20 bg-white lg:pr-60"> {/* higher z so content sits above the positioned image; increased lg padding to avoid overlap */}
+  return (
+    <div className="bg-white">
+      <Header navigation={NAV} />
+      <main className="relative isolate min-h-screen px-6 pt-10 lg:px-8">
+        <div className="mx-auto max-w-4xl pb-16">
+          <Link
+            href="/renovatiemogelijkheden"
+            className="text-sm font-semibold text-emerald-700 hover:text-emerald-900"
+          >
+            ← Terug naar overzicht
+          </Link>
 
-                    {/* Large-screen positioned image (top-right) */}
-                    <div className="hidden lg:block absolute -right-12 -top-8 w-72 h-64 rounded-xl border border-gray-100 shadow-sm overflow-hidden z-0 pointer-events-none">
-                        <img
-                            src={option.image}
-                            alt={option.imageAlt}
-                            className="w-full h-full object-cover"
-                            loading="eager"
-                        />
-                    </div>
+          {/* Title + summary + image (matches woningtypes layout) */}
+          <section className="mt-5 grid items-start gap-6 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
+            <header className="space-y-4">
+              <div>
+                <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">
+                  {option.title}
+                </h1>
+                <p className="mt-2 text-sm sm:text-base text-gray-600">
+                  {option.short}
+                </p>
+              </div>
+            </header>
 
-                    {/* Small-screen full-width image (keeps original behaviour on mobile) */}
-                    <div className="mt-6 overflow-hidden rounded-xl border border-gray-100 shadow-sm lg:hidden">
-                        <img
-                            src={option.image}
-                            alt={option.imageAlt}
-                            className="h-64 w-full object-cover sm:h-80"
-                            loading="eager"
-                        />
-                    </div>
+            {/* Image on the right - uses same approach as woningtypes */}
+            <figure className="relative h-48 w-full overflow-hidden rounded-2xl border border-gray-200 bg-gray-100 md:h-56">
+              <Image
+                src={option.image}
+                alt={option.imageAlt}
+                fill
+                className="object-cover"
+                priority
+              />
+            </figure>
+          </section>
 
-                    <Link
-                        href="/renovatiemogelijkheden"
-                        className="inline-flex items-center text-sm font-medium text-emerald-700 hover:text-emerald-900 transition-colors"
-                    >
-                        ← Terug naar overzicht
-                    </Link>
+          {/* Gradient divider as requested */}
+          <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-10 mb-0" />
 
-                    <header className="mt-6 border-b border-gray-100 pb-8">
-                        <div className="flex items-center gap-4 mb-4">
-                            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">
-                                {option.title}
-                            </h1>
-                        </div>
-                        <p className="text-lg text-gray-600 leading-relaxed max-w-2xl">
-                            {option.short}
-                        </p>
-                    </header>
-
-                    <section className="mt-8">
-                        <div className="prose prose-emerald max-w-none text-gray-700">
-                            {renderFormattedText(option.renovationdetails)}
-                        </div>
-                    </section>
-
-                </div>
-            </main>
+          <section className="mt-8">
+            <div className="prose prose-emerald max-w-none text-gray-700">
+              {renderFormattedText(option.renovationdetails)}
+            </div>
+          </section>
         </div>
-    );
+      </main>
+    </div>
+  );
 }
