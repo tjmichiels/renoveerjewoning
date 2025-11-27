@@ -123,7 +123,7 @@ export default function FinancieelPage() {
                         </div>
                     </section>
 
-                    <p className="mt-4 text-sm text-gray-600 max-w-3xl">
+                    <p className="mt-4 text-sm/6 text-gray-600 max-w-3xl">
                         Wil je niet alleen bedragen zien, maar ook de inhoudelijke uitleg per maatregel?<br/>{" "}
                         <Link
                             href="/renovatiemogelijkheden"

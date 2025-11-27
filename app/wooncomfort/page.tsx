@@ -68,7 +68,7 @@ export default function WooncomfortPage() {
                         <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900">
                             Meer wooncomfort
                         </h1>
-                        <p className="mt-2 text-gray-700 text-lg max-w-2xl font-friendly">
+                        <p className="mt-2 text-gray-700 text-lg/6.5 max-w-2xl font-friendly">
                             Kleine aanpassingen kunnen je woning veel comfortabeler maken. Minder
                             tocht, minder geluid en een veel gelijkmatiger temperatuur.
                         </p>
