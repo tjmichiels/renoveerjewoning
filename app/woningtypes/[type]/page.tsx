@@ -149,10 +149,12 @@ export default function HousingTypeDetailPage({params}: Props) {
                         {housingType.socialProof && (
                             <div
                                 className="mt-5 rounded-2xl border border-emerald-100 bg-emerald-50/60 px-4 py-3 text-[13px] text-emerald-900 flex items-start gap-3">
-                                <span
-                                    className="mt-0.5 inline-flex h-8 w-8 items-center justify-center rounded-full bg-white shadow-sm">
-                                    <UserGroupIcon className="h-4 w-4 text-emerald-700" aria-hidden/>
-                                </span>
+                              <span
+                                  className="mt-0.5 inline-flex h-8 w-8 min-w-8 min-h-8 flex-shrink-0 items-center justify-center rounded-full bg-white shadow-sm"
+                              >
+  <UserGroupIcon className="h-4 w-4 text-emerald-700" aria-hidden/>
+</span>
+
                                 <div>
                                     <p className="text-[11px] font-semibold uppercase tracking-wide text-emerald-700 leading-none">
                                         Wat anderen vaak doen
