@@ -32,7 +32,7 @@ export default function Home() {
                     aria-labelledby="faq-heading"
                     className="mt-10 w-full border-t border-gray-100 bg-gray-50/70"
                 >
-                    <div className="mx-auto max-w-5xl py-10 sm:py-14">
+                    <div className="mx-auto max-w-5xl pt-7 pb-2">
                         <h2
                             id="faq-heading"
                             className="text-2xl sm:text-3xl font-semibold tracking-tight text-gray-900 text-center"
@@ -50,7 +50,7 @@ export default function Home() {
                 </section>
 
                 {/* CTA-SECTIE ONDER FAQ */}
-                <section className="mx-auto max-w-5xl pb-20">
+                <section className="mx-auto max-w-5xl pb-24">
                     <div className="mt-4 rounded-2xl border border-emerald-100 bg-white px-6 py-6 sm:py-7 shadow-sm">
                         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                             <div>
