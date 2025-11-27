@@ -80,7 +80,7 @@ export default function ActiePage() {
             <main className="relative isolate min-h-screen px-6 pt-10 lg:px-8">
                 <div className="mx-auto max-w-5xl pb-16">
                     {/* Paginaheader */}
-                    <header className="mb-8">
+                    <header className="mb-7">
                         <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900">
                             Klaar om echt iets te doen?
                         </h1>
@@ -88,6 +88,9 @@ export default function ActiePage() {
                             Dit stappenplan helpt je om duidelijkheid te krijgen in wat voor jouw woning logisch is. Stap voor stap, van inzicht naar keuzes naar actie.
                         </p>
                     </header>
+
+                    {/*Gradient divider*/}
+                    <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-0 mb-8"/>
 
                     {/* Stappenlijst */}
                     <section
@@ -148,8 +151,11 @@ export default function ActiePage() {
                         ))}
                     </section>
 
+                    {/*Gradient divider*/}
+                    <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-10 mb-0"/>
+
                     {/* Slotcallout */}
-                    <section className="mt-14 rounded-2xl border border-emerald-100 bg-emerald-50/70 px-6 py-5">
+                    <section className="mt-9 rounded-2xl border border-emerald-100 bg-emerald-50/70 px-6 py-5">
                         <h2 className="text-base sm:text-lg font-semibold text-gray-900">
                             Je hoeft niet alles tegelijk te doen om resultaat te merken.
                         </h2>
