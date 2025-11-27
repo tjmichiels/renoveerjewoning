@@ -268,7 +268,7 @@ export default function FinancieelPage() {
                                 <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald-500 mt-1"/>
                                 <span>
         Gemeentelijke regelingen en leningen kunnen er net voor zorgen dat een maatregel
-        <strong>nu wél binnen bereik komt</strong> in plaats van “ooit later”.
+        <strong> nu wél binnen bereik komt</strong> in plaats van “ooit later”.
       </span>
                             </li>
                         </ul>
