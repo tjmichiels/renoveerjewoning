@@ -126,15 +126,18 @@ export default function RenovatieVerloopPage() {
                                         <h3 className="text-base font-semibold text-gray-900">
                                             {title}
                                         </h3>
-                                        <p className="mt-1 text-sm text-gray-700">{text}</p>
+                                        <p className="mt-0 text-sm text-gray-700">{text}</p>
                                     </div>
                                 </article>
                             ))}
                         </div>
                     </section>
 
+                    {/*Gradient divider*/}
+                    <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-11 mb-10"/>
+
                     {/* De dag zelf per maatregel */}
-                    <section className="mt-14" aria-label="Wat gebeurt er op de dag zelf">
+                    <section className="mt-0" aria-label="Wat gebeurt er op de dag zelf">
                         <h2 className="text-2xl font-semibold text-gray-900">
                             Wat gebeurt er op de dag zelf?
                         </h2>
@@ -163,22 +166,22 @@ export default function RenovatieVerloopPage() {
                                                 {title}
                                             </h3>
                                         </div>
-                                        <p className="mt-2 text-xs font-medium uppercase tracking-wide text-emerald-700">
+                                        <p className="mt-3 text-xs font-medium uppercase tracking-wide text-emerald-700">
                                             {duration}
                                         </p>
 
-                                        <dl className="mt-3 space-y-2 text-sm text-gray-700">
+                                        <dl className="mt-6 space-y-2 text-sm text-gray-700">
                                             <div>
                                                 <dt className="font-semibold">Wat doet het bedrijf?</dt>
-                                                <dd className="mt-0.5">{whatTheyDo}</dd>
+                                                <dd className="mt-0">{whatTheyDo}</dd>
                                             </div>
                                             <div>
-                                                <dt className="font-semibold">Wat verwacht men van jou?</dt>
-                                                <dd className="mt-0.5">{whatYouDo}</dd>
+                                                <dt className="font-semibold mt-4">Wat verwacht men van jou?</dt>
+                                                <dd className="mt-0">{whatYouDo}</dd>
                                             </div>
                                             <div>
-                                                <dt className="font-semibold">Hoeveel overlast is er?</dt>
-                                                <dd className="mt-0.5">{inconvenience}</dd>
+                                                <dt className="font-semibold mt-4">Hoeveel overlast is er?</dt>
+                                                <dd className="mt-0">{inconvenience}</dd>
                                             </div>
                                         </dl>
                                     </article>
@@ -187,8 +190,11 @@ export default function RenovatieVerloopPage() {
                         </div>
                     </section>
 
+                    {/*Gradient divider*/}
+                    <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-11 mb-10"/>
+
                     {/* Overlast & praktische zaken */}
-                    <section className="mt-14">
+                    <section className="mt-0">
                         <h2 className="text-2xl font-semibold text-gray-900">
                             Overlast, planning en wat er soms tegenvalt
                         </h2>
@@ -198,7 +204,7 @@ export default function RenovatieVerloopPage() {
                                 <h3 className="text-base font-semibold text-gray-900">
                                     Hoeveel overlast is er meestal?
                                 </h3>
-                                <p className="mt-2 text-sm text-gray-700">
+                                <p className="mt-1 text-sm text-gray-700">
                                     Bij de meeste isolatiemaatregelen kun je gewoon thuis blijven.
                                     Je merkt vooral geluid, soms wat stof en korte momenten van
                                     kou tijdens het werk. Vaak is een ruimte een paar uur minder
@@ -210,7 +216,7 @@ export default function RenovatieVerloopPage() {
                                 <h3 className="text-base font-semibold text-gray-900">
                                     Moet je vrij nemen van werk?
                                 </h3>
-                                <p className="mt-2 text-sm text-gray-700">
+                                <p className="mt-1 text-sm text-gray-700">
                                     Er moet iemand aanwezig zijn om open te doen en vragen te
                                     beantwoorden. Veel bewoners kiezen ervoor om één dag(deel)
                                     thuis te werken of vrij te nemen. Bij kort werk, zoals
@@ -222,7 +228,7 @@ export default function RenovatieVerloopPage() {
                                 <h3 className="text-base font-semibold text-gray-900">
                                     Wat kan er tegenvallen?
                                 </h3>
-                                <p className="mt-2 text-sm text-gray-700">
+                                <p className="mt-1 text-sm text-gray-700">
                                     Soms komt er tijdens het werk iets naar voren: houtrot, vocht
                                     in de spouw of een kruipruimte die lastiger bereikbaar is. Dat
                                     kan extra werk of kosten betekenen. Vraag daarom vooraf om
@@ -232,8 +238,11 @@ export default function RenovatieVerloopPage() {
                         </div>
                     </section>
 
+                    {/*Gradient divider*/}
+                    <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-11 mb-10"/>
+
                     {/* CTA: wat nu? */}
-                    <section className="mx-auto mt-14 max-w-5xl">
+                    <section className="mx-auto mt-10 max-w-5xl">
                         <div className="rounded-2xl border border-emerald-100 bg-emerald-50/70 px-6 py-6 sm:py-7 shadow-sm">
                             <h2 className="text-xl font-semibold text-gray-900">
                                 Nu je weet hoe het verloopt, een logische volgende stap

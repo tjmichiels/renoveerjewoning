@@ -98,8 +98,9 @@ export default function WooncomfortPage() {
                             ))}
                         </ul>
                     </section>
-                    <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-11 mb-10"/>
 
+                    {/*Gradient divider*/}
+                    <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-11 mb-10"/>
 
                     {/* Maatregelen */}
                     <section className="mt-0">
