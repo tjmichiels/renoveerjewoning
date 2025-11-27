@@ -51,9 +51,7 @@ export default function Renovatiemogelijkheden() {
                   href={`/renovatiemogelijkheden/${opt.slug}`}
                   className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md"
                 >
-                  {/* Hover image preview */}
                   <div className="pointer-events-none absolute inset-0 z-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    {/* Donkere overlay om de leesbaarheid van tekst te verbeteren via transparantie */}
                     <div className="absolute inset-0 bg-black/50" aria-hidden></div>
                     <img
                       src={opt.image}
@@ -63,7 +61,6 @@ export default function Renovatiemogelijkheden() {
                     />
                   </div>
 
-                  {/* Content */}
                   <div className="relative z-10">
                     <div className="flex items-center gap-3">
                       <span className="inline-flex items-center justify-center rounded-lg bg-emerald-50 p-2 ring-1 ring-inset ring-emerald-100">

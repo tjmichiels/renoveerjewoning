@@ -22,7 +22,7 @@ function renderFormattedText(text: string) {
             );
         }
 
-        // 2. Lijstitems (*) met ondersteuning voor dikgedrukte tekst (**text**)
+        // 2. Lijstitems (*) met ondersteuning voor dikgedrukte tekst (\*\*text\*\*)
         if (line.startsWith('* ')) {
             const content = line.replace('* ', '');
             // Split de tekst op '**' om dikgedrukte delen te vinden
@@ -60,7 +60,27 @@ export default function RenovationDetailPage({ params }: { params: { slug: strin
         <div className="bg-white">
             <Header navigation={NAV} />
             <main className="relative isolate min-h-screen px-6 pt-10 lg:px-8">
-                <div className="mx-auto max-w-4xl pb-16"> {/* max-w-5xl naar 4xl voor betere leesbaarheid tekst */}
+                <div className="mx-auto max-w-4xl pb-16 relative z-20 bg-white lg:pr-60"> {/* higher z so content sits above the positioned image; increased lg padding to avoid overlap */}
+
+                    {/* Large-screen positioned image (top-right) */}
+                    <div className="hidden lg:block absolute -right-12 -top-8 w-72 h-64 rounded-xl border border-gray-100 shadow-sm overflow-hidden z-0 pointer-events-none">
+                        <img
+                            src={option.image}
+                            alt={option.imageAlt}
+                            className="w-full h-full object-cover"
+                            loading="eager"
+                        />
+                    </div>
+
+                    {/* Small-screen full-width image (keeps original behaviour on mobile) */}
+                    <div className="mt-6 overflow-hidden rounded-xl border border-gray-100 shadow-sm lg:hidden">
+                        <img
+                            src={option.image}
+                            alt={option.imageAlt}
+                            className="h-64 w-full object-cover sm:h-80"
+                            loading="eager"
+                        />
+                    </div>
 
                     <Link
                         href="/renovatiemogelijkheden"
@@ -79,16 +99,6 @@ export default function RenovationDetailPage({ params }: { params: { slug: strin
                             {option.short}
                         </p>
                     </header>
-
-                    {/* Afbeelding bij deze renovatiemogelijkheid */}
-                    <div className="mt-6 overflow-hidden rounded-xl border border-gray-100 shadow-sm">
-                        <img
-                            src={option.image}
-                            alt={option.imageAlt}
-                            className="h-64 w-full object-cover sm:h-80"
-                            loading="eager"
-                        />
-                    </div>
 
                     <section className="mt-8">
                         <div className="prose prose-emerald max-w-none text-gray-700">
