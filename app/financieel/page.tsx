@@ -203,7 +203,7 @@ export default function FinancieelPage() {
                     </section>
 
                     {/* Laatste sectie: logische eerste stap / CTA */}
-                    <section className="mt-12">
+                    <section  id="subsidies" className="mt-12">
                         <div className="rounded-2xl border border-emerald-100 bg-emerald-50/60 px-6 py-6 sm:py-7 shadow-sm">
                             <h2 className="text-xl font-semibold text-gray-900">
                                 Wat is een logische eerste stap voor jou?
