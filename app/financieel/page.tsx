@@ -203,13 +203,13 @@ export default function FinancieelPage() {
                                 </h3>
                                 <p className="mt-2">
                                     Voor isolatiemaatregelen en warmtepompen kun je via de landelijke regeling
-                                    vaak <strong>een deel van de investering terugkrijgen</strong>. De vergoeding wordt
-                                    meestal berekend per m² isolatie of per installatie (bijvoorbeeld een warmtepomp).
+                                    <strong> een deel van de investering terugkrijgen</strong>. De vergoeding wordt
+                                    berekend per m² isolatie of per installatie (bijvoorbeeld een warmtepomp).
                                 </p>
                                 <p className="mt-2 text-xs text-gray-500">
-                                    Belangrijk: in veel gevallen krijg je{" "}
-                                    <strong>meer subsidie als je twee isolatiemaatregelen combineert</strong>
-                                    {" "} (bijvoorbeeld spouwmuur + vloer).
+                                    Vaak krijg je <strong>extra subsidie als je twee isolatiemaatregelen
+                                    combineert</strong>,
+                                    bijvoorbeeld spouwmuur + vloer.
                                 </p>
                             </div>
 
@@ -218,14 +218,13 @@ export default function FinancieelPage() {
                                     2. Gemeentelijke regelingen
                                 </h3>
                                 <p className="mt-2">
-                                    Veel gemeenten hebben extra{" "}
-                                    <strong>subsidies, waardebonnen of een gratis energiecoach</strong>. Soms
-                                    wordt een deel van de isolatie, het advies of kleine maatregelen vergoed.
+                                    Veel gemeenten bieden extra <strong>subsidies, waardebonnen of een gratis
+                                    energiecoach</strong>.
+                                    Soms wordt een deel van isolatie, advies of kleine maatregelen vergoed.
                                 </p>
                                 <p className="mt-2 text-xs text-gray-500">
-                                    Dit verschilt per gemeente. Het is handig om{" "}
-                                    <strong>voor je offertes opvraagt</strong> even te kijken op de pagina
-                                    “duurzaam wonen” of het “energieloket” van jouw gemeente.
+                                    Check op de pagina “duurzaam wonen” of het “energieloket” van jouw gemeente
+                                    welke regelingen nu lopen.
                                 </p>
                             </div>
 
@@ -234,12 +233,12 @@ export default function FinancieelPage() {
                                     3. Leningen voor verduurzaming
                                 </h3>
                                 <p className="mt-2">
-                                    Via speciale <strong>verduurzamingsleningen</strong> kun je de kosten spreiden
+                                    Met speciale <strong>verduurzamingsleningen</strong> kun je de kosten spreiden
                                     over meerdere jaren. De rente is vaak lager dan bij een gewone persoonlijke lening.
                                 </p>
                                 <p className="mt-2 text-xs text-gray-500">
-                                    Deze leningen zijn meestal alleen te gebruiken voor een vaste lijst maatregelen
-                                    (isolatie, glas, warmtepomp, zonnepanelen, ventilatie).
+                                    Deze leningen zijn meestal alleen te gebruiken voor isolatie, glas, warmtepompen,
+                                    zonnepanelen en ventilatie.
                                 </p>
                             </div>
                         </div>
@@ -284,66 +283,36 @@ export default function FinancieelPage() {
                     </section>
 
 
-                    {/* Laatste sectie: logische eerste stap / CTA */}
-                    <section id="subsidies" className="mt-12">
-                        <div
-                            className="rounded-2xl border border-emerald-100 bg-emerald-50/60 px-6 py-6 sm:py-7 shadow-sm">
-                            <h2 className="text-xl font-semibold text-gray-900">
-                                Wat is een logische eerste stap voor jou?
-                            </h2>
-                            <p className="mt-2 text-sm text-gray-700 max-w-3xl">
-                                Wil je nu concreet zien wat logisch is voor jouw woning?
-                                Kies dan eerst het woningtype dat het meest op jouw huis lijkt,
-                                of bekijk nog even de veelgestelde vragen als je nog twijfels hebt.
-                            </p>
-
-                            <div className="mt-4 flex flex-wrap gap-3">
-                                <Link
-                                    href="/woningtypes"
-                                    className="inline-flex items-center rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-800"
-                                >
-                                    Bekijk maatregelen per woningtype
-                                    <span className="ml-1" aria-hidden>
-                    →
-                  </span>
-                                </Link>
-                                <Link
-                                    href="/faq"
-                                    className="inline-flex items-center text-sm font-semibold text-emerald-800 hover:text-emerald-900"
-                                >
-                                    Nog vragen? Bekijk de FAQ
-                                    <span className="ml-1" aria-hidden>
-                                          →
-                                    </span>
-                                </Link>
-                            </div>
-                        </div>
-                    </section>
-
                     <section className="mx-auto mt-10 max-w-5xl pb-16">
                         <div
                             className="rounded-2xl border border-emerald-100 bg-emerald-50/60 px-6 py-6 sm:py-8 shadow-sm">
                             <h2 className="text-xl sm:text-2xl font-semibold text-gray-900">
                                 Klaar om er echt werk van te maken?
                             </h2>
-                            <p className="mt-2 text-sm sm:text-base text-gray-700">
-                                Je weet nu wat renovatie ongeveer kost en oplevert. Op de volgende pagina
-                                helpen we je om dit om te zetten in concrete stappen: van oriëntatie
-                                naar daadwerkelijk in actie komen.
+                            <p className="mt-2 text-sm sm:text-base text-gray-700 max-w-3xl">
+                                Je weet nu wat renovatie ongeveer kost en oplevert. Op{" "}
+                                <strong>Actie ondernemen</strong> zie je hoe je dit omzet in concrete stappen,
+                                en via <strong>Woningtypes</strong> zie je welke maatregelen logisch zijn voor jouw
+                                huis.
                             </p>
-                            <div className="mt-4">
+                            <div className="mt-4 flex flex-wrap gap-3">
                                 <Link
                                     href="/actie-ondernemen"
                                     className="inline-flex items-center rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-800"
                                 >
-                                    Ga naar: Actie ondernemen
-                                    <span className="ml-1" aria-hidden>
-          →
-        </span>
+                                    Naar: Actie ondernemen
+                                    <span className="ml-1" aria-hidden>→</span>
+                                </Link>
+                                <Link
+                                    href="/woningtypes"
+                                    className="inline-flex items-center text-sm font-semibold text-emerald-800 hover:text-emerald-900"
+                                >
+                                    Of bekijk eerst woningtypes →
                                 </Link>
                             </div>
                         </div>
                     </section>
+
 
                 </div>
             </main>
