@@ -63,6 +63,7 @@ export default function WooncomfortPage() {
             <Header navigation={NAV} />
 
             <main className="relative isolate min-h-screen px-6 pt-10 lg:px-8">
+
                 <div className="mx-auto max-w-5xl pb-20">
                     <header>
                         <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900">
@@ -97,10 +98,11 @@ export default function WooncomfortPage() {
                             ))}
                         </ul>
                     </section>
+                    <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-11 mb-10"/>
 
 
                     {/* Maatregelen */}
-                    <section className="mt-14">
+                    <section className="mt-0">
                         <h2 className="text-2xl font-semibold text-gray-900">
                             Maatregelen die comfort direct verbeteren
                         </h2>
@@ -142,7 +144,7 @@ export default function WooncomfortPage() {
                     <div className="mt-6 rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-700">
                         <p>
                             Veel van deze verbeteringen zijn sneller klaar dan je verwacht.
-                           Spouwmuurisolatie duurt vaak maar een paar uur,
+                            Spouwmuurisolatie duurt vaak maar een paar uur,
                             HR++-glas wordt meestal binnen één dag geplaatst,
                             en vloerisolatie gebeurt vanuit de kruipruimte. Je hoeft meestal niets te
                             verplaatsen en kunt gewoon thuis blijven.
