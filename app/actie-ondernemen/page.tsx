@@ -135,6 +135,18 @@ export default function ActiePage() {
                                             </Link>
                                         </div>
                                     )}
+                                    {step.nr === "5" && (
+                                        <p className="mt-4 text-sm text-gray-600">
+                                            Wil je zien hoe zo’n uitvoering er in de praktijk uitziet?{" "}
+                                            <Link
+                                                href="/renovatie-verloop"
+                                                className="font-semibold text-emerald-700 hover:text-emerald-900"
+                                            >
+                                                Bekijk een voorbeeld van een renovatiedag →
+                                            </Link>
+                                        </p>
+                                    )}
+
                                 </div>
                             </article>
                         ))}
