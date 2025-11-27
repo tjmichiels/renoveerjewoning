@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import Header from "../../components/Header";
+import Header from "../../components/layout/Header";
 import { NAV } from "../../content/navigation";
 import { getRenovationOptionBySlug, renovationOptions } from "../../content/renovatiemogelijkheden";
 

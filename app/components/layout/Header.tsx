@@ -2,17 +2,21 @@
 
 import {useState} from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {Dialog, DialogPanel} from "@headlessui/react";
 import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/outline";
+import {usePathname} from "next/navigation";
 
 type NavItem = { name: string; href: string };
 export default function Header({navigation}: { navigation: NavItem[] }) {
     const [open, setOpen] = useState(false);
+    const pathname = usePathname();
 
     return (
         <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-200">
             <nav aria-label="Hoofdmenu" className="flex items-center justify-between p-6 lg:px-8">
                 <div className="flex lg:flex-1">{/* logo plek */}</div>
+
 
                 <div className="flex lg:hidden">
                     <button
@@ -25,12 +29,27 @@ export default function Header({navigation}: { navigation: NavItem[] }) {
                     </button>
                 </div>
 
+                {/*Toon nav item (groen als het de huidige pagina is*/}
                 <div className="hidden lg:flex lg:gap-x-12">
-                    {navigation.map((item) => (
-                        <Link key={item.name} href={item.href} className="text-sm/6 font-semibold text-gray-900">
-                            {item.name}
-                        </Link>
-                    ))}
+                    {navigation.map((item) => {
+                        const isActive = pathname === item.href;
+
+                        return (
+                            <Link
+                                key={item.name}
+                                href={item.href}
+                                className={
+                                    `text-sm font-semibold transition pb-1 border-b-2 ${
+                                        isActive
+                                            ? "border-emerald-600 text-emerald-700"
+                                            : "border-transparent hover:border-gray-300 text-gray-900 hover:text-emerald-700"
+                                    }`
+                                }
+                            >
+                                {item.name}
+                            </Link>
+                        );
+                    })}
                 </div>
 
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end"/>
@@ -51,16 +70,26 @@ export default function Header({navigation}: { navigation: NavItem[] }) {
                         </button>
                     </div>
                     <div className="mt-6 space-y-2">
-                        {navigation.map((item) => (
-                            <Link
-                                key={item.name}
-                                href={item.href}
-                                className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                            >
-                                {item.name}
-                            </Link>
-                        ))}
+                        {navigation.map((item) => {
+                            const isActive = pathname === item.href;
+
+                            return (
+                                <Link
+                                    key={item.name}
+                                    href={item.href}
+                                    className={
+                                        `block rounded-lg px-3 py-2 text-base font-semibold transition 
+                    ${isActive
+                                            ? "bg-emerald-50 text-emerald-800"
+                                            : "text-gray-900 hover:bg-gray-50"}`
+                                    }
+                                >
+                                    {item.name}
+                                </Link>
+                            );
+                        })}
                     </div>
+
                 </DialogPanel>
             </Dialog>
         </header>
