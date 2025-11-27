@@ -140,7 +140,8 @@ export default function FinancieelPage() {
                                     Minder koude plekken in huis
                                 </h3>
                                 <p className="mt-2 text-sm text-gray-600">
-                                    Je voelt veel minder trek bij ramen of langs muren. Kamers voelen overal gelijkmatiger aan.
+                                    Je voelt veel minder trek bij ramen of langs muren. Kamers voelen overal
+                                    gelijkmatiger aan.
                                 </p>
                             </div>
                             <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
@@ -148,7 +149,8 @@ export default function FinancieelPage() {
                                     Rustigere temperatuur door de dag heen
                                 </h3>
                                 <p className="mt-2 text-sm text-gray-600">
-                                    Je huis koelt minder snel af en reageert minder heftig op het weer buiten. Minder pieken en dalen.
+                                    Je huis koelt minder snel af en reageert minder heftig op het weer buiten. Minder
+                                    pieken en dalen.
                                 </p>
                             </div>
                             <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
@@ -156,10 +158,20 @@ export default function FinancieelPage() {
                                     Woningwaarde en verkoopbaarheid
                                 </h3>
                                 <p className="mt-2 text-sm text-gray-600">
-                                    Een beter energielabel en lagere maandlasten maken je woning aantrekkelijker voor kopers en kunnen zich vertalen in een hogere verkoopprijs.
+                                    Een beter energielabel en lagere maandlasten maken je woning aantrekkelijker voor
+                                    kopers en kunnen zich vertalen in een hogere verkoopprijs.
                                 </p>
                             </div>
                         </div>
+                        <p className="mt-3 text-xs text-gray-500">
+                            Meer over wooncomfort{" "}
+                            <Link
+                                href="/wooncomfort"
+                                className="font-semibold text-emerald-700 hover:text-emerald-900"
+                            >
+                                Bekijk de pagina →
+                            </Link>
+                        </p>
                     </section>
 
                     {/* Sectie: subsidies en regelingen (hoog over, geen calculator) */}
