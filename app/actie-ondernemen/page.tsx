@@ -153,7 +153,7 @@ export default function ActiePage() {
                     </section>
 
                     {/* Slotcallout */}
-                    <section className="mt-10 rounded-2xl border border-emerald-100 bg-emerald-50/70 px-6 py-5">
+                    <section className="mt-14 rounded-2xl border border-emerald-100 bg-emerald-50/70 px-6 py-5">
                         <h2 className="text-base sm:text-lg font-semibold text-gray-900">
                             Je hoeft niet alles tegelijk te doen om resultaat te merken.
                         </h2>

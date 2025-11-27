@@ -94,7 +94,7 @@ export default function RenovatieVerloopPage() {
                         <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900">
                             Hoe ziet een renovatie er in de praktijk uit?
                         </h1>
-                        <p className="mt-2 text-gray-700 text-base sm:text-lg max-w-3xl">
+                        <p className="mt-2 text-gray-700 text-base sm:text-lg/6 max-w-3xl">
                             Hier zie je stap voor stap wat er globaal gebeurt: van het eerste
                             idee tot de uitvoeringsdag zelf. Zo weet je wat je kunt verwachten
                             en waar je je wel (en juist niet) druk om hoeft te maken.
@@ -103,15 +103,15 @@ export default function RenovatieVerloopPage() {
 
                     {/* Globale tijdlijn */}
                     <section aria-label="Globale stappen van een renovatie">
-                        <h2 className="text-2xl font-semibold text-gray-900">
+                        <h2 className="mt-9 text-2xl font-semibold text-gray-900">
                             De renovatie in vijf overzichtelijke stappen
                         </h2>
-                        <p className="mt-2 text-sm text-gray-600 max-w-3xl">
+                        <p className="mt-1 text-sm text-gray-600 max-w-3xl">
                             Elke woning en elk bedrijf werkt net anders, maar in grote lijnen
                             doorloop je bijna altijd deze stappen.
                         </p>
 
-                        <div className="mt-6 grid gap-4 md:grid-cols-2">
+                        <div className="mt-5 grid gap-4 md:grid-cols-2">
                             {timeline.map(({ icon: Icon, title, text }, idx) => (
                                 <article
                                     key={idx}
@@ -134,18 +134,18 @@ export default function RenovatieVerloopPage() {
                     </section>
 
                     {/* De dag zelf per maatregel */}
-                    <section className="mt-12" aria-label="Wat gebeurt er op de dag zelf">
+                    <section className="mt-14" aria-label="Wat gebeurt er op de dag zelf">
                         <h2 className="text-2xl font-semibold text-gray-900">
                             Wat gebeurt er op de dag zelf?
                         </h2>
-                        <p className="mt-2 text-sm text-gray-600 max-w-3xl">
+                        <p className="mt-1 text-sm text-gray-600 max-w-3xl">
                             Hieronder zie je in grote lijnen hoe een gemiddelde dag eruitziet
                             bij drie veelvoorkomende maatregelen. Bedragen en exacte duur
                             verschillen per woning en bedrijf, maar het proces lijkt hier vaak
                             sterk op.
                         </p>
 
-                        <div className="mt-6 grid gap-6 md:grid-cols-3">
+                        <div className="mt-5 grid gap-6 md:grid-cols-3">
                             {measures.map(
                                 (
                                     { icon: Icon, title, duration, whatTheyDo, whatYouDo, inconvenience },
@@ -188,12 +188,12 @@ export default function RenovatieVerloopPage() {
                     </section>
 
                     {/* Overlast & praktische zaken */}
-                    <section className="mt-12">
+                    <section className="mt-14">
                         <h2 className="text-2xl font-semibold text-gray-900">
                             Overlast, planning en wat er soms tegenvalt
                         </h2>
 
-                        <div className="mt-4 grid gap-4 md:grid-cols-3">
+                        <div className="mt-3 grid gap-4 md:grid-cols-3">
                             <article className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
                                 <h3 className="text-base font-semibold text-gray-900">
                                     Hoeveel overlast is er meestal?
@@ -233,7 +233,7 @@ export default function RenovatieVerloopPage() {
                     </section>
 
                     {/* CTA: wat nu? */}
-                    <section className="mx-auto mt-12 max-w-5xl">
+                    <section className="mx-auto mt-14 max-w-5xl">
                         <div className="rounded-2xl border border-emerald-100 bg-emerald-50/70 px-6 py-6 sm:py-7 shadow-sm">
                             <h2 className="text-xl font-semibold text-gray-900">
                                 Nu je weet hoe het verloopt, een logische volgende stap

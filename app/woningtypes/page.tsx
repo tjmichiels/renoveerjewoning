@@ -31,7 +31,7 @@ export default function HousingTypesPage() {
                         <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900">
                             Kies jouw woningtype
                         </h1>
-                        <p className="mt-2 text-gray-600">
+                        <p className="mt-2 text-gray-700">
                             Niet elke maatregel past bij elke woning. Kies het type dat het
                             beste lijkt op jouw huis en bekijk welke stappen daar het meest
                             opleveren.
@@ -39,7 +39,7 @@ export default function HousingTypesPage() {
                     </header>
                 </div>
 
-                <section className="mx-auto mt-4 max-w-5xl pb-16">
+                <section className="mx-auto mt-6 max-w-5xl pb-16">
                     <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                         {housingTypes.map((type) => (
                             <HousingTypeCard key={type.id} type={type}/>

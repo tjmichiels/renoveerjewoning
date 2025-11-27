@@ -75,12 +75,12 @@ export default function WooncomfortPage() {
                     </header>
 
                     {/* Comfortvoordelen */}
-                    <section className="mt-10">
+                    <section className="mt-8">
                         <h2 className="text-2xl font-semibold text-gray-900">
                             Waar je comfort vooral wint
                         </h2>
 
-                        <ul className="mt-6 grid gap-6 sm:grid-cols-2">
+                        <ul className="mt-3 grid gap-6 sm:grid-cols-2">
                             {benefits.map(({icon: Icon, title, text}, i) => (
                                 <li
                                     key={i}
@@ -100,11 +100,11 @@ export default function WooncomfortPage() {
 
 
                     {/* Maatregelen */}
-                    <section className="mt-12">
+                    <section className="mt-14">
                         <h2 className="text-2xl font-semibold text-gray-900">
                             Maatregelen die comfort direct verbeteren
                         </h2>
-                        <p className="mt-2 text-sm text-gray-600 max-w-3xl">
+                        <p className="mt-1 text-sm/6 text-gray-600 max-w-3xl">
                             Dit zijn typische maatregelen waar bewoners het comfort het sterkst van merken. <br/>
                             Wil je weten wat ze ongeveer kosten en besparen?{" "}
                             <Link
@@ -115,7 +115,7 @@ export default function WooncomfortPage() {
                             </Link>
                         </p>
 
-                        <ul className="mt-6 grid gap-6 sm:grid-cols-3">
+                        <ul className="mt-5 grid gap-6 sm:grid-cols-3">
                             {measures.map(({icon: Icon, title, text, link}, i) => (
                                 <li
                                     key={i}
@@ -139,7 +139,7 @@ export default function WooncomfortPage() {
                         </ul>
                     </section>
 
-                    <section className="mx-auto mt-12 max-w-5xl pb-16">
+                    <section className="mx-auto mt-16 max-w-5xl pb-16">
                         <div
                             className="rounded-2xl border border-emerald-100 bg-emerald-50/70 px-6 py-6 sm:py-7 shadow-sm">
                             <h2 className="text-xl font-semibold text-gray-900">

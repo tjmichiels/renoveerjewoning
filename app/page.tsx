@@ -58,7 +58,7 @@ export default function Home() {
 
                 {/* CTA-SECTIE ONDER FAQ */}
                 <section className="mx-auto max-w-5xl pb-24">
-                    <div className="mt-4 rounded-2xl border border-emerald-100 bg-white px-6 py-6 sm:py-7 shadow-sm">
+                    <div className="mt-6 rounded-2xl border border-emerald-100 bg-white px-6 py-6 sm:py-7 shadow-sm">
                         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                             <div>
                                 <h2 className="text-lg sm:text-xl font-semibold text-gray-900">
