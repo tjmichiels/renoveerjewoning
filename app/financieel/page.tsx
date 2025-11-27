@@ -35,13 +35,15 @@ export default function FinancieelPage() {
                             Globale kosten en besparing per maatregel
                         </h2>
                         <p className="mt-2 text-sm text-gray-600 max-w-3xl">
-                            De bedragen hieronder zijn <strong>ruwe richtlijnen</strong> voor een gemiddelde jaren 80-woning.
+                            De bedragen hieronder zijn <strong>ruwe richtlijnen</strong> voor een gemiddelde jaren
+                            80-woning.
                             Werkelijke kosten hangen af van oppervlak, staat van de woning en gekozen uitvoerder.
                         </p>
 
                         <div className="mt-6 grid gap-4 md:grid-cols-3">
                             {/* Spouwmuurisolatie */}
-                            <article className="flex flex-col rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+                            <article
+                                className="flex flex-col rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
                                 <h3 className="text-base font-semibold text-gray-900">
                                     Spouwmuurisolatie
                                 </h3>
@@ -65,7 +67,8 @@ export default function FinancieelPage() {
                             </article>
 
                             {/* Vloerisolatie */}
-                            <article className="flex flex-col rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+                            <article
+                                className="flex flex-col rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
                                 <h3 className="text-base font-semibold text-gray-900">
                                     Vloerisolatie
                                 </h3>
@@ -89,7 +92,8 @@ export default function FinancieelPage() {
                             </article>
 
                             {/* HR++-glas */}
-                            <article className="flex flex-col rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+                            <article
+                                className="flex flex-col rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
                                 <h3 className="text-base font-semibold text-gray-900">
                                     HR++-glas
                                 </h3>
@@ -173,21 +177,21 @@ export default function FinancieelPage() {
 
                         <ul className="mt-4 space-y-2 text-sm text-gray-700">
                             <li className="flex gap-2">
-                                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500"/>
                                 <span>
                   <strong>Landelijke subsidie</strong> voor isolatiemaatregelen en
                   soms warmtepompen (bedragen per m² of per installatie).
                 </span>
                             </li>
                             <li className="flex gap-2">
-                                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500"/>
                                 <span>
                   <strong>Gemeentelijke regelingen</strong> zoals extra subsidies of een
                   energiecoach die met je meekijkt.
                 </span>
                             </li>
                             <li className="flex gap-2">
-                                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500"/>
                                 <span>
                   <strong>Leningen met lagere rente</strong> speciaal voor verduurzaming
                   (bijvoorbeeld via een energiebespaarlening).
@@ -196,15 +200,17 @@ export default function FinancieelPage() {
                         </ul>
 
                         <p className="mt-4 text-sm text-gray-600 max-w-3xl">
-                            Op deze site laten we vooral zien <strong>welke stappen logisch zijn</strong> voor jouw woning.
+                            Op deze site laten we vooral zien <strong>welke stappen logisch zijn</strong> voor jouw
+                            woning.
                             De exacte subsidiebedragen kun je het beste controleren bij de overheid of je gemeente
                             op het moment dat je echt offertes gaat opvragen.
                         </p>
                     </section>
 
                     {/* Laatste sectie: logische eerste stap / CTA */}
-                    <section  id="subsidies" className="mt-12">
-                        <div className="rounded-2xl border border-emerald-100 bg-emerald-50/60 px-6 py-6 sm:py-7 shadow-sm">
+                    <section id="subsidies" className="mt-12">
+                        <div
+                            className="rounded-2xl border border-emerald-100 bg-emerald-50/60 px-6 py-6 sm:py-7 shadow-sm">
                             <h2 className="text-xl font-semibold text-gray-900">
                                 Wat is een logische eerste stap voor jou?
                             </h2>
@@ -236,6 +242,32 @@ export default function FinancieelPage() {
                             </div>
                         </div>
                     </section>
+
+                    <section className="mx-auto mt-10 max-w-5xl pb-16">
+                        <div
+                            className="rounded-2xl border border-emerald-100 bg-emerald-50/60 px-6 py-6 sm:py-8 shadow-sm">
+                            <h2 className="text-xl sm:text-2xl font-semibold text-gray-900">
+                                Klaar om er echt werk van te maken?
+                            </h2>
+                            <p className="mt-2 text-sm sm:text-base text-gray-700">
+                                Je weet nu wat renovatie ongeveer kost en oplevert. Op de volgende pagina
+                                helpen we je om dit om te zetten in concrete stappen: van oriëntatie
+                                naar daadwerkelijk in actie komen.
+                            </p>
+                            <div className="mt-4">
+                                <Link
+                                    href="/actie-ondernemen"
+                                    className="inline-flex items-center rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-800"
+                                >
+                                    Ga naar: Actie ondernemen
+                                    <span className="ml-1" aria-hidden>
+          →
+        </span>
+                                </Link>
+                            </div>
+                        </div>
+                    </section>
+
                 </div>
             </main>
         </div>

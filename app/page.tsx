@@ -24,30 +24,35 @@ export default function Home() {
                 <Hero
                     title="Weet je dat jouw woning je elk jaar honderden euro’s kan opleveren?"
                     subtitle="In veel woningen verdwijnt tot een kwart van de warmte via muren, vloeren en ramen. Door te isoleren en oude installaties te vervangen, kun je elk jaar honderden euro’s besparen, terwijl je woning comfortabeler en duurzamer wordt."
-                    blob={{ from: "from-emerald-200", via: "via-yellow-200", to: "to-sky-200" }}
+                    blob={{from: "from-emerald-200", via: "via-yellow-200", to: "to-sky-200"}}
                 />
 
-                {/* FAQ-BAND */}
-                <section
-                    aria-labelledby="faq-heading"
-                    className="mt-10 w-full border-t border-gray-100 bg-gray-50/70"
-                >
-                    <div className="mx-auto max-w-5xl pt-7 pb-2">
-                        <h2
-                            id="faq-heading"
-                            className="text-2xl sm:text-3xl font-semibold tracking-tight text-gray-900 text-center"
-                        >
-                            Veelgestelde vragen over kosten en besparing
-                        </h2>
-                        <p className="mt-2 text-sm sm:text-base text-gray-600 text-center">
-                            Antwoorden op de vragen die de meeste huiseigenaren als eerste hebben.
-                        </p>
-
-                        <div className="mt-6">
-                            <FaqList items={faqTopSix} palette={palettes.greenYellow} columns={2} />
+                <section aria-labelledby="faq" className="mx-auto max-w-5xl py-8">
+                    <div className="mb-4 flex flex-col items-start justify-between gap-2 sm:flex-row sm:items-end ">
+                        <div>
+                            <h2 id="faq" className="text-2xl font-semibold text-gray-900">
+                                Veelgestelde vragen
+                            </h2>
+                            <p className="mt-1 text-sm text-gray-600">
+                                Twijfels over kosten, besparing en wat logisch is om eerst te doen.
+                            </p>
                         </div>
+
+                        <Link
+                            href="/wooncomfort"
+                            className="text-sm font-semibold text-emerald-700 hover:text-emerald-900"
+                        >
+                            Liever weten hoe het voelt in huis? <span aria-hidden>→</span>
+                        </Link>
                     </div>
+
+                    <FaqList
+                        items={faqTopSix}
+                        palette={palettes.greenYellow}
+                        columns={2}
+                    />
                 </section>
+
 
                 {/* CTA-SECTIE ONDER FAQ */}
                 <section className="mx-auto max-w-5xl pb-24">

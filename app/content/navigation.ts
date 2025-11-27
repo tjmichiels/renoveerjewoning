@@ -3,5 +3,5 @@ export const NAV = [
     {name: "Woningtypes", href: "/woningtypes"},
     {name: "Financieel", href: "/financieel"},
     {name: "Veelgestelde vragen", href: "/faq"},
-    {name: "Actie ondernemen", href: "/actie"},
+    {name: "Actie ondernemen", href: "/actie-ondernemen"},
 ];

@@ -149,7 +149,8 @@ export default function HousingTypeDetailPage({params}: Props) {
                         {housingType.socialProof && (
                             <div
                                 className="mt-4 rounded-2xl border border-emerald-100 bg-emerald-50/60 px-4 py-3 text-[13px] text-emerald-900 flex items-start gap-3">
-                                <span className="mt-0.5 inline-flex h-8 w-8 items-center justify-center rounded-full bg-white shadow-sm">
+                                <span
+                                    className="mt-0.5 inline-flex h-8 w-8 items-center justify-center rounded-full bg-white shadow-sm">
                                     <UserGroupIcon className="h-4 w-4 text-emerald-700" aria-hidden/>
                                 </span>
                                 <div>
@@ -242,6 +243,46 @@ export default function HousingTypeDetailPage({params}: Props) {
                             })}
                         </div>
                     </section>
+
+                    <section className="mt-10">
+                        <div className="rounded-2xl border border-gray-100 bg-white px-5 py-5 shadow-sm">
+                            <h2 className="text-lg font-semibold text-gray-900">
+                                Hoe merk je dit in je woning?
+                            </h2>
+                            <p className="mt-2 text-sm text-gray-700">
+                                Minder tocht, warmere kamers en een stiller huis. Ontdek hoe renovatie
+                                jouw wooncomfort direct verbetert.
+                            </p>
+
+                            <Link
+                                href="/wooncomfort"
+                                className="mt-3 inline-flex items-center text-sm font-semibold text-emerald-700 hover:text-emerald-900"
+                            >
+                                Meer over wooncomfort →
+                            </Link>
+                        </div>
+                    </section>
+
+
+                    <section className="mt-10">
+                        <div className="rounded-2xl border border-emerald-100 bg-emerald-50/70 px-5 py-5 sm:py-6">
+                            <h2 className="text-lg font-semibold text-gray-900">
+                                Met deze maatregelen aan de slag?
+                            </h2>
+                            <p className="mt-2 text-sm text-gray-700">
+                                Op <strong>Actie ondernemen</strong> helpen we je om dit om te zetten
+                                in een concreet plan: wat je eerst doet, hoe je offertes kunt vergelijken
+                                en waar je op moet letten.
+                            </p>
+                            <Link
+                                href="/actie-ondernemen"
+                                className="mt-3 inline-flex items-center text-sm font-semibold text-emerald-800 hover:text-emerald-900"
+                            >
+                                Naar: Actie ondernemen →
+                            </Link>
+                        </div>
+                    </section>
+
                 </div>
             </main>
         </div>
