@@ -34,6 +34,8 @@ const steps = [
             "Let op: maatregelen aan schil (gevel, dak, vloer, glas) geven vaak snel resultaat.",
             "Kies één of twee maatregelen die passen bij jouw budget en situatie.",
         ],
+        linkLabel: "Lees meer per maatregel",
+        href: "/renovatiemogelijkheden",
     },
     {
         nr: "3",
