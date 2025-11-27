@@ -137,19 +137,18 @@ export default function FinancieelPage() {
                         <div className="mt-5 grid gap-4 md:grid-cols-3">
                             <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
                                 <h3 className="text-base font-semibold text-gray-900">
-                                    Minder tocht & temperatuurschommelingen
+                                    Minder koude plekken in huis
                                 </h3>
                                 <p className="mt-2 text-sm text-gray-600">
-                                    Geen koudeval meer bij ramen en minder “warme bovenverdieping, koude begane grond”.
+                                    Je voelt veel minder trek bij ramen of langs muren. Kamers voelen overal gelijkmatiger aan.
                                 </p>
                             </div>
                             <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
                                 <h3 className="text-base font-semibold text-gray-900">
-                                    Rustiger binnenklimaat
+                                    Rustigere temperatuur door de dag heen
                                 </h3>
                                 <p className="mt-2 text-sm text-gray-600">
-                                    Een beter geïsoleerde woning verandert minder snel van temperatuur,
-                                    waardoor het in de winter én in de zomer aangenamer is.
+                                    Je huis koelt minder snel af en reageert minder heftig op het weer buiten. Minder pieken en dalen.
                                 </p>
                             </div>
                             <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
@@ -157,8 +156,7 @@ export default function FinancieelPage() {
                                     Woningwaarde en verkoopbaarheid
                                 </h3>
                                 <p className="mt-2 text-sm text-gray-600">
-                                    Een beter energielabel en lagere maandlasten maken je woning vaak aantrekkelijker
-                                    voor toekomstige kopers.
+                                    Een beter energielabel en lagere maandlasten maken je woning aantrekkelijker voor kopers en kunnen zich vertalen in een hogere verkoopprijs.
                                 </p>
                             </div>
                         </div>
@@ -236,8 +234,8 @@ export default function FinancieelPage() {
                                 >
                                     Nog vragen? Bekijk de FAQ
                                     <span className="ml-1" aria-hidden>
-                    →
-                  </span>
+                                          →
+                                    </span>
                                 </Link>
                             </div>
                         </div>
