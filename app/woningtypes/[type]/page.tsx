@@ -133,7 +133,7 @@ export default function HousingTypeDetailPage({params}: Props) {
                                 fill
                                 className="object-cover"
                             />
-                        </figure>w
+                        </figure>
                     </section>
 
                     {/* Maatregelen */}
