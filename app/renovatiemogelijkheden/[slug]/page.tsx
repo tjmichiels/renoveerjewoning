@@ -87,8 +87,8 @@ export default function RenovationDetailPage({ params }: { params: { slug: strin
             </figure>
           </section>
 
-          {/* Divider between title/image and the main text */}
-          <div className="mt-6 border-t border-gray-100" />
+          {/* Gradient divider as requested */}
+          <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-10 mb-0" />
 
           <section className="mt-8">
             <div className="prose prose-emerald max-w-none text-gray-700">
