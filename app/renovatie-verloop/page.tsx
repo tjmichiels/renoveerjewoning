@@ -101,9 +101,13 @@ export default function RenovatieVerloopPage() {
                         </p>
                     </header>
 
+
+                    {/*Gradient divider*/}
+                    <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-8 mb-0"/>
+
                     {/* Globale tijdlijn */}
                     <section aria-label="Globale stappen van een renovatie">
-                        <h2 className="mt-9 text-2xl font-semibold text-gray-900">
+                        <h2 className="mt-7 text-2xl font-semibold text-gray-900">
                             De renovatie in vijf overzichtelijke stappen
                         </h2>
                         <p className="mt-1 text-sm text-gray-600 max-w-3xl">

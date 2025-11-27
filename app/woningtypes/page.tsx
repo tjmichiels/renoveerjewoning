@@ -37,9 +37,13 @@ export default function HousingTypesPage() {
                             opleveren.
                         </p>
                     </header>
+
+                    {/*Gradient divider*/}
+                    <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-6 mb-0"/>
+
                 </div>
 
-                <section className="mx-auto mt-6 max-w-5xl pb-16">
+                <section className="mx-auto mt-3 max-w-5xl pb-16">
                     <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                         {housingTypes.map((type) => (
                             <HousingTypeCard key={type.id} type={type}/>

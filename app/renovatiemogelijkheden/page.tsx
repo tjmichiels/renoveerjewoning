@@ -38,6 +38,10 @@ export default function Renovatiemogelijkheden() {
           <p className="mt-2 text-gray-600">
             Kies een categorie om praktisch aan de slag te gaan.
           </p>
+
+
+          {/*Gradient divider*/}
+          <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-7 mb-0"/>
         </header>
 
         <section className="mx-auto max-w-5xl pb-16 pt-8">

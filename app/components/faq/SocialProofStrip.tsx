@@ -11,7 +11,8 @@ export default function SocialProofStrip() {
                 </h2>
 
                 <p className="mt-1 text-sm text-emerald-900">
-                    Veel mensen beginnen niet met een grote verbouwing, maar met één maatregel die relatief snel iets oplevert.
+                    Veel mensen beginnen niet met een grote verbouwing, maar met één maatregel die relatief snel iets
+                    oplevert.
                 </p>
 
                 <ul className="mt-3 space-y-1.5 text-sm text-emerald-900">
@@ -20,6 +21,8 @@ export default function SocialProofStrip() {
                     <li>• Kleine maatregelen zoals tochtstrips, omdat je die makkelijk zelf kunt doen.</li>
                 </ul>
             </div>
+
+            <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-8 mb-0"/>
         </section>
     );
 }

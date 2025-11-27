@@ -42,7 +42,11 @@ export default function FaqPage() {
                             </a>
                         </p>
                     </div>
+
+                    {/*Gradient divider*/}
+                    <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-6 mb-2"/>
                 </div>
+
 
 
                 {/* Top 6 */}
@@ -54,6 +58,8 @@ export default function FaqPage() {
                         Start hier: de vragen waar de meeste huiseigenaren mee beginnen.
                     </p>
                     <FaqList items={faqTopSix} palette={palettes.greenYellow} columns={2}/>
+                    {/*Gradient divider*/}
+                    <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-1 mb-3"/>
                 </section>
 
                 {/* Sociale vergelijking / herkenbare context */}
@@ -62,7 +68,7 @@ export default function FaqPage() {
 
                 {/* Meer */}
                 <section id="more" aria-labelledby="more-heading"
-                         className="mx-auto max-w-5xl pb-16 pt-12 scroll-mt-20">
+                         className="mx-auto max-w-5xl pb-16 pt-6 scroll-mt-20">
                     <h2 id="more-heading" className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-0">
                         Meer vragen
                     </h2>
