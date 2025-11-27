@@ -49,18 +49,35 @@ export default function Renovatiemogelijkheden() {
                 <Link
                   key={opt.slug}
                   href={`/renovatiemogelijkheden/${opt.slug}`}
-                  className="group flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md transition-shadow"
+                  className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md"
                 >
-                  <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center justify-center rounded-lg bg-emerald-50 p-2">
-                      <Icon className="h-5 w-5 text-emerald-700" aria-hidden />
-                    </span>
-                    <h2 className="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-emerald-800">
-                      {opt.title}
-                    </h2>
+                  {/* Hover image preview */}
+                  <div className="pointer-events-none absolute inset-0 z-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    {/* Donkere overlay om de leesbaarheid van tekst te verbeteren via transparantie */}
+                    <div className="absolute inset-0 bg-black/50" aria-hidden></div>
+                    <img
+                      src={opt.image}
+                      alt={opt.imageAlt}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
                   </div>
-                  <p className="mt-2 text-sm text-gray-600">{opt.short}</p>
-                  <span className="mt-3 text-sm font-medium text-emerald-700">Meer over {opt.title} →</span>
+
+                  {/* Content */}
+                  <div className="relative z-10">
+                    <div className="flex items-center gap-3">
+                      <span className="inline-flex items-center justify-center rounded-lg bg-emerald-50 p-2 ring-1 ring-inset ring-emerald-100">
+                        <Icon className="h-5 w-5 text-emerald-700" aria-hidden />
+                      </span>
+                      <h2 className="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-white">
+                        {opt.title}
+                      </h2>
+                    </div>
+                    <p className="mt-2 text-sm text-gray-700 group-hover:text-white backdrop-blur-[1px]">
+                      {opt.short}
+                    </p>
+                    <span className="mt-3 inline-block text-sm font-medium text-emerald-700 group-hover:text-white">Meer over {opt.title} →</span>
+                  </div>
                 </Link>
               );
             })}
