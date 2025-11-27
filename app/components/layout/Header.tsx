@@ -4,10 +4,12 @@ import {useState} from "react";
 import Link from "next/link";
 import {Dialog, DialogPanel} from "@headlessui/react";
 import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/outline";
+import {usePathname} from "next/navigation";
 
 type NavItem = { name: string; href: string };
 export default function Header({navigation}: { navigation: NavItem[] }) {
     const [open, setOpen] = useState(false);
+    const pathname = usePathname();
 
     return (
         <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-200">
@@ -25,12 +27,27 @@ export default function Header({navigation}: { navigation: NavItem[] }) {
                     </button>
                 </div>
 
+                {/*Toon nav item (groen als het de huidige pagina is*/}
                 <div className="hidden lg:flex lg:gap-x-12">
-                    {navigation.map((item) => (
-                        <Link key={item.name} href={item.href} className="text-sm/6 font-semibold text-gray-900">
-                            {item.name}
-                        </Link>
-                    ))}
+                    {navigation.map((item) => {
+                        const isActive = pathname === item.href;
+
+                        return (
+                            <Link
+                                key={item.name}
+                                href={item.href}
+                                className={
+                                    `text-sm font-semibold transition pb-1 border-b-2 ${
+                                        isActive
+                                            ? "border-emerald-600 text-emerald-700"
+                                            : "border-transparent hover:border-gray-300 text-gray-900 hover:text-emerald-700"
+                                    }`
+                                }
+                            >
+                                {item.name}
+                            </Link>
+                        );
+                    })}
                 </div>
 
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end"/>
