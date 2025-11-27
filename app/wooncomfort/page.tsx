@@ -105,7 +105,7 @@ export default function WooncomfortPage() {
                             Maatregelen die comfort direct verbeteren
                         </h2>
 
-                        <ul className="mt-6 grid gap-6 sm:grid-cols-3">
+                        <ul className="mt-3 grid gap-6 sm:grid-cols-3">
                             {measures.map(({icon: Icon, title, text, link}, i) => (
                                 <li
                                     key={i}
@@ -129,23 +129,47 @@ export default function WooncomfortPage() {
                         </ul>
                     </section>
 
-                    <section className="mx-auto mt-10 max-w-5xl pb-16">
-                        <div className="rounded-2xl border border-gray-100 bg-white px-5 py-5 shadow-sm">
-                            <h2 className="text-lg font-semibold text-gray-900">
-                                Comfort verbeteren in jouw eigen woning?
-                            </h2>
-                            <p className="mt-2 text-sm text-gray-700">
-                                Op de pagina <strong>Actie ondernemen</strong> zie je welke stappen je nu
-                                al kunt zetten: van inzicht in je woning tot het aanvragen van offertes.
+                    <section className="mt-5">
+                        <div
+                            className="rounded-lg border border-emerald-100 bg-emerald-50/60 px-4 py-3 text-sm text-gray-800">
+                            <p>
+                                Wil je weten wat deze maatregelen ongeveer kosten en opleveren?{" "}
+                                <Link
+                                    href="/financieel"
+                                    className="font-semibold text-emerald-700 hover:text-emerald-900"
+                                >
+                                    Bekijk de financiële informatie →
+                                </Link>
                             </p>
-                            <Link
-                                href="/actie-ondernemen"
-                                className="mt-3 inline-flex items-center text-sm font-semibold text-emerald-700 hover:text-emerald-900"
-                            >
-                                Bekijk de stappen →
-                            </Link>
                         </div>
                     </section>
+
+
+                    <section className="mx-auto mt-12 max-w-5xl pb-16">
+                        <div
+                            className="rounded-2xl border border-emerald-100 bg-emerald-50/70 px-6 py-6 sm:py-7 shadow-sm">
+                            <h2 className="text-xl font-semibold text-gray-900">
+                                Comfort verbeteren in jouw woning?
+                            </h2>
+                            <p className="mt-2 text-sm text-gray-700 max-w-3xl">
+                                Wil je hier écht iets mee? Op <strong>Actie ondernemen</strong> zie je welke stappen
+                                logisch zijn
+                                om nu te zetten — van inzicht in je woning tot het aanvragen van offertes.
+                            </p>
+
+                            <div className="mt-4 flex flex-wrap gap-3">
+                                <Link
+                                    href="/actie-ondernemen"
+                                    className="inline-flex items-center rounded-full bg-emerald-700 px-5 py-2.5
+                           text-sm font-semibold text-white shadow-sm hover:bg-emerald-800"
+                                >
+                                    Bekijk de stappen
+                                    <span className="ml-1" aria-hidden>→</span>
+                                </Link>
+                            </div>
+                        </div>
+                    </section>
+
 
                 </div>
             </main>
