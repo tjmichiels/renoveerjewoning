@@ -29,8 +29,11 @@ export default function FinancieelPage() {
                         </p>
                     </header>
 
+                    {/*Gradient divider*/}
+                    <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-8 mb-0"/>
+
                     {/* Sectie: drie belangrijkste maatregelen */}
-                    <section className="mt-10">
+                    <section className="mt-7">
                         <h2 className="text-2xl font-semibold text-gray-900">
                             Globale kosten en besparing per maatregel
                         </h2>
@@ -136,9 +139,11 @@ export default function FinancieelPage() {
                         </Link>
                     </p>
 
+                    {/*Gradient divider*/}
+                    <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-10 mb-0"/>
 
                     {/* Sectie: andere voordelen dan alleen geld */}
-                    <section className="mt-12">
+                    <section className="mt-8">
                         <h2 className="text-2xl font-semibold text-gray-900">
                             Het gaat niet alleen om geld
                         </h2>
@@ -188,8 +193,11 @@ export default function FinancieelPage() {
                         </p>
                     </section>
 
+                    {/*Gradient divider*/}
+                    <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-11 mb-0"/>
+
                     {/* Sectie: subsidies en regelingen (praktisch en concreet) */}
-                    <section id="subsidies" className="mt-12">
+                    <section id="subsidies" className="mt-9">
                         <h2 className="text-2xl font-semibold text-gray-900">
                             Subsidies en leningen: wat kun je ongeveer verwachten?
                         </h2>
@@ -285,6 +293,9 @@ export default function FinancieelPage() {
                         </p>
                     </section>
 
+
+                    {/*Gradient divider*/}
+                    <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-10 mb-0"/>
 
                     <section className="mx-auto mt-10 max-w-5xl pb-16">
                         <div

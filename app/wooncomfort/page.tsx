@@ -75,6 +75,9 @@ export default function WooncomfortPage() {
                         </p>
                     </header>
 
+                    {/*Gradient divider*/}
+                    <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-8 mb-8"/>
+
                     {/* Comfortvoordelen */}
                     <section className="mt-8">
                         <h2 className="text-2xl font-semibold text-gray-900">
@@ -100,7 +103,7 @@ export default function WooncomfortPage() {
                     </section>
 
                     {/*Gradient divider*/}
-                    <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-11 mb-10"/>
+                    <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-10 mb-8"/>
 
                     {/* Maatregelen */}
                     <section className="mt-0">
@@ -153,7 +156,10 @@ export default function WooncomfortPage() {
                     </div>
 
 
-                    <section className="mx-auto mt-16 max-w-5xl pb-16">
+                    {/*Gradient divider*/}
+                    <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-12 mb-0"/>
+
+                    <section className="mx-auto mt-12 max-w-5xl pb-16">
                         <div
                             className="rounded-2xl border border-emerald-100 bg-emerald-50/70 px-6 py-6 sm:py-7 shadow-sm">
                             <h2 className="text-xl font-semibold text-gray-900">
