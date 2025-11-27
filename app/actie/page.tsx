@@ -87,9 +87,7 @@ export default function ActiePage() {
                             Klaar om echt iets te doen?
                         </h1>
                         <p className="mt-2 text-gray-700 text-base sm:text-lg">
-                            Dit stappenplan helpt je om van “ik zou eigenlijk iets moeten” naar
-                            concreet handelen te gaan. Zonder technische taal, maar met logische
-                            volgorde: eerst inzicht, dan keuzes, dan actie.
+                            Dit stappenplan helpt je om duidelijkheid te krijgen in wat voor jouw woning logisch is. Stap voor stap, van inzicht naar keuzes naar actie.
                         </p>
                     </header>
 
