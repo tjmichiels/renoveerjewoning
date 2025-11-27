@@ -4,6 +4,7 @@ export type RenovationOption = {
     short: string;
     icon: "insulation" | "windows" | "heating" | "solar" | "ventilation";
     details: string;
+    renovationdetails: string;
 };
 
 export const renovationOptions: RenovationOption[] = [
@@ -14,6 +15,7 @@ export const renovationOptions: RenovationOption[] = [
         icon: "insulation",
         details:
             "De meeste woningen hebben een spouw van 4-6 cm, ideaal voor na-isolatie. Dit, gecombineerd met dak- en vloerisolatie via de kruipruimte, verbetert de matige Rc-waarde (1,3-2,0) van de bouw aanzienlijk. Dit is essentieel voordat u een warmtepomp plaatst.",
+        renovationdetails: ""
     },
     {
         slug: "glas-en-kozijnen",
@@ -22,6 +24,7 @@ export const renovationOptions: RenovationOption[] = [
         icon: "windows",
         details:
             "Veel woningen uit deze periode hebben nog verouderd dubbel glas (64%). Door te upgraden naar HR++ (streef U-waarde 1,0 W/m²K) wordt de thermische schil sterk verbeterd. Dit is een snelle stap om tocht te verminderen.",
+        renovationdetails: ""
     },
     {
         slug: "verwarming",
@@ -30,6 +33,8 @@ export const renovationOptions: RenovationOption[] = [
         icon: "heating",
         details:
             "Aangezien de basisisolatie van de woning al aanwezig is, is een hybride warmtepomp een logische vervolgstap. Dit systeem werkt samen met de huidige installatie en zorgt voor efficiëntere verwarming. Een volledig elektrische warmtepomp is pas aan te raden na maximale isolatie.",
+        renovationdetails: ""
+
     },
     {
         slug: "zonne-energie",
@@ -38,6 +43,7 @@ export const renovationOptions: RenovationOption[] = [
         icon: "solar",
         details:
             "De daken van de rijwoningen (25-35 m²) zijn zeer geschikt voor het opwekken van hernieuwbare energie. Zonnepanelen zijn een effectieve maatregel om het primaire energieverbruik te verlagen en de energielasten te drukken.",
+        renovationdetails: ""
     },
     {
         slug: "ventilatie",
@@ -46,6 +52,7 @@ export const renovationOptions: RenovationOption[] = [
         icon: "ventilation",
         details:
             "Bij een goed geïsoleerde en luchtdichte woning (klasse 2 of 3) is goede ventilatie cruciaal voor een gezond binnenklimaat. Het plaatsen van een mechanische ventilatie met warmteterugwinning (WTW) is dan een effectieve oplossing om warmteverlies door ventilatie te minimaliseren.",
+        renovationdetails: ""
     },
 ];
 

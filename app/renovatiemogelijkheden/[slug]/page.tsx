@@ -36,6 +36,10 @@ export default function RenovationDetailPage({ params }: { params: { slug: strin
             <p className="mt-2 text-sm text-gray-600">
             </p>
           </section>
+
+            <section className="mt-6">
+                <p className="mt-2 text-gray-700">{option.renovationdetails}</p>
+            </section>
         </div>
       </main>
     </div>
