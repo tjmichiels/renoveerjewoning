@@ -139,6 +139,17 @@ export default function WooncomfortPage() {
                         </ul>
                     </section>
 
+                    <div className="mt-6 rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-700">
+                        <p>
+                            Veel van deze verbeteringen zijn sneller klaar dan je verwacht.
+                           Spouwmuurisolatie duurt vaak maar een paar uur,
+                            HR++-glas wordt meestal binnen één dag geplaatst,
+                            en vloerisolatie gebeurt vanuit de kruipruimte. Je hoeft meestal niets te
+                            verplaatsen en kunt gewoon thuis blijven.
+                        </p>
+                    </div>
+
+
                     <section className="mx-auto mt-16 max-w-5xl pb-16">
                         <div
                             className="rounded-2xl border border-emerald-100 bg-emerald-50/70 px-6 py-6 sm:py-7 shadow-sm">

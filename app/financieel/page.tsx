@@ -123,7 +123,10 @@ export default function FinancieelPage() {
                         </div>
                     </section>
 
-                    <p className="mt-4 text-sm/6 text-gray-600 max-w-3xl">
+                    <p className="mt-4 text-sm/6 text-gray-600 max-w-3-xl">
+                        <strong>Goed om te weten:</strong> veel isolatiemaatregelen worden binnen een dag uitgevoerd en geven nauwelijks overlast. In veel gevallen kun je gewoon thuis blijven.
+                    </p>
+                    <p className="mt-10 text-sm/6 text-gray-600 max-w-3xl">
                         Wil je niet alleen bedragen zien, maar ook de inhoudelijke uitleg per maatregel?<br/>{" "}
                         <Link
                             href="/renovatiemogelijkheden"

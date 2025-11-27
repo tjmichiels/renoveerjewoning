@@ -136,7 +136,7 @@ export default function ActiePage() {
                                         </div>
                                     )}
                                     {step.nr === "5" && (
-                                        <p className="mt-4 text-sm text-gray-600">
+                                        <p className="mt-4 text-sm text-gray-500">
                                             Wil je zien hoe zo’n uitvoering er in de praktijk uitziet?{" "}
                                             <Link
                                                 href="/renovatie-verloop"
