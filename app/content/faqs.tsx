@@ -163,9 +163,16 @@ export const faqMore: FaqEntry[] = [
         q: "Wat is de makkelijkste stap om mee te beginnen?",
         a: (
             <>
-                Begin met <strong>spouwmuurisolatie</strong> of <strong>HR++-glas</strong>.
-                Beide leveren <strong>snel resultaat</strong> op, zijn betaalbaar, en kunnen zonder
-                ingrijpende verbouwing worden uitgevoerd.
+                {/*Begin met <strong>spouwmuurisolatie</strong> of <strong>HR++-glas</strong>.*/}
+                {/*Beide leveren <strong>snel resultaat</strong> op, zijn betaalbaar, en kunnen zonder*/}
+                {/*ingrijpende verbouwing worden uitgevoerd.*/}
+                Als je laagdrempelig wilt starten, zijn{" "}
+                <strong>tochtstrips, een brievenbusborstel en radiatorfolie</strong> vaak het eenvoudigst.
+                Die kun je zelf plaatsen en je merkt het comfortverschil meteen.
+                <br /><br/>
+                Wil je een grotere stap zetten, dan zijn{" "}
+                <strong>spouwmuurisolatie of HR++-glas</strong> logische vervolgstappen: die kosten meer,
+                maar leveren ook structureel besparing op.
             </>
         ),
         Icon: WrenchScrewdriverIcon,

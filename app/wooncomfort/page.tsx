@@ -103,7 +103,8 @@ export default function WooncomfortPage() {
                     </section>
 
                     {/*Gradient divider*/}
-                    <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-10 mb-8"/>
+                    <div
+                        className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-10 mb-8"/>
 
                     {/* Maatregelen */}
                     <section className="mt-0">
@@ -153,11 +154,19 @@ export default function WooncomfortPage() {
                             en vloerisolatie gebeurt vanuit de kruipruimte. Je hoeft meestal niets te
                             verplaatsen en kunt gewoon thuis blijven.
                         </p>
+
+                        <p className="mt-1">
+                            Nog niet toe aan grote maatregelen? Met{" "}
+                            <strong>tochtstrips, een brievenbusborstel en radiatorfolie</strong> kun je
+                            vaak al merkbaar minder tocht en kou voelen, zeker bij ramen en deuren.
+                        </p>
                     </div>
 
 
+
                     {/*Gradient divider*/}
-                    <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-12 mb-0"/>
+                    <div
+                        className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-12 mb-0"/>
 
                     <section className="mx-auto mt-12 max-w-5xl pb-16">
                         <div

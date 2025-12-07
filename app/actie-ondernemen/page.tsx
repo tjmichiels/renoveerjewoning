@@ -29,8 +29,10 @@ const steps = [
         summary:
             "Je hoeft niet alles tegelijk te doen. Eén stap kan al veel schelen in comfort en energierekening.",
         bullets: [
+            "Kijk welke maatregelen bij jouw woningtype veel voorkomen (bijv. spouwmuurisolatie, vloerisolatie, HR++-glas).",
             "Let vooral op maatregelen aan gevel, dak, vloer en glas: die leveren vaak snel resultaat op.",
-            "Kies één of twee maatregelen die passen bij jouw budget en situatie.",
+            "Wil je eerst iets laagdrempeligs doen? Kleine maatregelen zoals tochtstrips of radiatorfolie geven al merkbaar minder tocht.",
+            "Kies één of twee stappen die passen bij jouw budget en situatie.",
         ],
         linkLabel: "Lees meer per maatregel",
         href: "/renovatiemogelijkheden",

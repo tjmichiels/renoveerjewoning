@@ -50,39 +50,54 @@ export default function Renovatiemogelijkheden() {
             {renovationOptions.map((opt) => {
               const Icon = iconMap[opt.icon];
               return (
-                <Link
-                  key={opt.slug}
-                  href={`/renovatiemogelijkheden/${opt.slug}`}
-                  className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md"
-                >
-                  <div className="pointer-events-none absolute inset-0 z-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    <div className="absolute inset-0 bg-black/50" aria-hidden></div>
-                    <img
-                      src={opt.image}
-                      alt={opt.imageAlt}
-                      className="h-full w-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-
-                  <div className="relative z-10">
-                    <div className="flex items-center gap-3">
-                      <span className="inline-flex items-center justify-center rounded-lg bg-emerald-50 p-2 ring-1 ring-inset ring-emerald-100">
-                        <Icon className="h-5 w-5 text-emerald-700" aria-hidden />
-                      </span>
-                      <h2 className="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-white">
-                        {opt.title}
-                      </h2>
+                  <Link
+                      key={opt.slug}
+                      href={`/renovatiemogelijkheden/${opt.slug}`}
+                      className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md"
+                  >
+                    <div
+                        className="pointer-events-none absolute inset-0 z-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                      <div className="absolute inset-0 bg-black/50" aria-hidden></div>
+                      <img
+                          src={opt.image}
+                          alt={opt.imageAlt}
+                          className="h-full w-full object-cover"
+                          loading="lazy"
+                      />
                     </div>
-                    <p className="mt-2 text-sm text-gray-700 group-hover:text-white backdrop-blur-[1px]">
-                      {opt.short}
-                    </p>
-                    <span className="mt-3 inline-block text-sm font-medium text-emerald-700 group-hover:text-white">Meer over {opt.title} →</span>
-                  </div>
-                </Link>
+
+                    <div className="relative z-10">
+                      <div className="flex items-center gap-3">
+                      <span
+                          className="inline-flex items-center justify-center rounded-lg bg-emerald-50 p-2 ring-1 ring-inset ring-emerald-100">
+                        <Icon className="h-5 w-5 text-emerald-700" aria-hidden/>
+                      </span>
+                        <h2 className="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-white">
+                          {opt.title}
+                        </h2>
+                      </div>
+                      <p className="mt-2 text-sm text-gray-700 group-hover:text-white backdrop-blur-[1px]">
+                        {opt.short}
+                      </p>
+                      <span className="mt-3 inline-block text-sm font-medium text-emerald-700 group-hover:text-white">Meer over {opt.title} →</span>
+                    </div>
+                  </Link>
               );
             })}
           </div>
+
+          {/*Gradient divider*/}
+          <div className="h-px w-full bg-gradient-to-r from-amber-200 via-emerald-200 to-lime-200 mt-8 mb-0"/>
+
+          <p
+              className="mt-8 text-sm text-gray-700 border-l-4 border-emerald-200 pl-3 py-1"
+          >
+            Twijfel je nog over grote stappen? Met{" "}
+            <strong className="text-emerald-700 font-semibold">kleine maatregelen zoals tochtstrips en
+              radiatorfolie</strong>{" "}
+            kun je vaak al ervaren wat minder tocht en kou doet in je woning.
+          </p>
+
         </section>
       </main>
     </div>
