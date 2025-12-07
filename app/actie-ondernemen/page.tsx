@@ -134,6 +134,15 @@ export default function ActiePage() {
                                             </Link>
                                         </div>
                                     )}
+                                    {step.nr === "4" && (
+                                        <p className="mt-2 text-sm text-gray-600">
+                                            Tip: in veel gemeenten kun je gratis
+                                            een <strong>energiecoach</strong> inschakelen.
+                                            Dat is een getrainde vrijwilliger die samen met jou meekijkt in je woning
+                                            en praktisch advies geeft over logische stappen.
+                                        </p>
+
+                                    )}
                                     {step.nr === "5" && (
                                         <p className="mt-4 text-sm text-gray-500">
                                             Wil je zien hoe zo’n uitvoering er in de praktijk uitziet?{" "}
