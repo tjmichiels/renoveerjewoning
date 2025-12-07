@@ -210,46 +210,124 @@ export const housingTypes: HousingType[] = [
             }
         ],
     },
-    // {
-    //     id: "appartement",
-    //     slug: "appartement",
-    //     title: "Appartement",
-    //     shortLabel: "Typisch voor een appartement:",
-    //     intro:
-    //         "In een appartement heb je meestal minder eigen schil om te isoleren. Glas en kierdichting leveren vaak de meeste winst op.",
-    //     yearlySavings: "afhankelijk van complex en installaties",
-    //     typicalIssues: [
-    //         "Beperkte eigen geveloppervlakken",
-    //         "Afhankelijk van Vereniging van Eigenaren (VvE)",
-    //         "Tocht langs ramen en balkon/deur"
-    //     ],
-    //     measures: [
-    //         {
-    //             title: "HR++-glas",
-    //             description:
-    //                 "Vervangt oud dubbel of enkel glas en vermindert tocht en kou bij ramen.",
-    //             costRange: "afhankelijk van aantal ramen",
-    //             savingsRange: "merkbaar meer comfort"
-    //         },
-    //         {
-    //             title: "Kierdichting",
-    //             description:
-    //                 "Tochtstrips en naadafdichting bij ramen en deuren verminderen tocht tegen lage kosten.",
-    //             costRange: "± €20 – €100",
-    //             note: "Goed zelf te doen, direct merkbaar."
-    //         },
-    //         {
-    //             title: "Afstemming met VvE",
-    //             description:
-    //                 "Voor grotere maatregelen (dak-, gevelisolatie, collectieve installaties) is vaak besluitvorming binnen de VvE nodig.",
-    //             costRange: "afhankelijk van gekozen maatregelen",
-    //             note: "Informeer bij de VvE welke plannen er al zijn."
-    //         }
-    //     ],
-    //     imageSrc: "/images/appartement.jpg",
-    //     imageAlt: "Appartementencomplex",
-    //     tagline: "Glas en kierdichting leveren hier vaak de meeste winst op.",
-    // }
+    {
+        id: "appartement",
+        slug: "appartement",
+        title: "Appartement",
+        shortLabel: "Typisch voor een appartement:",
+        intro:
+            "In een appartement heb je vaak minder eigen buitengevels om te isoleren. Glas en kierdichting leveren hier meestal de meeste winst op. Voor grotere maatregelen ben je vaak afhankelijk van de Vereniging van Eigenaren (VvE).",
+        yearlySavings: "sterk afhankelijk van het complex en de installaties",
+        typicalIssues: [
+            "Beperkt eigen geveloppervlak om te isoleren",
+            "Afhankelijkheid van de VvE voor grotere maatregelen",
+            "Tocht langs ramen, balkondeuren en kozijnen"
+        ],
+
+        imageSrc: "/images/woningtypes/appartement.jpg",
+        imageAlt: "Appartementencomplex met meerdere etages",
+        tagline: "Met beter glas en kierdichting kun je het comfort al flink verhogen.",
+
+        socialProof:
+            "Appartementbewoners beginnen vaak met HR++-glas en kierdichting bij ramen en balkondeuren. Grotere stappen lopen meestal via de VvE.",
+
+        measures: [
+            {
+                title: "HR++-glas",
+                description:
+                    "Vervangt oud dubbel of enkel glas. Dit vermindert kou en tocht bij ramen en maakt de woning merkbaar comfortabeler.",
+                costRange: "afhankelijk van aantal ramen",
+                savingsRange: "meer comfort en een lagere warmtevraag",
+                icon: "glass",
+                imageSrc: "/images/maatregelen/hrplusplusglas.jpg",
+                imageAlt: "Een appartement met nieuw HR++-glas",
+            },
+            {
+                title: "Kierdichting & kleine maatregelen",
+                description:
+                    "Tochtstrips, naadafdichting en rubberprofielen bij ramen en deuren verminderen tocht tegen lage kosten.",
+                costRange: "± €20 – €150",
+                note: "Goed zelf te doen en direct merkbaar in comfort.",
+                icon: "small",
+                imageSrc: "/images/maatregelen/kleinemaatregelen.jpg",
+                imageAlt: "Tochtstrips bij een raam in een appartement",
+            },
+            {
+                title: "Dak- of gevelisolatie via de VvE",
+                description:
+                    "Voor dakisolatie, gevelisolatie of collectieve installaties (zoals een warmtepomp of ventilatiesysteem) is vaak een besluit binnen de VvE nodig.",
+                costRange: "afhankelijk van gekozen maatregelen en verdeelsleutel",
+                note: "Informeer bij de VvE of er al plannen of een meerjarenonderhoudsplan zijn.",
+                icon: "wall",
+                imageSrc: "/images/maatregelen/gevelisolatie.jpeg",
+                imageAlt: "Gevelisolatie aan een appartementencomplex",
+            },
+        ],
+    },
+    {
+        id: "twee-onder-een-kap",
+        slug: "twee-onder-een-kap",
+        title: "Twee-onder-één-kapwoning",
+        shortLabel: "Typisch voor een twee-onder-één-kapwoning:",
+        intro:
+            "Een twee-onder-één-kapwoning deelt één muur met de buren, maar heeft verder veel eigen buitengevels en dakoppervlak. Dat betekent meer warmteverlies, maar ook meer mogelijkheden om te besparen.",
+        yearlySavings: "ongeveer €600–€1.000 per jaar",
+        typicalIssues: [
+            "Extra buitengevels vergeleken met een tussenwoning",
+            "Groot dakoppervlak waar warmte kan ontsnappen",
+            "Tocht bij kozijnen en koude hoeken aan de buitenzijde"
+        ],
+
+        imageSrc: "/images/woningtypes/twee-onder-een-kap.webp",
+        imageAlt: "Twee-onder-een-kapwoning in een woonwijk",
+        tagline: "Meer buitengevel en dak betekent ook meer ruimte om te isoleren en te besparen.",
+
+        socialProof:
+            "Eigenaren van twee-onder-een-kapwoningen beginnen vaak met spouw- of gevelisolatie en HR++-glas. Daarna volgt het dak om de grootste warmtelekken aan te pakken.",
+
+        measures: [
+            {
+                title: "Spouw- of gevelisolatie",
+                description:
+                    "Door de spouw of buitengevel te isoleren pak je direct een groot deel van het warmteverlies aan, vooral bij de vrijliggende gevels.",
+                costRange: "± €1.500 – €3.500",
+                savingsRange: "duidelijke daling in gasverbruik en minder koude muren",
+                icon: "cavity",
+                imageSrc: "/images/maatregelen/gevelofspouwmuurisolatie.jpg",
+                imageAlt: "Gevel of spouwmuur die geïsoleerd wordt",
+            },
+            {
+                title: "Dakisolatie",
+                description:
+                    "Het grote dakoppervlak isoleren voorkomt dat warmte naar boven wegtrekt en maakt zolder en bovenverdieping comfortabeler.",
+                costRange: "± €2.500 – €5.000 (afhankelijk van dakoppervlak)",
+                savingsRange: "kan honderden euro’s per jaar schelen",
+                icon: "roof",
+                imageSrc: "/images/maatregelen/dakisolatie.jpg",
+                imageAlt: "Dakisolatie bij een hellend dak",
+            },
+            {
+                title: "HR++-glas",
+                description:
+                    "Nieuwe beglazing vermindert warmteverlies en tocht bij ramen, vooral aan de wind- en tuinkant.",
+                costRange: "afhankelijk van aantal ramen",
+                savingsRange: "structureel lagere warmtevraag en meer comfort",
+                icon: "glass",
+                imageSrc: "/images/maatregelen/hrplusplusglas.jpg",
+                imageAlt: "Kozijnen met HR++-glas",
+            },
+            {
+                title: "Vloerisolatie",
+                description:
+                    "Isolatie boven de kruipruimte voorkomt koude vloeren, vooral aan de zij- en tuinkant van de woning.",
+                costRange: "± €1.500 – €3.000",
+                savingsRange: "comfortverbetering en lagere stookkosten",
+                icon: "floor",
+                imageSrc: "/images/maatregelen/vloerisolatie.jpg",
+                imageAlt: "Vloerisolatie in een kruipruimte",
+            },
+        ],
+    },
 ];
 
 export function getHousingTypeBySlug(slug: string): HousingType | undefined {
