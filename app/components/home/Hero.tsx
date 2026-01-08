@@ -3,12 +3,8 @@ import QuickBenefits from "./QuickBenefits";
 import GradientBlob from "../layout/GradientBlob";
 
 export default function Hero({
-                                 title,
-                                 subtitle,
                                  blob = { from: "from-indigo-200", via: "via-sky-200", to: "to-emerald-200" },
                              }: {
-    title: string;
-    subtitle: string;
     blob?: { from: string; via: string; to: string };
 }) {
     return (
@@ -17,12 +13,15 @@ export default function Hero({
 
             <h1 className="font-emphasis text-5xl tracking-tight text-balance text-gray-900 sm:text-6xl">
                 Weet je dat jouw woning je elk jaar{" "}
-                <span className="font-extrabold text-emerald-700">honderden euro’s</span>{" "}
-                kan opleveren?
+                <span className="font-extrabold text-red-700">honderden euro’s</span>{" "}
+                kost?
             </h1>
 
             <p className="mt-6 text-lg font-medium text-pretty text-gray-800 sm:text-xl/8 font-friendly">
-                {subtitle}
+                In veel woningen verdwijnt tot een kwart van de warmte via muren, vloeren en ramen.
+                Door te{" "}
+                <span className="font-extrabold text-emerald-700">isoleren</span>
+                {" "}en oude installaties te vervangen, kun je elk jaar honderden euro’s besparen, terwijl je woning comfortabeler en duurzamer wordt.
             </p>
 
             <QuickBenefits />
