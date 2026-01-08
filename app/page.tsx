@@ -22,7 +22,7 @@ export default function Home() {
             <main className="relative isolate min-h-screen px-6 pt-0 lg:px-8">
                 {/* HERO */}
                 <Hero
-                    blob={{from: "from-emerald-200", via: "via-yellow-200", to: "to-sky-200"}}
+                    blob={{from: "from-orange-200", via: "via-yellow-200", to: "to-sky-200"}}
                 />
 
 
