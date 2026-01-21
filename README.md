@@ -1,4 +1,4 @@
-# TRIK – Renovatie Website
+# TRIK – Renovatiewebsite
 
 Dit repository bevat de code voor een informatieve renovatie-website die is ontwikkeld binnen het project **TRIK – bewoner in beweging**.
 De website richt zich op particuliere woningeigenaren en helpt hen om overzicht te krijgen in woningrenovatie en verduurzaming.
