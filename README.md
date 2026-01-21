@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TRIK – Renovatie Website
 
-## Getting Started
+Dit repository bevat de code voor een informatieve renovatie-website die is ontwikkeld binnen het project **TRIK – bewoner in beweging**.
+De website richt zich op particuliere woningeigenaren en helpt hen om overzicht te krijgen in woningrenovatie en verduurzaming.
 
-First, run the development server:
+De focus ligt op:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+* drempels verlagen
+* onzekerheid wegnemen
+* logische keuzes inzichtelijk maken
+* bewoners helpen van oriëntatie naar actie te gaan
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Projectdoel
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+De centrale vraag achter de website is:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+> *Hoe kan een digitale omgeving particuliere woningeigenaren helpen om daadwerkelijk de stap naar renovatie te zetten?*
 
-## Learn More
+De website ondersteunt dit door informatie helder te structureren, keuzestress te beperken en subtiele gedragssturing (nudging) toe te passen.
 
-To learn more about Next.js, take a look at the following resources:
+## Structuur en flow
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+De website is opgebouwd volgens een vaste denkvolgorde van de gebruiker:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Oriëntatie** – Heeft dit zin voor mij?
+2. **Inzicht** – Wat levert het op en wat kan ik doen?
+3. **Verdieping** – Hoe ziet dat er concreet uit?
+4. **Actie** – Wat moet ik nu zelf doen?
 
-## Deploy on Vercel
+Elke pagina heeft één duidelijke rol binnen deze flow. Navigatie, links en call-to-actions verwijzen steeds naar een volgende logische stap.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Live versie
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+De website is te bekijken via:
+[https://renoveerjewoning.vercel.app/](https://renoveerjewoning.vercel.app/)
+
+## Over dit project
+
+Dit project is uitgevoerd binnen een multidisciplinair traject met bijdragen vanuit:
+
+* ICT
+* Bouwkunde
+* Sociale disciplines
+
+Deze repository bevat uitsluitend het ICT-deel: de technische realisatie van de website.
