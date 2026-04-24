@@ -1,6 +1,7 @@
 // app/components/home/Hero.tsx
 import QuickBenefits from "./QuickBenefits";
 import GradientBlob from "../layout/GradientBlob";
+import MemeQuotes from "./MemeQuotes";
 
 export default function Hero({
                                  blob = { from: "from-indigo-200", via: "via-sky-200", to: "to-emerald-200" },
@@ -25,6 +26,7 @@ export default function Hero({
             </p>
 
             <QuickBenefits />
+            <MemeQuotes />
         </section>
     );
 }
